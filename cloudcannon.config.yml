@@ -1,0 +1,74 @@
+source: /
+paths:
+  static: public
+  uploads: public/assets
+collections_config:
+  pages:
+    path: src/data
+    name: Pages
+    icon: web
+    url: /
+    disable_add: true
+    disable_add_folder: true
+    disable_file_actions: true
+    _enabled_editors:
+      - visual
+      - data
+    _inputs:
+      url:
+        type: text
+        hidden: true
+_inputs:
+  _name:
+    type: text
+    hidden: true
+  heading:
+    type: text
+  description:
+    type: textarea
+  body_html:
+    type: html
+  image:
+    type: image
+  background_image:
+    type: image
+  logo:
+    type: image
+  video:
+    type: file
+  blocks:
+    type: array
+    options:
+      structures: _structures.blocks
+_structures:
+  blocks:
+    values:
+      - label: Hero
+        icon: panorama
+        value:
+          _name: Hero
+          heading: A luxury sanctuary
+          description: Welcome to Saltay
+          video: /assets/floating-woman.mp4
+      - label: Treatments
+        icon: spa
+        value:
+          _name: Treatments
+          services: []
+      - label: Care
+        icon: self_improvement
+        value:
+          _name: Care
+          columns: []
+          background_image: /assets/ocean.jpg
+      - label: Booking
+        icon: calendar_month
+        value:
+          _name: Booking
+          eyebrow: READY TO BEGIN?
+          heading: Book Your Experience
+          description: By appointment only — Hanalei & Anahola, Kaua‘i
+          button: Book Now and Save
+          phone: (808) 855-8718
+          statement: Every offering at Saltay is a deeply personalized ritual.
+          background_image: /assets/ocean.jpg

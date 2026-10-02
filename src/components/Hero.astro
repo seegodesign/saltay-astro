@@ -1,0 +1,11 @@
+---
+const { heading, description, video } = Astro.props;
+---
+<section class="hero">
+  <video autoplay muted loop playsinline preload="metadata" aria-hidden="true"><source src={video} type="video/mp4" /></video>
+  <div class="hero-shade"></div>
+  <div class="container hero-copy">
+    <h1 data-editable="text" data-prop="heading">{heading}</h1>
+    <p data-editable="text" data-prop="description">{description}</p>
+  </div>
+</section>

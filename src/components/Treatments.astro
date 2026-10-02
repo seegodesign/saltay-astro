@@ -1,0 +1,12 @@
+---
+const { services } = Astro.props;
+---
+<section class="treatments"><div class="container treatment-grid" data-editable="array" data-prop="services">
+{services.map(service => <article data-editable="array-item">
+  <p class="eyebrow" data-editable="text" data-prop="eyebrow">{service.eyebrow}</p>
+  <h2 data-editable="text" data-prop="title">{service.title}</h2>
+  <img src={service.image} alt={service.image_alt} width="495" height="400" data-editable="image" data-prop-src="image" data-prop-alt="image_alt" />
+  <div data-editable="array" data-prop="paragraphs">{service.paragraphs.map(text=><p data-editable="array-item"><editable-text data-prop="text">{text.text}</editable-text></p>)}</div>
+  <ul data-editable="array" data-prop="items">{service.items.map(text=><li data-editable="array-item"><editable-text data-prop="text">{text.text}</editable-text></li>)}</ul>
+</article>)}
+</div></section>

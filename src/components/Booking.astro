@@ -1,0 +1,7 @@
+---
+const { eyebrow, heading, description, button, phone, statement, background_image } = Astro.props;
+---
+<section class="booking" style={`--section-image: url('${background_image}')`}><div class="container booking-grid">
+<div class="booking-card"><p class="eyebrow" data-editable="text" data-prop="eyebrow">{eyebrow}</p><h2 data-editable="text" data-prop="heading">{heading}</h2><p data-editable="text" data-prop="description">{description}</p><a href="#" class="button booking-button" data-editable="text" data-prop="button">{button}</a><a href="#" class="phone"><span aria-hidden="true">☎</span> <span data-editable="text" data-prop="phone">{phone}</span></a></div>
+<h3 data-editable="text" data-prop="statement">{statement}</h3>
+</div></section>

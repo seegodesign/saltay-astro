@@ -1,0 +1,6 @@
+---
+const { columns, background_image } = Astro.props;
+---
+<section class="care" style={`--section-image: url('${background_image}')`}><div class="container care-grid" data-editable="array" data-prop="columns">
+{columns.map(col=><article data-editable="array-item"><h2 data-editable="text" data-prop="title">{col.title}</h2><div data-editable="text" data-prop="body_html" data-type="block" set:html={col.body_html}></div></article>)}
+</div></section>

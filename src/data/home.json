@@ -1,0 +1,135 @@
+{
+  "title": "Saltay Hanalei Bay",
+  "url": "/",
+  "logo": "/assets/logo.png",
+  "navigation": [
+    "Home",
+    "Treatments",
+    "Pricing"
+  ],
+  "booking_label": "Book Now and Save",
+  "footer_links": [
+    "Wellness Treatments",
+    "Swimwear",
+    "Community",
+    "About",
+    "Musings",
+    "Book With Us",
+    "Locations"
+  ],
+  "blocks": [
+    {
+      "_name": "Hero",
+      "heading": "A luxury sanctuary on Kaua‘i, now available anywhere",
+      "description": "Discover signature treatments, holistic therapies, and personalized care designed to restore balance and elevate your well-being. Visit us on Kaua‘i or experience Saltay from wherever you are.",
+      "video": "/assets/floating-woman.mp4"
+    },
+    {
+      "_name": "Treatments",
+      "services": [
+        {
+          "eyebrow": "HEALING TOUCH",
+          "title": "Massage Therapy & Bodywork",
+          "image": "/assets/massage.jpeg",
+          "image_alt": "Massage Therapy & Bodywork",
+          "paragraphs": [
+            {
+              "text": "Our signature massage experiences are personalized therapeutic rituals designed to release deep-seated tension, restore healthy circulation, and bring your nervous system into a profound state of rest."
+            },
+            {
+              "text": "Each session is customized to your specific needs — whether you seek relief from chronic pain, recovery support, or a deeply restorative escape."
+            }
+          ],
+          "items": [
+            {
+              "text": "Deep Tissue & Athletic Support"
+            },
+            {
+              "text": "Prenatal & Restorative Massage"
+            },
+            {
+              "text": "Heated Stones & Botanical Pampering"
+            },
+            {
+              "text": "Tui Na Therapeutic Massage"
+            }
+          ]
+        },
+        {
+          "eyebrow": "ANCIENT HEALING",
+          "title": "Acupuncture & Energy Medicine",
+          "image": "/assets/acupuncture.jpeg",
+          "image_alt": "Acupuncture & Energy Medicine",
+          "paragraphs": [
+            {
+              "text": "Drawing on thousands of years of Traditional Chinese Medicine, our acupuncture and energy medicine sessions restore the free flow of vital energy throughout your body — encouraging balance, vitality, and emotional wellbeing."
+            }
+          ],
+          "items": [
+            {
+              "text": "Traditional Acupuncture"
+            },
+            {
+              "text": "Fire Cupping Therapy"
+            },
+            {
+              "text": "Cranial Sacral Therapy"
+            },
+            {
+              "text": "Elemental Restorative Healing"
+            }
+          ]
+        },
+        {
+          "eyebrow": "HOLISTIC FACIALS",
+          "title": "Botanical Rituals & Holistic Skincare",
+          "image": "/assets/facial.jpeg",
+          "image_alt": "Botanical Rituals & Holistic Skincare",
+          "paragraphs": [
+            {
+              "text": "Our botanical rituals are immersive, plant-based experiences that honor the healing intelligence of nature. Each ritual is custom blended with locally sourced botanicals, minerals, and ocean-inspired elements."
+            }
+          ],
+          "items": [
+            {
+              "text": "Pampered in Paradise Massage"
+            },
+            {
+              "text": "Botanical Body Wraps"
+            },
+            {
+              "text": "Herbal Steam & Compress"
+            },
+            {
+              "text": "Botanical Facial Rituals"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_name": "Care",
+      "columns": [
+        {
+          "title": "Immersive & In-Person Care",
+          "body_html": "<ul>\n<li><strong><a href=\"#\">Spa Packages &amp; Day Rituals</a>:</strong> Curated combinations (like the <em>Saltay Sanctuary Reset</em> or <em>Nourished Restoration</em>) for guests seeking a half-day escape.</li>\n<li><strong><a href=\"#\">Personal Retreats &amp; Apprenticeships</a>:</strong> Multi-day journeys for self-discovery, mastery, and master practitioner training modules.</li>\n<li><strong><a href=\"#\">Workshops</a>:</strong> Local educational events rooted in foundational botanical medicine.</li>\n</ul>\n"
+        },
+        {
+          "title": "Metaphysical & Remote Support",
+          "body_html": "<p><strong><a href=\"#\">Remote Healing &amp; Energy Work</a>:</strong> Tapping into subtle fields via Remote Acupuncture, Spirit Vision Readings, and Multi-dimensional Root Chakra Healing.</p>\n"
+        }
+      ],
+      "background_image": "/assets/ocean.jpg"
+    },
+    {
+      "_name": "Booking",
+      "eyebrow": "READY TO BEGIN?",
+      "heading": "Book Your Experience",
+      "description": "By appointment only — Hanalei & Anahola, Kaua‘i",
+      "button": "Book Now and Save",
+      "phone": "(808) 855-8718",
+      "statement": "Every offering at Saltay is a deeply personalized ritual that blends ancient healing wisdom with luxurious, plant-based care.",
+      "background_image": "/assets/ocean.jpg"
+    }
+  ]
+}
