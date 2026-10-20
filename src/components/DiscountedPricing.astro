@@ -1,9 +1,15 @@
 ---
 import { tinaField } from '@tinacms/astro';
 import LinkArrow from './LinkArrow.astro';
+import signatureExperiences from '../data/signature-experiences.json';
 import type { PageQuery } from '../../tina/__generated__/types';
 interface Props { page: Extract<PageQuery['page'], { __typename: 'PageDiscountedPricing' }>; }
 const { page } = Astro.props;
+const experienceUrl = (text: string | null | undefined) => {
+  const name = (text ?? '').replace(/\s+Signature$/i, '').trim().toLowerCase();
+  const experience = signatureExperiences.experiences.find(item => item.name.toLowerCase() === name);
+  return experience ? `/signature-experiences/#${experience.id}` : undefined;
+};
 ---
 <main id="discounted-pricing-content">
   <section class="menu-hero discount-hero" aria-labelledby="discount-title"><div class="container">
@@ -20,6 +26,9 @@ const { page } = Astro.props;
       {(page.rate_groups ?? []).filter(Boolean).map(group => <article class="discount-rate-card"><h3 data-tina-field={tinaField(group, 'title')}>{group.title}</h3><ul data-tina-field={tinaField(group, 'sessions')}>{(group.sessions ?? []).filter(Boolean).map(session => <li><span data-tina-field={tinaField(session, 'duration')}>{session.duration}</span><div><span class="discount-price" data-tina-field={tinaField(session, 'price')}>{session.price}</span><span class="discount-price-unit">per person</span></div></li>)}</ul></article>)}
     </div>
   </section>
-  <section class="discount-experiences" aria-labelledby="experiences-title"><div class="container"><div class="discount-section-heading"><p class="eyebrow">AVAILABLE EXPERIENCES</p><h2 id="experiences-title" data-tina-field={tinaField(page, 'experiences_heading')}>{page.experiences_heading}</h2><p data-tina-field={tinaField(page, 'experiences_intro')}>{page.experiences_intro}</p></div><ul data-tina-field={tinaField(page, 'experiences')}>{(page.experiences ?? []).filter(Boolean).map((experience, index) => <li><span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><h3 data-tina-field={tinaField(experience, 'text')}>{experience.text}</h3></li>)}</ul></div></section>
+  <section class="discount-experiences" aria-labelledby="experiences-title"><div class="container"><div class="discount-section-heading"><p class="eyebrow">AVAILABLE EXPERIENCES</p><h2 id="experiences-title" data-tina-field={tinaField(page, 'experiences_heading')}>{page.experiences_heading}</h2><p data-tina-field={tinaField(page, 'experiences_intro')}>{page.experiences_intro}</p></div><ul data-tina-field={tinaField(page, 'experiences')}>{(page.experiences ?? []).filter(Boolean).map((experience, index) => {
+    const href = experienceUrl(experience.text);
+    return <li><span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><h3 data-tina-field={tinaField(experience, 'text')}>{href ? <a href={href}>{experience.text}</a> : experience.text}</h3></li>;
+  })}</ul></div></section>
   <section class="menu-booking" aria-labelledby="discount-booking-title"><div class="container"><h2 id="discount-booking-title" data-tina-field={tinaField(page, 'booking_heading')}>{page.booking_heading}</h2><p data-tina-field={tinaField(page, 'booking_text')}>{page.booking_text}</p><a class="button" href={page.booking_url ?? ''} data-tina-field={tinaField(page, 'booking_label')}>{page.booking_label}</a><a class="discount-full-menu" href="/pricing/">Explore the full treatment menu <LinkArrow /></a></div></section>
 </main>

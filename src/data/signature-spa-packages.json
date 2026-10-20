@@ -7,7 +7,7 @@
   "title": "Signature Spa Packages | Saltay Hanalei Bay",
   "description": "Explore six immersive spa packages at Saltay, with botanical bodywork, facial rituals, and time to unwind.",
   "eyebrow": "Time to immerse · Kaua‘i",
-  "heading": "A little longer in paradise",
+  "heading": "Signature Spa Packages",
   "introduction": "Let several experiences become one unhurried journey. Discover botanical rituals, restorative bodywork, and shared moments, with each package bringing its own rhythm to your visit.",
   "hero_image": "/assets/facial.jpeg",
   "hero_image_alt": "Botanical facial care at Saltay",
@@ -18,22 +18,22 @@
     {
       "id": "pampered-indulgence",
       "title": "Pampered Indulgence",
-      "details_html": "Total time: 3hrs 15 min <ul><li>90 mins Pampered in Paradise Signature experience</li> <li>45 mins Jewel of the Siren Signature experience</li> <li>Up to 30 minutes Botanical Foot Soak</li> <li>Up to 30 minutes Infra-red sauna</li></ul>"
+      "details_html": "Total time: 3hrs 15 min <ul><li>90 mins <a href=\"/signature-experiences/#pampered-in-paradise\">Pampered in Paradise</a> Signature experience</li> <li>45 mins <a href=\"/signature-experiences/#jewel-of-the-siren\">Jewel of the Siren</a> Signature experience</li> <li>Up to 30 minutes Botanical Foot Soak</li> <li>Up to 30 minutes Infra-red sauna</li></ul>"
     },
     {
       "id": "nourished-restoration",
       "title": "Nourished Restoration",
-      "details_html": "Total time: 4hrs 44 min <ul><li>90 minutes Tui Na Chinese Medicine Bodywork</li> <li>74 minutes Jewel of the Siren Signature Experience + Jade comb meridian scalp channel stimulation</li> <li>60 minutes Parasympathetic System reset w/ Acupuncture or Acupressure</li> <li>30 minutes botanical respiratory steam</li> <li>30 minutes botanical foot soak</li></ul>"
+      "details_html": "Total time: 4hrs 44 min <ul><li>90 minutes Tui Na Chinese Medicine Bodywork</li> <li>74 minutes <a href=\"/signature-experiences/#jewel-of-the-siren\">Jewel of the Siren</a> Signature Experience + Jade comb meridian scalp channel stimulation</li> <li>60 minutes Parasympathetic System reset w/ Acupuncture or Acupressure</li> <li>30 minutes botanical respiratory steam</li> <li>30 minutes botanical foot soak</li></ul>"
     },
     {
       "id": "saltay-reset",
       "title": "Saltay Reset",
-      "details_html": "Total time: 5 hours <ul><li>120 minutes The Mermaid’s Way Signature experience <ul><li>Water blessing</li> <li>Acupunture/Acupressure</li> <li>Tui Na Chinese Medicine bodywork</li> <li>Yin Yang contrast therapy</li> <li>Chromo light scape vibrational frequency</li> <li>Silky seaweed mineral-infused botanical foot soak</li></ul></li> <li>60 minutes cacao ceremony <ul><li>Guided meditation journey</li> <li>Alchemy crystal sound healing therapy</li></ul></li> <li>60 minutes body healing reset <ul><li>Cranial sacral therapy</li> <li>Jade comb meridian scalp channel stimulation</li> <li>Deep abdominal release</li> <li>Energetic Balancing</li> <li>Sacral pounding</li></ul></li> <li>60 minutes Spirit vision reading</li></ul>"
+      "details_html": "Total time: 5 hours <ul><li>120 minutes <a href=\"/signature-experiences/#the-mermaids-journey\">The Mermaid’s Way</a> Signature experience <ul><li>Water blessing</li> <li>Acupunture/Acupressure</li> <li>Tui Na Chinese Medicine bodywork</li> <li>Yin Yang contrast therapy</li> <li>Chromo light scape vibrational frequency</li> <li>Silky seaweed mineral-infused botanical foot soak</li></ul></li> <li>60 minutes cacao ceremony <ul><li>Guided meditation journey</li> <li>Alchemy crystal sound healing therapy</li></ul></li> <li>60 minutes body healing reset <ul><li>Cranial sacral therapy</li> <li>Jade comb meridian scalp channel stimulation</li> <li>Deep abdominal release</li> <li>Energetic Balancing</li> <li>Sacral pounding</li></ul></li> <li>60 minutes Spirit vision reading</li></ul>"
     },
     {
       "id": "sanctuary-for-two",
       "title": "Sanctuary for Two",
-      "details_html": "Total time: 3hrs 33 min <ul><li>90 minutes Signature Pampered in Paradise</li> <li>45 minutes Cacao ceremony + sound healing journey</li> <li>30 minutes Botanical foot soak</li> <li>30 minutes Infra-Red Sauna</li> <li>18 minutes Heart connection bonding + Energy reset</li></ul>"
+      "details_html": "Total time: 3hrs 33 min <ul><li>90 minutes Signature <a href=\"/signature-experiences/#pampered-in-paradise\">Pampered in Paradise</a></li> <li>45 minutes Cacao ceremony + sound healing journey</li> <li>30 minutes Botanical foot soak</li> <li>30 minutes Infra-Red Sauna</li> <li>18 minutes Heart connection bonding + Energy reset</li></ul>"
     },
     {
       "id": "saltay-escape",

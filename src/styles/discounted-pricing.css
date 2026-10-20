@@ -21,6 +21,9 @@
 .discount-experiences li { border-top: 1px solid #a47e3755; padding-top: 22px; }
 .discount-experiences li > span { color: #806125; font-size: 14px; letter-spacing: .1em; }
 .discount-experiences h3 { font-size: 30px; line-height: 1.2; margin-top: 16px; }
+.discount-experiences h3 a { color: inherit; text-decoration: underline; text-underline-offset: 5px; }
+.discount-experiences h3 a:hover { color: #806125; }
+.discount-experiences h3 a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
 .discount-full-menu { display: block; width: fit-content; margin: 24px auto 0; text-decoration: underline; text-underline-offset: 5px; }
 @media (max-width: 767px) {
   .discount-location { grid-template-columns: 1fr; gap: 16px; padding-block: 40px; }

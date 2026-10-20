@@ -60,4 +60,5 @@ document.addEventListener('keydown', event => {
 });
 const updateHeader = () => document.querySelector('header')?.classList.toggle('scrolled', window.scrollY > 50);
 window.addEventListener('scroll', updateHeader, { passive: true });
+document.addEventListener('astro:page-load', updateHeader);
 updateHeader();

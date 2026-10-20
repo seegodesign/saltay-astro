@@ -7,6 +7,9 @@
 .wellness-offering { border-top: 1px solid #a47e3740; padding-top: 26px; }
 .wellness-offering > p { margin-top: 20px; line-height: 1.5; }
 .wellness-offering .session-details { margin-top: 20px; max-width: none; }
+.wellness-offering .session-details a { color: #806125; text-decoration: underline; text-underline-offset: 4px; }
+.wellness-offering .session-details a:hover { color: #514b3c; }
+.wellness-offering .session-details a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
 .wellness-planning { padding: 28px; background: #a47e370c; border: 1px solid #a47e3733; line-height: 1.4; }
 .booking-availability { max-width: 600px; margin: 26px auto 0; line-height: 1.5; color: #735e3f; }
 .booking-contact { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; padding-block: 80px; }

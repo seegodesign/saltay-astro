@@ -1,10 +1,3 @@
-.community-hero { position: relative; isolation: isolate; margin-top: 118px; min-height: 420px; padding: 100px 0; display: grid; align-items: center; background: #323c29; color: white; }
-.community-hero-image { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; object-position: center; }
-.community-hero::before { content: ''; position: absolute; inset: 0; z-index: -1; background: rgb(10 10 10 / 50%); }
-.community-hero h1, .community-hero .eyebrow { color: inherit; }
-@media (max-width: 767px) {
-  .community-hero { margin-top: 90px; min-height: 360px; padding: 64px 0; }
-}
 .community-section { border-top: 1px solid #a47e3740; padding-top: 26px; }
 .community-section .session-details { margin-top: 20px; max-width: none; }
 .community-section a { color: #806125; text-decoration: underline; text-underline-offset: 4px; }

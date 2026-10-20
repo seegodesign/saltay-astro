@@ -6,8 +6,7 @@ const { page } = Astro.props;
 const sections = (page.sections ?? []).filter(Boolean);
 ---
 <main id="community-content">
-  <section class="menu-hero community-hero" aria-labelledby="community-title">
-    <img class="community-hero-image" src={page.hero_image ?? ''} alt={page.hero_image_alt ?? ''} width="1598" height="597" fetchpriority="high" data-tina-field={tinaField(page, 'hero_image')} />
+  <section class="menu-hero" aria-labelledby="community-title">
     <div class="container">
       <p class="eyebrow" data-tina-field={tinaField(page, 'eyebrow')}>{page.eyebrow}</p>
       <h1 id="community-title" data-tina-field={tinaField(page, 'heading')}>{page.heading}</h1>
