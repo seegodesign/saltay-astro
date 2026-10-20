@@ -11,6 +11,7 @@
   "booking_label": "Book your experience",
   "footer_links": [
     "Home",
+    "Swimwear",
     "Wellness Treatments",
     "Acupuncture",
     "Signature Experiences",
@@ -27,7 +28,7 @@
   "blocks": [
     {
       "heading": "Your healing sanctuary on Kaua‘i",
-      "description": "Personalized massage, acupuncture, and botanical rituals in Hanalei and Anahola. Slow down, settle in, and make space for yourself.",
+      "description": "Discover Kaua‘i’s premier destination for holistic wellness, where signature treatments, transformational healing experiences, and personalized care elevate every aspect of your well-being.",
       "_template": "Hero",
       "image": "/assets/floating-woman-light.avif"
     },
@@ -134,11 +135,11 @@
       "columns": [
         {
           "title": "Immersive & In-Person Care",
-          "body_html": "<ul>\n<li><strong><a href=\"/signature-spa-packages/\">Spa Packages &amp; Day Rituals</a>:</strong> Curated combinations (like the <em>Saltay Sanctuary Reset</em> or <em>Nourished Restoration</em>) for guests seeking a half-day escape.</li>\n<li><strong>Personal Retreats &amp; Apprenticeships:</strong> Multi-day journeys for self-discovery, mastery, and master practitioner training modules.</li>\n<li><strong>Workshops:</strong> Local educational events rooted in foundational botanical medicine.</li>\n</ul>\n<p><a class=\"care-enquiry-link\" href=\"/book-with-us/\">Enquire about retreats, apprenticeships &amp; workshops <span aria-hidden=\"true\">→</span></a></p>\n"
+          "body_html": "<ul>\n<li><strong><a href=\"/signature-spa-packages/\">Spa Packages &amp; Day Rituals</a>:</strong> Curated combinations (like the <em>Saltay Sanctuary Reset</em> or <em>Nourished Restoration</em>) for guests seeking a half-day escape.</li>\n<li><strong><a href=\"/workshops/\">Personal Retreats &amp; Apprenticeships</a>:</strong> Multi-day journeys for self-discovery, mastery, and master practitioner training modules.</li>\n<li><strong><a href=\"/workshops/\">Workshops</a>:</strong> Local educational events rooted in foundational botanical medicine.</li>\n</ul>\n<p><a class=\"care-enquiry-link\" href=\"/book-with-us/\">Enquire about retreats, apprenticeships &amp; workshops <span aria-hidden=\"true\">→</span></a></p>\n"
         },
         {
           "title": "Care from anywhere",
-          "body_html": "<p>Explore remote healing and energy work with Saltay, wherever you are.</p>\n<ul>\n<li>Remote Acupuncture</li>\n<li>Spirit Vision Readings</li>\n<li>Multi-dimensional Root Chakra Healing</li>\n</ul>\n<p><a class=\"care-remote-link\" href=\"/book-with-us/\">Ask about remote care <span aria-hidden=\"true\">→</span></a></p>\n"
+          "body_html": "<p>Explore remote healing and energy work with Saltay, wherever you are.</p>\n<ul>\n<li>Remote Acupuncture</li>\n<li>Spirit Vision Readings</li>\n<li>Multi-dimensional Root Chakra Healing</li>\n</ul>\n<p><a class=\"care-remote-link\" href=\"/remote-sessions/\">Explore remote care <span aria-hidden=\"true\">→</span></a></p>\n"
         }
       ],
       "background_image": "/assets/ocean.jpg",
@@ -147,7 +148,7 @@
     {
       "_template": "Reviews",
       "eyebrow": "WORDS FROM OUR GUESTS",
-      "heading": "A little aloha, in their own words",
+      "heading": "Rated 5 stars by guests",
       "link_label": "Read more reviews on Google",
       "link_url": "https://www.google.com/maps?cid=8062033889982457878",
       "reviews": [

@@ -9,7 +9,7 @@
 .about-intro-copy { width: 48%; max-width: 600px; }
 .about-eyebrow { margin: 0 0 22px; color: #806b45; font-size: 13px; letter-spacing: .17em; line-height: 1.5; }
 .about-intro h1 { white-space: pre-line; font-size: clamp(44px, 4.8vw, 72px); line-height: 1.06; letter-spacing: -.025em; color: #78613c; }
-.about-lead { font-size: 23px; line-height: 1.5; max-width: 440px; margin: 28px 0; }
+.about-lead { font-size: 23px; line-height: 1.5; max-width: 640px; margin: 28px 0; }
 .about-text-link { display: inline-flex; align-items: center; gap: 12px; color: #735e3f; border-bottom: 1px solid #a47e3766; padding: 6px 0; font-size: 19px; }
 .about-story { scroll-margin-top: 110px; position: relative; isolation: isolate; clip-path: inset(0); }
 .about-story::before { content: ''; position: fixed; inset: 0; z-index: -1; pointer-events: none; background: linear-gradient(90deg, #fffaf2d9, #fffaf2bf), url('/assets/ocean.jpg') center / cover; }

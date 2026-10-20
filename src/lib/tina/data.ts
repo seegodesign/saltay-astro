@@ -125,3 +125,11 @@ export const getLocations = async () => {
   if (page.__typename !== 'PageLocations') throw new Error('Expected the Locations page template');
   return { ...result, data: { ...result.data, page } };
 };
+
+export const getImportedPage = async (slug: string) => {
+  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) throw new Error('Invalid imported page slug');
+  return requestWithMetadata(
+    client.queries.importedPages({ relativePath: `${slug}.json` }),
+    { priority: 'primary' },
+  );
+};

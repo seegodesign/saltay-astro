@@ -1,3 +1,6 @@
+import ImportedPage from '../../components/ImportedPage.astro';
+import ExperienceDetail from '../../components/ExperienceDetail.astro';
+import { getImportedPage } from './data';
 import Locations from '../../components/Locations.astro';
 import { getLocations } from './data';
 import Community from '../../components/Community.astro';
@@ -21,6 +24,18 @@ import TreatmentsOverview from '../../components/TreatmentsOverview.astro';
 import { getHome, getPricing, getAbout, getDiscountedPricing, getTreatments } from './data';
 
 export const islands: IslandRegistry = {
+  importedPage: {
+    fetch: (_request, params) => getImportedPage(params.get('slug') ?? ''),
+    component: ImportedPage,
+    wrapper: { tag: 'div', className: 'imported-page-content' },
+    propsFromData: (result) => ({ page: (result as Awaited<ReturnType<typeof getImportedPage>>).data.importedPages }),
+  },
+  experienceDetail: {
+    fetch: () => getSignatureExperiences(),
+    component: ExperienceDetail,
+    wrapper: { tag: 'div', className: 'experience-detail-content' },
+    propsFromData: (result, params) => ({ page: (result as Awaited<ReturnType<typeof getSignatureExperiences>>).data.page, id: params.get('id') ?? '' }),
+  },
   locations: {
     fetch: () => getLocations(), component: Locations,
     wrapper: { tag: 'div', className: 'locations-content' },

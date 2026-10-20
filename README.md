@@ -111,3 +111,24 @@ The Community hero uses the original `community-header.jpg`, stored locally in `
 The **Google reviews** homepage section features short, verbatim excerpts from Dawn S, Lorena B, and Megan J, with individual star ratings and links to their original Google reviews. Source: Google reviews reproduced at https://wanderlog.com/place/details/12644469/saltay-botanical-spa-massage--wellness (consulted October 19, 2026). Direct Google pages were unavailable to the research fetcher; reviewer names, ratings, and original review links come from that source.
 
 Edit **Pages → Home → Google reviews** in Tina to change the heading, excerpts, reviewer names, star ratings, or links, and to add, remove, or reorder reviews. Keep excerpts faithful to the originals. This is a curated section; it does not automatically sync with Google or display a live overall rating or review count.
+
+## Complete legacy URL coverage
+
+All 37 requested legacy paths are listed in `docs/legacy-url-audit.json` and render local pages. `src/pages/[...path].astro` supplies the 26 previously missing paths; existing explicit routes remain the primary pages. `/home/`, `/spa-treatments/`, the nested Signature Experiences index, and both root-level blog URLs render the same content as their established local counterparts. Six empty legacy experience paths reuse the existing Signature Experiences Tina document and support live preview.
+
+The other 15 documents are editable under **Imported Pages** in Tina, with live visual preview. Their content lives in `src/data/imported-pages/`, with source URLs and import dates. Public WordPress REST API content was imported on October 20, 2026; layout shortcodes, theme markup, scripts, styles, and the WordPress contact form were removed. Original images and the swimwear wholesale order PDF are stored in `public/assets/imported/`. The swimwear preorder form is replaced by a contact link. The nested Pampered in Paradise page retains its distinct published “Decadent Delight” content.
+
+The source Botanical, Therapeutic Bodywork, and Radiance Ritual pages have no published body content; local pages explain that details are available by inquiry. Fertility Support retains the source’s “Coming soon.” Workshops retains its “Nothing available currently” notices, and sailing retains the source’s Fall 2024 announcement. These are imported historical statements, not newly confirmed availability. The original Checkout and My Account pages display unprocessed WooCommerce shortcodes, even on the live site. Their local replacements offer booking/contact help; no store, login, cart, or payment backend has been introduced.
+
+After a successful local build, run `node scripts/verify-legacy-pages.mjs` to check all requested paths, HTML documents, headings, local image/document files, internal page links, and fragment targets. If development is already running, build on separate ports:
+
+```sh
+node --dns-result-order=ipv4first node_modules/@tinacms/cli/bin/tinacms build --local --skip-cloud-checks --port 4002 --datalayer-port 9001 -c 'node node_modules/astro/bin/astro.mjs build'
+node scripts/verify-legacy-pages.mjs
+```
+
+## XML sitemap
+
+Astro's official `@astrojs/sitemap` integration generates `/sitemap-index.xml` and `/sitemap-0.xml` on each build using the production origin from `astro.config.mjs`. New prerendered pages and Musings posts are included automatically, including imported legacy routes. Admin, Tina preview endpoints, checkout, and account routes are excluded.
+
+`/robots.txt` advertises the sitemap index, and the shared page layout includes a sitemap discovery link. The existing development `noindex,nofollow` page metadata remains in effect. Sitemap files are generated during builds rather than served by the development server.

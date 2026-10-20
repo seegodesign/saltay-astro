@@ -1,0 +1,16 @@
+---
+import { tinaField } from '@tinacms/astro';
+import type { PageQuery } from '../../tina/__generated__/types';
+interface Props { page: Extract<PageQuery['page'], { __typename: 'PageSignatureExperiences' }>; id: string }
+const { page, id } = Astro.props;
+const experience = page.experiences?.find(item => item?.id === id);
+if (!experience) throw new Error(`Unknown experience: ${id}`);
+---
+<main id="imported-content" class="imported-page">
+  <section class="container imported-hero imported-hero-with-image">
+    <div><p class="eyebrow">Signature Experiences</p><h1 data-tina-field={tinaField(experience, 'title')}>{experience.title}</h1></div>
+    <img src={experience.image ?? ''} alt={experience.image_alt ?? ''} width="960" height="640" fetchpriority="high" data-tina-field={tinaField(experience, 'image')} />
+  </section>
+  <article class="container imported-body" data-tina-field={tinaField(experience, 'details_html')} set:html={experience.details_html ?? ''} />
+  <section class="container imported-booking"><h2>Make time for yourself</h2><div><a class="button" href="/book-with-us/">Book this experience</a><a href="/signature-experiences/">All Signature Experiences →</a><a href="/pricing/">Treatment pricing →</a></div></section>
+</main>

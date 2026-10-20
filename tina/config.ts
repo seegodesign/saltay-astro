@@ -170,6 +170,29 @@ export default defineConfig({
         ],
       },
       {
+        name: "importedPages",
+        label: "Imported Pages",
+        path: "src/data/imported-pages",
+        format: "json",
+        ui: {
+          allowedActions: { create: false, delete: false },
+          router: ({ document }) => document._sys.filename === "pampered-in-paradise"
+            ? "/spa-treatments/signature-experiences/pampered-in-paradise/"
+            : document._sys.filename === "the-radiance-ritual"
+              ? "/spa-treatments/signature-experiences/the-radiance-ritual/"
+              : `/${document._sys.filename}/`,
+        },
+        fields: [
+          { type: "string", name: "title", label: "Page title", isTitle: true, required: true },
+          { type: "string", name: "url", label: "Public path", required: true, ui: { component: "hidden" } },
+          text("heading", "Heading"), text("description", "Page description", true),
+          image("hero_image", "Hero image"), text("hero_image_alt", "Hero image description"),
+          { type: "string", name: "body_html", label: "Page body HTML", required: true, ui: { component: "textarea" },
+            description: "Preserve HTML tags when editing paragraphs, headings, images, and links." },
+          text("source_url", "Original URL"), text("imported_on", "Import date"),
+        ],
+      },
+      {
         name: "page",
         label: "Pages",
         path: "src/data",

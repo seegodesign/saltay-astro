@@ -1,0 +1,46 @@
+---
+import TinaIsland from '@tinacms/astro/TinaIsland.astro';
+import SiteLayout from '../layouts/SiteLayout.astro';
+import MusingsLayout from '../layouts/MusingsLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import ImportedPage from '../components/ImportedPage.astro';
+import ExperienceDetail from '../components/ExperienceDetail.astro';
+import Musing from '../components/Musing.astro';
+import HomePage from './index.astro';
+import TreatmentsPage from './treatments.astro';
+import SignatureExperiencesPage from './signature-experiences.astro';
+import home from '../data/home.json';
+import { getImportedPage, getSignatureExperiences, getMusing } from '../lib/tina/data';
+import { islands } from '../lib/tina/islands';
+import { pageAliases, experienceRoutes } from '../lib/legacy-routes';
+import '../styles/imported-page.css';
+
+export async function getStaticPaths() {
+  const documents = import.meta.glob('../data/imported-pages/*.json', { eager: true, import: 'default' });
+  return [
+    ...Object.entries(documents).map(([file, value]) => ({
+      params: { path: (value as { url: string }).url.replace(/^\/+|\/+$/g, '') },
+      props: { kind: 'imported', slug: file.split('/').pop()!.replace(/\.json$/, '') },
+    })),
+    ...Object.entries(pageAliases).map(([path, slug]) => ({ params: { path }, props: { kind: 'alias', slug } })),
+    ...Object.entries(experienceRoutes).map(([path, slug]) => ({ params: { path }, props: { kind: 'experience', slug } })),
+  ];
+}
+const { kind, slug } = Astro.props;
+const AliasPage = { home: HomePage, treatments: TreatmentsPage, signatureExperiences: SignatureExperiencesPage }[slug];
+const imported = kind === 'imported' ? (await getImportedPage(slug)).data.importedPages : null;
+const experiences = kind === 'experience' ? (await getSignatureExperiences()).data.page : null;
+const experience = experiences?.experiences?.find(item => item?.id === slug);
+const post = kind === 'alias' && !AliasPage ? (await getMusing(slug)).data.musings : null;
+const title = imported?.title ?? experience?.title ?? post?.title ?? 'Saltay Hanalei Bay';
+---
+{AliasPage ? <AliasPage /> : post ? <MusingsLayout title={post.title} description={post.excerpt ?? ''}>
+  <TinaIsland name="musing" wrapper={islands.musing.wrapper} params={{ slug }} primary><Musing post={post} /></TinaIsland>
+</MusingsLayout> : <SiteLayout title={title} description={imported?.description ?? ''}>
+  <a class="skip-link" href="#imported-content">Skip to content</a>
+  <SiteHeader home={home} active={imported?.heading ?? 'Signature Experiences'} />
+  {imported && <TinaIsland name="importedPage" wrapper={islands.importedPage.wrapper} params={{ slug }} primary><ImportedPage page={imported} /></TinaIsland>}
+  {experiences && <TinaIsland name="experienceDetail" wrapper={islands.experienceDetail.wrapper} params={{ id: slug }} primary><ExperienceDetail page={experiences} id={slug} /></TinaIsland>}
+  <SiteFooter home={home} />
+</SiteLayout>}

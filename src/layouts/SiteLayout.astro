@@ -19,6 +19,7 @@ const { title, description = '', bodyClass } = Astro.props;
     <title>{title}</title>
     <meta name="description" content={description ?? ''} />
     <meta name="robots" content="noindex,nofollow" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <LocalBusinessJsonLd />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
