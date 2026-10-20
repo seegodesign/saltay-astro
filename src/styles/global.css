@@ -1,10 +1,5 @@
-:root {
-  --cream: #fffaf2;
-  --gold: #a47e37;
-  --olive: #7d7152;
-  --body: #666;
-  --footer: #f5efdf;
-}
+@import './tokens.css';
+
 * {
   box-sizing: border-box;
 }
@@ -77,12 +72,25 @@ header {
     background 0.25s,
     height 0.25s;
 }
+header::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: calc(100% + 140px);
+  background: linear-gradient(to bottom, #fff 0%, #fffffff2 25%, #ffffff99 60%, #ffffff00 100%);
+  pointer-events: none;
+  transition: opacity 0.25s;
+}
+header.scrolled::before {
+  opacity: 0;
+}
 header.scrolled {
   height: 82px;
   background: rgba(255, 250, 242, 0.97);
   box-shadow: 0 1px 8px #0001;
 }
 .header-inner {
+  position: relative;
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -182,6 +190,27 @@ header nav > a {
   border-bottom: 1px solid #a47e3770;
   color: #735e3f;
   font-size: 20px;
+}
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 14px 28px;
+}
+.hero-actions .button {
+  padding: 12px 22px;
+  font-size: 20px;
+}
+.hero-copy .hero-locations {
+  margin: 22px auto 0;
+  color: #735e3f;
+  font-size: 18px;
+}
+.hero-locations a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 .hero-rule {
   display: block;
@@ -293,7 +322,7 @@ header nav > a {
   padding: 12px;
   border: 1px solid #a47e3733;
   border-radius: 18px;
-  background: #fffaf2f2;
+  background: #fff;
   box-shadow: 0 18px 48px #514b3c0d;
 }
 .care-card {
@@ -356,7 +385,7 @@ header nav > a {
   padding: clamp(24px, 3vw, 40px);
   border: 1px solid #a47e3726;
   border-radius: 12px;
-  background: #f3ebdd;
+  background: #ffffff;
 }
 .care-remote h2 {
   margin-bottom: 22px;
@@ -379,6 +408,13 @@ header nav > a {
   display: inline-flex;
   align-items: center;
   gap: 10px;
+  padding-block: 6px;
+}
+.care-body p:has(.care-enquiry-link) {
+  margin-top: 24px;
+}
+.care-enquiry-link {
+  display: inline-block;
   padding-block: 6px;
 }
 .booking {

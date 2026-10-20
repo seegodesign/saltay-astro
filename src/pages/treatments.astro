@@ -7,7 +7,6 @@ import TreatmentsOverview from '../components/TreatmentsOverview.astro';
 import { getTreatments } from '../lib/tina/data';
 import { islands } from '../lib/tina/islands';
 import home from '../data/home.json';
-import '../styles/treatments.css';
 const { data: { page } } = await getTreatments();
 ---
 <SiteLayout title={page.title} description={page.description ?? ''} bodyClass="treatments-overview-page">

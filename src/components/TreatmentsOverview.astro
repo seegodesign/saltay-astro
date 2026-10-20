@@ -2,6 +2,7 @@
 import { tinaField } from '@tinacms/astro';
 import LinkArrow from './LinkArrow.astro';
 import type { PageTreatments } from '../../tina/__generated__/types';
+import '../styles/treatments.css';
 interface Props { page: PageTreatments; }
 const { page } = Astro.props;
 ---
@@ -45,3 +46,28 @@ const { page } = Astro.props;
     <a class="overview-phone" href={page.phone_url} data-tina-field={tinaField(page, 'phone')}>{page.phone}</a>
   </div></section>
 </main>
+
+<style>
+  .overview-hero-inner {
+    display: grid;
+    justify-items: center;
+  }
+
+  .overview-hero-copy {
+    width: 100%;
+    max-width: 650px;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .overview-hero-copy > .eyebrow,
+  .overview-hero-copy > h1,
+  .overview-hero-copy > .overview-introduction {
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  .overview-hero-copy > .overview-actions {
+    justify-content: center;
+  }
+</style>

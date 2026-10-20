@@ -1,0 +1,49 @@
+---
+import home from '../data/home.json';
+import locations from '../data/locations.json';
+import booking from '../data/book-with-us.json';
+
+// Use the public site URL for stable identities, including in local/preview builds.
+const absoluteUrl = (path: string) => new URL(path, Astro.site).href;
+const organizationId = absoluteUrl('/#organization');
+const hero = home.blocks.find(block => block._template === 'Hero');
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': organizationId,
+      name: home.title,
+      url: absoluteUrl('/'),
+      logo: absoluteUrl(home.logo),
+      telephone: booking.phone_url.replace(/^tel:/, ''),
+    },
+    ...locations.locations.map(location => {
+      const address = location.postal_address;
+      const postalCode = 'postal_code' in address ? address.postal_code : undefined;
+      const mapQuery = [address.street, address.locality, address.region, postalCode].filter(Boolean).join(', ');
+      return {
+        '@type': 'DaySpa',
+        '@id': absoluteUrl(`/locations/#${location.id}`),
+        name: location.name,
+        url: absoluteUrl(`/locations/#${location.id}`),
+        parentOrganization: { '@id': organizationId },
+        telephone: booking.phone_url.replace(/^tel:/, ''),
+        image: hero?.image ? absoluteUrl(hero.image) : undefined,
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: address.street,
+          addressLocality: address.locality,
+          addressRegion: address.region,
+          postalCode,
+          addressCountry: address.country,
+        },
+        hasMap: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapQuery)}`,
+      };
+    }),
+  ],
+};
+// CMS content must not be able to close the script element with </script>.
+const jsonLd = JSON.stringify(structuredData).replace(/</g, '\\u003c');
+---
+<script is:inline type="application/ld+json" set:html={jsonLd} />

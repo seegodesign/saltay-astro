@@ -6,11 +6,12 @@ import Treatments from './Treatments.astro';
 import Care from './Care.astro';
 import Booking from './Booking.astro';
 import Reviews from './Reviews.astro';
+import Welcome from './Welcome.astro';
 import SiteHeader from './SiteHeader.astro';
 import SiteFooter from './SiteFooter.astro';
 interface Props { home: Extract<PageQuery['page'], { __typename: 'PageHome' }>; }
 const { home } = Astro.props;
-const components = { Hero, Treatments, Care, Reviews, Booking };
+const components = { Hero, Treatments, Welcome, Care, Reviews, Booking };
 ---
 <SiteHeader home={home} />
 <main data-tina-field={tinaField(home, 'blocks')}>

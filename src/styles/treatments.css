@@ -1,14 +1,15 @@
 .overview-skip { position: fixed; top: -100px; left: 20px; z-index: 20; padding: 12px 20px; background: var(--cream); }
 .overview-skip:focus { top: 12px; }
 .overview-hero { --overview-hero-height: 740px; position: relative; isolation: isolate; overflow: hidden; display: flex; align-items: center; min-height: var(--overview-hero-height); clip-path: inset(0); padding: 170px 0 80px; border-bottom: 1px solid #a47e3725; }
-.overview-hero::before { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: linear-gradient(90deg, #fffaf2f5 5%, #fffaf2df 35%, #fffaf285 65%, #fffaf230); }
 .overview-hero-inner { position: relative; }
-.overview-hero-copy { max-width: 650px; padding: 20px 0; }
+.overview-hero-copy { max-width: 650px; margin-inline: auto; padding: 20px 0; text-align: center; }
 .overview-hero .eyebrow, .overview-category .eyebrow, .overview-extra .eyebrow { text-align: left; text-transform: uppercase; letter-spacing: .12em; margin-bottom: 16px; }
+.overview-hero .eyebrow { text-align: center; }
 .overview-hero h1 { font-size: clamp(48px, 5.5vw, 76px); line-height: 1.02; text-wrap: balance; }
-.overview-introduction { font-size: 24px; line-height: 1.45; margin: 28px 0 32px; max-width: 560px; }
+.overview-introduction { font-size: 24px; line-height: 1.45; margin: 28px auto 32px; max-width: 560px; }
 .overview-hero-image { position: fixed; inset: 0; z-index: -2; display: block; width: 100%; height: var(--overview-hero-height); object-fit: cover; object-position: center; }
 .overview-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 18px 28px; }
+.overview-hero .overview-actions { justify-content: center; }
 .overview-actions .button { font-size: 21px; padding: 12px 24px; }
 .overview-text-link { display: inline-flex; align-items: baseline; gap: 12px; width: fit-content; color: #886828; text-decoration: underline; text-underline-offset: 5px; line-height: 1.4; }
 .overview-text-link:hover { color: #65552d; }
@@ -67,10 +68,9 @@
 }
 @media (max-width: 767px) {
   .overview-hero { --overview-hero-height: 620px; padding: 140px 0 64px; }
-  .overview-hero::before { background: linear-gradient(110deg, #fffaf2f2, #fffaf2b3); }
   .overview-hero-copy { padding: 0; }
   .overview-hero h1 { font-size: clamp(44px, 11vw, 64px); }
-  .overview-introduction { font-size: 22px; margin: 22px 0 28px; }
+  .overview-introduction { font-size: 22px; margin: 22px auto 28px; }
   .overview-choices { padding-top: 52px; }
   .overview-category-grid { grid-template-columns: 1fr; gap: 44px; }
   .overview-category h3 { font-size: 36px; }

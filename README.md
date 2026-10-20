@@ -17,6 +17,8 @@ Select **Pages → Pricing | Saltay Hanalei Bay** to edit the pricing page. Savi
 
 The Care section preserves its original HTML. Its **Body HTML** field is a textarea; keep markup intact when editing formatted text or links. The hero background image uses Tina's media picker.
 
+JPEG uploads (`.jpg` / `.jpeg`) are automatically converted to WebP in the browser before Tina stores them in `public/assets` locally or uploads them to TinaCloud. Conversion preserves image dimensions and uses quality 0.85. Other file formats and existing images are unchanged. If decoding or WebP encoding fails, Tina shows an error and stops that upload batch. The conversion lives in `tina/webp-uploads.ts` and is installed through `cmsCallback` in `tina/config.ts`.
+
 ## Content search
 
 Use Tina's **Search** in the admin to find content across Home, Pricing, About, and Discounted Pricing, or search within **Pages**. Search includes nested treatment descriptions, session details, and prices. Local development builds the search index at startup and updates it when content changes; no search token is needed locally. Restart `npm run dev` after first enabling search.
@@ -54,6 +56,8 @@ Cloud account connection and deployed authentication require your TinaCloud proj
 Content schema: `tina/config.ts`. Content: `src/data/home.json`. Visual preview: `src/lib/tina/`, `src/pages/tina-island/[name].ts`, and `src/components/Home.astro`. Tina generates its client and admin application during dev/build; those outputs are ignored, while `tina/tina-lock.json` should be committed.
 
 ## Assets
+
+The shared `SiteLayout` includes server-rendered JSON-LD from `src/components/LocalBusinessJsonLd.astro`: an Organization and a DaySpa for each location, with stable IDs, postal addresses, phone, image, and map links. The public origin is set by `site` in `astro.config.mjs`; update it if the production domain changes. Data comes from the saved Home, Booking, and Locations JSON documents and updates when the site rebuilds. Edit **Locations → Postal address (JSON-LD)** in Tina when an address changes, keeping it consistent with the displayed **Address** field. Unknown postal codes and opening hours are omitted; visits are by appointment. Pages retain the development `noindex,nofollow` setting, which must be revisited for a public launch.
 
 Original Saltay media live in `public/assets/`. Google Fonts supplies EB Garamond and Hubballi. Keep appropriate rights to client assets when publishing. Ocean panels retain the original overlays.
 

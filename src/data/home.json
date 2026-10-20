@@ -4,14 +4,11 @@
   "url": "/",
   "logo": "/assets/logo.png",
   "navigation": [
-    "Home",
     "Treatments",
     "Pricing",
-    "About",
-    "Community",
-    "Musings"
+    "About"
   ],
-  "booking_label": "Book Now and Save",
+  "booking_label": "Book your experience",
   "footer_links": [
     "Home",
     "Wellness Treatments",
@@ -29,10 +26,10 @@
   ],
   "blocks": [
     {
-      "heading": "A luxury sanctuary on Kaua‘i, now available anywhere",
-      "description": "Discover signature treatments, holistic therapies, and personalized care designed to restore balance and elevate your well-being. Visit us on Kaua‘i or experience Saltay from wherever you are.",
+      "heading": "Your healing sanctuary on Kaua‘i",
+      "description": "Personalized massage, acupuncture, and botanical rituals in Hanalei and Anahola. Slow down, settle in, and make space for yourself.",
       "_template": "Hero",
-      "image": "/assets/floating-woman-light-top-gradient.jpg"
+      "image": "/assets/floating-woman-light.avif"
     },
     {
       "services": [
@@ -121,10 +118,23 @@
       "_template": "Treatments"
     },
     {
+      "_template": "Welcome",
+      "eyebrow": "A PERSONAL WELCOME",
+      "heading": "Meet Wanda, the heart behind Saltay",
+      "name": "Wanda Sakari",
+      "role": "Founder · Master Herbalist · Licensed Acupuncturist",
+      "description": "Wanda founded Saltay to help people feel more connected to their health and wellbeing. Her practice brings botanical traditions and therapeutic bodywork together in a deeply personal spa experience.",
+      "detail": "Here on Kaua‘i, thoughtful touch and custom botanical formulations invite you to slow down, reconnect, and find your own sense of balance.",
+      "image": "/assets/bio-wanda-1.jpg",
+      "image_alt": "Wanda Sakari, founder of Saltay",
+      "link_label": "Get to know Saltay",
+      "link_url": "/about/"
+    },
+    {
       "columns": [
         {
           "title": "Immersive & In-Person Care",
-          "body_html": "<ul>\n<li><strong><a href=\"/signature-spa-packages/\">Spa Packages &amp; Day Rituals</a>:</strong> Curated combinations (like the <em>Saltay Sanctuary Reset</em> or <em>Nourished Restoration</em>) for guests seeking a half-day escape.</li>\n<li><strong><a href=\"#\">Personal Retreats &amp; Apprenticeships</a>:</strong> Multi-day journeys for self-discovery, mastery, and master practitioner training modules.</li>\n<li><strong><a href=\"#\">Workshops</a>:</strong> Local educational events rooted in foundational botanical medicine.</li>\n</ul>\n"
+          "body_html": "<ul>\n<li><strong><a href=\"/signature-spa-packages/\">Spa Packages &amp; Day Rituals</a>:</strong> Curated combinations (like the <em>Saltay Sanctuary Reset</em> or <em>Nourished Restoration</em>) for guests seeking a half-day escape.</li>\n<li><strong>Personal Retreats &amp; Apprenticeships:</strong> Multi-day journeys for self-discovery, mastery, and master practitioner training modules.</li>\n<li><strong>Workshops:</strong> Local educational events rooted in foundational botanical medicine.</li>\n</ul>\n<p><a class=\"care-enquiry-link\" href=\"/book-with-us/\">Enquire about retreats, apprenticeships &amp; workshops <span aria-hidden=\"true\">→</span></a></p>\n"
         },
         {
           "title": "Care from anywhere",
@@ -163,9 +173,9 @@
     },
     {
       "eyebrow": "READY TO BEGIN?",
-      "heading": "Book Your Experience",
+      "heading": "Make Time for Yourself",
       "description": "By appointment only — Hanalei & Anahola, Kaua‘i",
-      "button": "Book Now and Save",
+      "button": "Book your experience",
       "phone": "(808) 855-8718",
       "statement": "Every offering at Saltay is a deeply personalized ritual that blends ancient healing wisdom with luxurious, plant-based care.",
       "background_image": "/assets/ocean.jpg",

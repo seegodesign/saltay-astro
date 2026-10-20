@@ -1,4 +1,5 @@
 import { defineConfig, type TinaField, type Template } from "tinacms";
+import { enableWebpUploads } from "./webp-uploads";
 
 const text = (name: string, label: string, textarea = false): TinaField => ({
   type: "string",
@@ -50,6 +51,22 @@ const blocks: Template[] = [
           textItems("items", "Treatment options"),
         ],
       },
+    ],
+  },
+  {
+    name: "Welcome",
+    label: "Personal welcome",
+    fields: [
+      text("eyebrow", "Eyebrow"),
+      text("heading", "Heading"),
+      text("name", "Practitioner name"),
+      text("role", "Practitioner role"),
+      text("description", "Introduction", true),
+      text("detail", "Detail", true),
+      image("image", "Portrait"),
+      text("image_alt", "Portrait description"),
+      text("link_label", "Link label"),
+      text("link_url", "Link URL"),
     ],
   },
   {
@@ -121,6 +138,7 @@ export default defineConfig({
   token: process.env.TINA_TOKEN,
   build: { outputFolder: "admin", publicFolder: "public" },
   media: { tina: { mediaRoot: "assets", publicFolder: "public" } },
+  cmsCallback: enableWebpUploads,
   search: {
     tina: {
       // TODO: Create a Search token in TinaCloud → project → Tokens and set TINA_SEARCH_TOKEN in the production build environment.
@@ -172,7 +190,13 @@ export default defineConfig({
               { type: "object", name: "locations", label: "Locations", list: true,
                 ui: { itemProps: (item) => ({ label: item?.name || "Location" }) },
                 fields: [text("id", "Anchor ID"), text("name", "Location name"),
-                  text("address", "Address"), textItems("paragraphs", "Description paragraphs")],
+                  text("address", "Address"),
+                  { type: "object", name: "postal_address", label: "Postal address (JSON-LD)",
+                    fields: [text("street", "Street address"), text("locality", "City / locality"),
+                      text("region", "State / region"), text("postal_code", "Postal code"),
+                      text("country", "Country code")],
+                  },
+                  textItems("paragraphs", "Description paragraphs")],
               },
               text("booking_heading", "Booking heading"), text("booking_text", "Booking text", true),
               text("booking_label", "Booking label"), text("booking_url", "Booking URL"),

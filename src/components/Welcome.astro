@@ -1,0 +1,43 @@
+---
+import { tinaField } from '@tinacms/astro';
+import LinkArrow from './LinkArrow.astro';
+import type { PageHomeBlocksWelcome } from '../../tina/__generated__/types';
+
+interface Props { data: PageHomeBlocksWelcome; }
+const { data } = Astro.props;
+---
+<section class="welcome" aria-label="Meet our founder">
+  <div class="container welcome-grid">
+    <figure>
+      <img src={data.image} alt={data.image_alt ?? ''} width="640" height="800" loading="lazy" data-tina-field={tinaField(data, 'image')} />
+      <figcaption>
+        <span class="welcome-name" data-tina-field={tinaField(data, 'name')}>{data.name}</span>
+        <span data-tina-field={tinaField(data, 'role')}>{data.role}</span>
+      </figcaption>
+    </figure>
+    <div class="welcome-copy">
+      <p class="eyebrow" data-tina-field={tinaField(data, 'eyebrow')}>{data.eyebrow}</p>
+      <h2 data-tina-field={tinaField(data, 'heading')}>{data.heading}</h2>
+      <p data-tina-field={tinaField(data, 'description')}>{data.description}</p>
+      <p data-tina-field={tinaField(data, 'detail')}>{data.detail}</p>
+      <a class="welcome-link" href={data.link_url ?? '/about/'} data-tina-field={tinaField(data, 'link_label')}>{data.link_label} <LinkArrow /></a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .welcome { padding: clamp(56px, 7vw, 96px) 0; background: var(--footer); }
+  .welcome-grid { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); align-items: center; gap: clamp(40px, 7vw, 100px); max-width: 1100px; }
+  figure { margin: 0; }
+  img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; border-radius: 10px; }
+  figcaption { display: grid; gap: 4px; margin-top: 18px; color: #735e3f; font-size: 17px; line-height: 1.4; }
+  .welcome-name { font-family: "EB Garamond", Georgia, serif; font-size: 26px; }
+  .eyebrow { text-align: left; letter-spacing: .12em; margin-bottom: 18px; }
+  h2 { font-size: clamp(36px, 3.5vw, 48px); text-wrap: balance; }
+  .welcome-copy > p:not(.eyebrow) { font-size: 21px; line-height: 1.5; margin: 24px 0; color: #514b3c; }
+  .welcome-link { display: inline-flex; align-items: center; gap: 14px; padding: 8px 0; border-bottom: 1px solid #a47e3770; color: #735e3f; font-size: 20px; }
+  @media (max-width: 767px) {
+    .welcome-grid { grid-template-columns: 1fr; gap: 36px; }
+    figure { width: 100%; max-width: 380px; margin-inline: auto; }
+  }
+</style>

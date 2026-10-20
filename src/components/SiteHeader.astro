@@ -7,7 +7,10 @@ const links: Record<string, string> = { Home: '/', Treatments: '/treatments/', P
   <a href="/" aria-label="Saltay Hanalei Bay home"><img data-tina-field={tinaField(home, 'logo')} class="logo" src={home.logo} alt="Saltay Hanalei Bay Spa" /></a>
   <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
   <nav data-tina-field={tinaField(home, 'navigation')} id="main-nav" aria-label="Main navigation">
-    {(home.navigation ?? []).filter(Boolean).map(text => text === 'Pricing' ? <details class="pricing-navigation">
+    {(home.navigation ?? []).filter(text => text && !['Musings', 'Locations', 'Community'].includes(text)).map(text => text === 'About' ? <details class="pricing-navigation">
+      <summary class:list={{ 'pricing-navigation-current': ['About', 'Locations', 'Community'].includes(active) }}>About</summary>
+      <div class="pricing-dropdown"><a href="/about/" aria-current={active === 'About' ? 'page' : undefined}>About Saltay</a><a href="/locations/" aria-current={active === 'Locations' ? 'page' : undefined}>Locations</a><a href="/community/" aria-current={active === 'Community' ? 'page' : undefined}>Community</a></div>
+    </details> : text === 'Pricing' ? <details class="pricing-navigation">
       <summary class:list={{ 'pricing-navigation-current': active === 'Pricing' || active === 'Discounted Pricing' }}>Pricing</summary>
       <div class="pricing-dropdown"><a href="/pricing/" aria-current={active === 'Pricing' ? 'page' : undefined}>Treatment pricing</a><a href="/discounted-pricing/" aria-current={active === 'Discounted Pricing' ? 'page' : undefined}>Discounted Pricing at Saltay II</a></div>
     </details> : text === 'Treatments' ? <details class="pricing-navigation">
