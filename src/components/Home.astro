@@ -1,0 +1,19 @@
+---
+import { tinaField } from '@tinacms/astro';
+import type { PageQuery } from '../../tina/__generated__/types';
+import Hero from './Hero.astro';
+import Treatments from './Treatments.astro';
+import Care from './Care.astro';
+import Booking from './Booking.astro';
+import Reviews from './Reviews.astro';
+import SiteHeader from './SiteHeader.astro';
+import SiteFooter from './SiteFooter.astro';
+interface Props { home: Extract<PageQuery['page'], { __typename: 'PageHome' }>; }
+const { home } = Astro.props;
+const components = { Hero, Treatments, Care, Reviews, Booking };
+---
+<SiteHeader home={home} />
+<main data-tina-field={tinaField(home, 'blocks')}>
+{(home.blocks ?? []).filter(Boolean).map(block=>{const Component=components[block.__typename.replace('PageHomeBlocks', '') as keyof typeof components];return <div><Component data={block}/></div>;})}
+</main>
+<SiteFooter home={home} />

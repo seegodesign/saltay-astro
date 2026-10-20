@@ -1,0 +1,81 @@
+{
+  "_template": "treatments",
+  "title": "Spa & Wellness Treatments | Saltay Hanalei Bay",
+  "description": "Explore Saltay’s signature spa experiences, immersive packages, acupuncture, botanical enhancements, and children’s offerings on Kaua‘i.",
+  "eyebrow": "Spa & wellness treatments · Kaua‘i",
+  "heading": "Find your Saltay experience",
+  "introduction": "A little time to reconnect. A whole afternoon to unwind. Explore botanical bodywork, holistic therapies, and personalized rituals, and find the experience that feels right for you.",
+  "hero_image": "/assets/ocean.jpg",
+  "hero_image_alt": "Ocean waters along the coast of Kaua‘i",
+  "choices_heading": "Three ways to begin",
+  "choices_introduction": "Start with a signature ritual, settle into a longer spa journey, or explore a particular therapy.",
+  "categories": [
+    {
+      "eyebrow": "A personal ritual",
+      "title": "Signature Experiences",
+      "description": "Explore named rituals that bring together therapeutic bodywork, botanical applications, and holistic facial care. Discover experiences such as Pampered in Paradise, Divine Unwind, and Jewel of the Siren.",
+      "image": "/assets/massage.jpeg",
+      "image_alt": "Therapeutic massage and botanical bodywork at Saltay",
+      "link_label": "Explore signature experiences",
+      "url": "/signature-experiences/"
+    },
+    {
+      "eyebrow": "Time to immerse",
+      "title": "Spa Packages",
+      "description": "Make room for a longer visit with several experiences woven into one journey. Explore packages that combine bodywork, facial rituals, and botanical care, including an experience created for two.",
+      "image": "/assets/facial.jpeg",
+      "image_alt": "Holistic facial care as part of a Saltay spa experience",
+      "link_label": "Discover spa packages",
+      "url": "/signature-spa-packages/"
+    },
+    {
+      "eyebrow": "Explore the modalities",
+      "title": "Acupuncture & More",
+      "description": "Learn about acupuncture, acupressure, fire cupping, Tui Na bodywork, and other therapies offered at Saltay. Find out what each modality involves before choosing your session.",
+      "image": "/assets/acupuncture.jpeg",
+      "image_alt": "Acupuncture treatment at Saltay",
+      "link_label": "Explore acupuncture & more",
+      "url": "/acupuncture/"
+    }
+  ],
+  "extras_heading": "Make the experience your own",
+  "extras": [
+    {
+      "eyebrow": "The finishing touches",
+      "title": "Wellness Enhancements",
+      "description": "Personalize a signature experience or retreat with additions such as botanical compresses, aromatherapy acupressure, or sound frequency. Enhancements enrich your chosen session without extending its duration.",
+      "link_label": "View wellness enhancements",
+      "url": "/spa-add-ons/"
+    },
+    {
+      "eyebrow": "Care for younger guests",
+      "title": "Keiki (Children)",
+      "description": "Explore bodywork and botanical offerings for children, with a parent accompanying their session. Jewel of the Siren botanical facials are offered from age nine; see the Keiki page for available options.",
+      "link_label": "Explore Keiki offerings",
+      "url": "/keiki-children/"
+    }
+  ],
+  "expect_eyebrow": "The Saltay approach",
+  "expect_heading": "What to expect",
+  "expect_introduction": "Botanicals, thoughtful touch, and time to settle in. Your chosen experience guides the therapies and amenities included in your visit.",
+  "steps": [
+    {
+      "title": "Begin with you",
+      "description": "Your therapist introduces your selected experience and the botanicals chosen for it. Share what you’re hoping for and settle into your time at Saltay."
+    },
+    {
+      "title": "Receive your ritual",
+      "description": "Depending on your selection, your session may weave together bodywork, botanical applications, facial care, acupuncture, or other therapeutic modalities."
+    },
+    {
+      "title": "Leave time to linger",
+      "description": "Some experiences include a botanical foot soak, infra-red sauna, or steam. Review your chosen offering to see what’s included, or ask us to help plan your visit."
+    }
+  ],
+  "booking_heading": "Not sure where to begin?",
+  "booking_text": "Tell us what you’re looking for, and we’ll help you choose an experience. Ready to reserve your time? Explore availability or browse our treatment pricing.",
+  "booking_label": "Book your experience",
+  "booking_url": "/book-with-us/",
+  "phone": "(808) 855-8718",
+  "phone_url": "tel:+18088558718"
+}

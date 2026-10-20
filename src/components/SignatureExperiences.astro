@@ -1,0 +1,45 @@
+---
+import { tinaField } from '@tinacms/astro';
+import DiagonalArrow from './DiagonalArrow.astro';
+import type { PageQuery } from '../../tina/__generated__/types';
+interface Props { page: Extract<PageQuery['page'], { __typename: 'PageSignatureExperiences' }>; }
+const { page } = Astro.props;
+const experiences = (page.experiences ?? []).filter(Boolean);
+---
+<main id="signature-experiences-content">
+  <section class="menu-hero signature-hero" aria-labelledby="signature-title">
+    <div class="container">
+      <p class="eyebrow" data-tina-field={tinaField(page, 'eyebrow')}>{page.eyebrow}</p>
+      <h1 id="signature-title" data-tina-field={tinaField(page, 'heading')}>{page.heading}</h1>
+      <p class="menu-intro" data-tina-field={tinaField(page, 'introduction')}>{page.introduction}</p>
+      <a class="button" href="#signature-menu">Explore the experiences</a>
+    </div>
+  </section>
+  <section class="container signature-menu" id="signature-menu" aria-labelledby="signature-menu-title">
+    <h2 id="signature-menu-title" data-tina-field={tinaField(page, 'menu_heading')}>{page.menu_heading}</h2>
+    <p data-tina-field={tinaField(page, 'menu_introduction')}>{page.menu_introduction}</p>
+    <nav class="signature-grid" aria-label="Signature experiences" data-tina-field={tinaField(page, 'experiences')}>
+      {experiences.map(experience => <a href={`#${experience.id}`}>
+        <img src={experience.image ?? ''} alt="" width="180" height="180" loading="lazy" data-tina-field={tinaField(experience, 'image')} />
+        <span data-tina-field={tinaField(experience, 'name')}>{experience.name}</span>
+      </a>)}
+    </nav>
+  </section>
+  <div class="container signature-details" data-tina-field={tinaField(page, 'experiences')}>
+    {experiences.map((experience, index) => <section class="signature-experience" id={experience.id} aria-labelledby={`${experience.id}-title`}>
+      <div class="signature-image"><img src={experience.image ?? ''} alt={experience.image_alt ?? ''} width="600" height="600" loading="lazy" data-tina-field={tinaField(experience, 'image')} /></div>
+      <div class="signature-copy">
+        <p class="eyebrow">Signature ritual <span aria-hidden="true">· {String(index + 1).padStart(2, '0')}</span></p>
+        <h2 id={`${experience.id}-title`} data-tina-field={tinaField(experience, 'title')}>{experience.title}</h2>
+        <div class="signature-body" data-tina-field={tinaField(experience, 'details_html')} set:html={experience.details_html ?? ''} />
+        <div class="signature-actions"><a href={page.booking_url ?? ''}>Book this experience <span aria-hidden="true"><DiagonalArrow /></span></a><a href="#signature-menu">All experiences <span aria-hidden="true">↑</span></a></div>
+      </div>
+    </section>)}
+  </div>
+  <section class="menu-booking" aria-labelledby="signature-booking-title"><div class="container">
+    <h2 id="signature-booking-title" data-tina-field={tinaField(page, 'booking_heading')}>{page.booking_heading}</h2>
+    <p data-tina-field={tinaField(page, 'booking_text')}>{page.booking_text}</p>
+    <a class="button" href={page.booking_url ?? ''} data-tina-field={tinaField(page, 'booking_label')}>{page.booking_label}</a>
+    <nav class="pricing-page-links" aria-label="Plan your visit"><a href="/pricing/">View treatment pricing</a><a href="/spa-add-ons/">Explore wellness enhancements</a></nav>
+  </div></section>
+</main>

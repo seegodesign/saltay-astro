@@ -1,0 +1,5 @@
+Generated with the built-in imagegen tool for Signature Ritual 05.
+Asset: public/assets/signature/saltay-seahorse-underwater.jpg
+
+Prompt:
+Create a square photorealistic underwater wildlife photograph for a refined botanical spa website. One realistic golden-tan seahorse in side profile, its entire recognizable head, narrow snout, curved body and curled tail clearly visible, gently holding a slender piece of seagrass with its tail. Natural anatomy and lifelike fine skin texture. Clear turquoise and soft deep teal ocean water, softly blurred seagrass in the background, delicate natural sunlight filtering down from the surface. Calm, serene, elegant marine photography, authentic underwater camera look, no illustration or painting, no text, no logos, no frame. Center the full seahorse with generous breathing room so it remains recognizable in both a square image and a small circular center crop. Output one square image.

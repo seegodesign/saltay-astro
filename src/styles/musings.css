@@ -1,0 +1,30 @@
+.musings-main { padding-top: 172px; padding-bottom: 100px; min-height: calc(100vh - 80px); }
+.musings-intro { max-width: 760px; margin: 0 auto 64px; text-align: center; }
+.musings-intro h1 { font-size: clamp(40px, 5vw, 64px); }
+.musings-intro > p:not(.eyebrow) { font-size: 22px; }
+.musings-rule { display: block; max-width: 85%; height: auto; margin: 30px auto 0; }
+.musings-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 64px; max-width: 1050px; margin: auto; }
+.musing-card-image { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 8px; display: block; }
+.musing-card h2 { font-size: clamp(30px, 3vw, 40px); text-wrap: balance; }
+.musing-card h2 a { color: var(--olive); }
+.musing-meta { color: var(--footer); font-size: 17px; margin: 20px 0 16px; }
+.musing-read { display: inline-flex; gap: 16px; border-bottom: 1px solid #a47e3766; padding: 6px 0; }
+.musing-article { max-width: 800px; margin: auto; }
+.musing-back { display: inline-block; margin-bottom: 42px; }
+.musing-article > .eyebrow { text-align: left; }
+.musing-article h1 { font-size: clamp(38px, 5vw, 60px); text-wrap: balance; }
+.musing-featured { display: block; width: 100%; max-height: 530px; object-fit: cover; margin: 36px 0; border-radius: 8px; }
+.musing-body { font-size: 22px; line-height: 1.65; overflow-wrap: anywhere; }
+.musing-body p { margin: 24px 0; }
+.musing-body img { max-width: 100%; height: auto; display: block; }
+.musing-body figure { margin: 32px 0; }
+.musing-tags { overflow-wrap: anywhere; font-size: 16px; border-top: 1px solid #a47e3740; margin-top: 36px; padding-top: 24px; }
+.musings-skip { position: fixed; left: 12px; top: -100px; z-index: 20; padding: 8px 16px; background: var(--cream); }
+.musings-skip:focus { top: 12px; }
+@media (max-width: 767px) {
+  .musings-main { padding-top: 130px; padding-bottom: 60px; }
+  .musings-intro { margin-bottom: 40px; }
+  .musings-grid { grid-template-columns: 1fr; gap: 48px; }
+  .musing-body { font-size: 21px; }
+  .musing-back { margin-bottom: 28px; }
+}

@@ -1,0 +1,11 @@
+.enhancements-hero .menu-intro { max-width: 680px; margin-bottom: 14px; }
+.enhancements-note { max-width: 580px; margin: 0 auto 28px; color: #735e3f; font-size: 19px; line-height: 1.45; }
+.enhancements-menu { max-width: 1100px; padding-block: 64px 80px; scroll-margin-top: 110px; }
+.enhancements-menu h2 { text-align: center; margin-bottom: 36px; font-size: clamp(32px, 3.5vw, 44px); }
+.enhancements-list { columns: 2; column-gap: 64px; list-style: none; padding: 0; margin: 0; }
+.enhancements-list li { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; padding: 18px 0; border-bottom: 1px solid #a47e3733; break-inside: avoid; font-size: 22px; line-height: 1.3; color: #514b3c; }
+@media (max-width: 767px) {
+  .enhancements-menu { padding-block: 42px 52px; }
+  .enhancements-list { columns: 1; }
+  .enhancements-list li { gap: 18px; font-size: 21px; }
+}

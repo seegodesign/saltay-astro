@@ -1,0 +1,22 @@
+{
+  "_template": "discountedPricing",
+  "title": "Discounted Pricing at Saltay II | Saltay Hanalei Bay",
+  "eyebrow": "SALTAY II · ANAHOLA, KAUA‘I",
+  "heading": "A little escape.\nA little closer to nature.",
+  "description": "Discover discounted spa experiences at our second location, nestled beneath the Kalalea mountains on Kaua‘i’s East Side.",
+  "location_heading": "Welcome to Saltay II",
+  "location_text": "Our Anahola location brings a relaxed, rootsy spirit to your spa experience. Find us in a stand-alone annex hale at the Anahola Marketplace, beneath the Kalalea mountains.",
+  "rates_heading": "Your time to unwind",
+  "rates_note": "All prices are per person at the Saltay II Anahola annex location.",
+  "rate_groups": [
+    { "title": "Weekday specials", "sessions": [{ "duration": "60 minutes", "price": "$165" }, { "duration": "90 minutes", "price": "$247" }] },
+    { "title": "Weekend specials", "sessions": [{ "duration": "60 minutes", "price": "$177" }, { "duration": "90 minutes", "price": "$265" }] }
+  ],
+  "experiences_heading": "Find your Saltay moment",
+  "experiences_intro": "These spa experiences are available at the Saltay II Anahola annex location.",
+  "experiences": [{ "text": "Pampered in Paradise" }, { "text": "Immortal Dragon" }, { "text": "Divine Unwind Signature" }],
+  "booking_heading": "We’ll meet you in Anahola.",
+  "booking_text": "Make time for yourself at Saltay II. Explore availability and book your experience online.",
+  "booking_label": "Book your experience",
+  "booking_url": "/book-with-us/"
+}

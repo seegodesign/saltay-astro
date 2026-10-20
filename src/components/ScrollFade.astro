@@ -1,0 +1,23 @@
+---
+interface Props { layer?: number; }
+const { layer = 1 } = Astro.props;
+---
+<span class="scroll-fade" data-scroll-fade aria-hidden="true" style={`z-index: ${layer}`} />
+<style>
+  .scroll-fade {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(
+      to top,
+      var(--cream) var(--scroll-fade-solid-stop, 8%),
+      transparent var(--scroll-fade-clear-stop, 48%)
+    );
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .scroll-fade {
+      background: linear-gradient(to top, var(--cream) 8%, transparent 48%);
+    }
+  }
+</style>
+<script src="../scripts/scroll-fade.ts"></script>

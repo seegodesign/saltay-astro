@@ -1,0 +1,19 @@
+---
+import TinaIsland from '@tinacms/astro/TinaIsland.astro';
+import Musing from '../../components/Musing.astro';
+import MusingsLayout from '../../layouts/MusingsLayout.astro';
+import { getMusing } from '../../lib/tina/data';
+import { islands } from '../../lib/tina/islands';
+export function getStaticPaths() {
+  return Object.keys(import.meta.glob('../../data/musings/*.json')).map(path => ({
+    params: { slug: path.split('/').pop()!.replace(/\.json$/, '') },
+  }));
+}
+const slug = Astro.params.slug!;
+const { data: { musings: post } } = await getMusing(slug);
+---
+<MusingsLayout title={post.title} description={post.excerpt ?? ''}>
+  <TinaIsland name="musing" wrapper={islands.musing.wrapper} params={{ slug }} primary>
+    <Musing post={post} />
+  </TinaIsland>
+</MusingsLayout>

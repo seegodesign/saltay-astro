@@ -1,0 +1,59 @@
+{
+  "_template": "wellnessDetail",
+  "booking_heading": "Make time for yourself",
+  "booking_text": "Choose your experience, explore session pricing, or get in touch to plan your visit.",
+  "booking_label": "Book your experience",
+  "booking_url": "/book-with-us/",
+  "title": "Acupuncture & More | Saltay Hanalei Bay",
+  "description": "Explore acupuncture, acupressure, fire cupping, botanical support, and Tui Na bodywork at Saltay.",
+  "eyebrow": "Traditional practices · Personal care",
+  "heading": "Acupuncture & more",
+  "introduction": "Explore a thoughtful combination of Chinese medicine traditions and botanical care. Your session is shaped by your preferences and the modalities chosen with your practitioner.",
+  "hero_image": "/assets/acupuncture.jpeg",
+  "hero_image_alt": "Acupuncture at Saltay Botanical Spa",
+  "menu_heading": "Explore the modalities",
+  "note": "Browse 60- and 90-minute session options on our pricing page. Ask us which approach fits your visit.",
+  "pricing_url": "/pricing/#acupuncture",
+  "items": [
+    {
+      "id": "acupuncture",
+      "title": "Acupuncture",
+      "text": "Fine needles are used at selected points as part of a personalized session. Talk with your practitioner about your goals and preferences."
+    },
+    {
+      "id": "fire-cupping",
+      "title": "Fire cupping",
+      "text": "A cupping technique that lifts the skin with suction. Ask your practitioner how this modality may fit into your chosen session."
+    },
+    {
+      "id": "acupressure",
+      "title": "Acupressure",
+      "text": "Pressure is applied to selected points through touch, offering an option for guests who prefer a session without needles."
+    },
+    {
+      "id": "herbal-support",
+      "title": "Herbal support",
+      "text": "Botanical care may include teas, topical preparations, foot soaks, baths, respiratory steam, or compresses."
+    },
+    {
+      "id": "bodywork",
+      "title": "Tui Na bodywork",
+      "text": "A Chinese bodywork tradition using push and pull techniques, performed while fully clothed."
+    },
+    {
+      "id": "contrast-therapy",
+      "title": "Contrast therapy",
+      "text": "Warm and cool applications are brought together within the Saltay approach to botanical care."
+    },
+    {
+      "id": "moxibustion",
+      "title": "Moxibustion",
+      "text": "A traditional modality involving moxa. Discuss the approach with your practitioner when planning your session."
+    },
+    {
+      "id": "energy-balancing",
+      "title": "Energy balancing",
+      "text": "A focus on the flow of energy within your wider Saltay experience."
+    }
+  ]
+}

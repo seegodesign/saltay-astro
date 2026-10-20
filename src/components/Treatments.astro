@@ -1,12 +1,19 @@
 ---
-const { services } = Astro.props;
+import { tinaField } from '@tinacms/astro';
+import LinkArrow from './LinkArrow.astro';
+const { data } = Astro.props;
+const { services } = data;
 ---
-<section class="treatments"><div class="container treatment-grid" data-editable="array" data-prop="services">
-{services.map(service => <article data-editable="array-item">
-  <p class="eyebrow" data-editable="text" data-prop="eyebrow">{service.eyebrow}</p>
-  <h2 data-editable="text" data-prop="title">{service.title}</h2>
-  <img src={service.image} alt={service.image_alt} width="495" height="400" data-editable="image" data-prop-src="image" data-prop-alt="image_alt" />
-  <div data-editable="array" data-prop="paragraphs">{service.paragraphs.map(text=><p data-editable="array-item"><editable-text data-prop="text">{text.text}</editable-text></p>)}</div>
-  <ul data-editable="array" data-prop="items">{service.items.map(text=><li data-editable="array-item"><editable-text data-prop="text">{text.text}</editable-text></li>)}</ul>
+<section class="treatments"><div class="container treatment-grid" data-tina-field={tinaField(data, 'services')}>
+{(services ?? []).filter(Boolean).map(service => <article class="treatment-card">
+  <p class="eyebrow" data-tina-field={tinaField(service, 'eyebrow')}>{service.eyebrow}</p>
+  <h2 data-tina-field={tinaField(service, 'title')}>{service.title}</h2>
+  <div class="treatment-visual">
+    <img src={service.image} alt={service.image_alt} width="495" height="640" loading="lazy" data-tina-field={tinaField(service, 'image')} />
+    <div class="treatment-copy">
+      <div data-tina-field={tinaField(service, 'paragraphs')}>{(service.paragraphs ?? []).filter(Boolean).map(text=><p data-tina-field={tinaField(text, 'text')}>{text.text}</p>)}</div>
+      <a class="treatment-link" href={service.link_url || '/treatments/'} data-tina-field={tinaField(service, 'link_label')}>{service.link_label || 'Explore treatments'} <LinkArrow /></a>
+    </div>
+  </div>
 </article>)}
 </div></section>

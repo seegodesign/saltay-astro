@@ -1,0 +1,32 @@
+.signature-hero .menu-intro { max-width: 680px; }
+.signature-menu { padding-block: 64px; text-align: center; scroll-margin-top: 110px; }
+.signature-menu h2 { font-size: clamp(34px, 4vw, 46px); }
+.signature-menu > p { margin: 18px 0 36px; }
+.signature-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px 44px; max-width: 900px; margin: auto; }
+.signature-grid a { display: flex; flex-direction: column; align-items: center; gap: 14px; color: #735e3f; font-size: 22px; line-height: 1.25; }
+.signature-grid img { width: 112px; height: 112px; border-radius: 50%; object-fit: cover; padding: 5px; border: 1px solid #a47e3755; transition: border-color .2s, transform .2s; }
+.signature-grid a:hover img { border-color: var(--gold); transform: translateY(-3px); }
+.signature-grid a:focus-visible, .signature-actions a:focus-visible { outline: 2px solid var(--gold); outline-offset: 6px; }
+.signature-details { padding-bottom: 80px; }
+.signature-experience { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(32px, 6vw, 84px); align-items: start; border-top: 1px solid #a47e3738; padding-top: 56px; margin-top: 56px; scroll-margin-top: 110px; }
+.signature-experience:first-child { margin-top: 0; }
+.signature-image img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; border-radius: 18px; }
+.signature-copy .eyebrow { text-align: left; text-transform: uppercase; letter-spacing: .12em; margin-bottom: 16px; }
+.signature-copy h2 { font-size: clamp(30px, 3vw, 42px); line-height: 1.12; text-wrap: balance; }
+.signature-body { margin-top: 24px; line-height: 1.5; overflow-wrap: anywhere; }
+.signature-body p { margin: 0 0 18px; }
+.signature-body blockquote { margin: 24px 0; padding-left: 22px; border-left: 2px solid #a47e3755; }
+.signature-actions { display: flex; flex-wrap: wrap; gap: 16px 28px; margin-top: 28px; }
+.signature-actions a { color: #735e3f; border-bottom: 1px solid #a47e3755; padding-bottom: 5px; }
+.signature-actions span { margin-left: 10px; }
+@media (max-width: 767px) {
+  .signature-menu { padding-block: 44px; }
+  .signature-grid { gap: 28px 16px; }
+  .signature-grid a { font-size: 18px; }
+  .signature-grid img { width: 80px; height: 80px; }
+  .signature-details { padding-bottom: 52px; }
+  .signature-experience { grid-template-columns: 1fr; gap: 30px; padding-top: 36px; margin-top: 40px; }
+  .signature-image { max-width: 340px; width: 100%; margin-inline: auto; }
+  .signature-image img { aspect-ratio: 6 / 5; }
+}
+@media (prefers-reduced-motion: reduce) { .signature-grid img { transition: none; } }

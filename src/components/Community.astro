@@ -1,0 +1,34 @@
+---
+import { tinaField } from '@tinacms/astro';
+import type { PageQuery } from '../../tina/__generated__/types';
+interface Props { page: Extract<PageQuery['page'], { __typename: 'PageCommunity' }>; }
+const { page } = Astro.props;
+const sections = (page.sections ?? []).filter(Boolean);
+---
+<main id="community-content">
+  <section class="menu-hero community-hero" aria-labelledby="community-title">
+    <img class="community-hero-image" src={page.hero_image ?? ''} alt={page.hero_image_alt ?? ''} width="1598" height="597" fetchpriority="high" data-tina-field={tinaField(page, 'hero_image')} />
+    <div class="container">
+      <p class="eyebrow" data-tina-field={tinaField(page, 'eyebrow')}>{page.eyebrow}</p>
+      <h1 id="community-title" data-tina-field={tinaField(page, 'heading')}>{page.heading}</h1>
+      <p class="menu-intro" data-tina-field={tinaField(page, 'introduction')}>{page.introduction}</p>
+    </div>
+  </section>
+  <div class="container menu-layout">
+    <aside class="menu-index">
+      <p class="eyebrow" data-tina-field={tinaField(page, 'menu_heading')}>{page.menu_heading}</p>
+      <nav aria-label="Community offerings">{sections.map((section, index) => <a href={`#${section.id}`}><span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>{section.heading}</a>)}</nav>
+    </aside>
+    <div data-tina-field={tinaField(page, 'sections')}>
+      {sections.map(section => <section class="menu-section community-section" id={section.id} aria-labelledby={`${section.id}-title`}>
+        <h2 id={`${section.id}-title`} data-tina-field={tinaField(section, 'heading')}>{section.heading}</h2>
+        <div class="session-details" data-tina-field={tinaField(section, 'body_html')} set:html={section.body_html ?? ''} />
+      </section>)}
+    </div>
+  </div>
+  <section class="menu-booking" aria-labelledby="community-booking-title"><div class="container">
+    <h2 id="community-booking-title" data-tina-field={tinaField(page, 'booking_heading')}>{page.booking_heading}</h2>
+    <p data-tina-field={tinaField(page, 'booking_text')}>{page.booking_text}</p>
+    <a class="button" href={page.booking_url ?? '/book-with-us/'} data-tina-field={tinaField(page, 'booking_label')}>{page.booking_label}</a>
+  </div></section>
+</main>

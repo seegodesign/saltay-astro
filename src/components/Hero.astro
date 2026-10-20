@@ -1,11 +1,18 @@
 ---
-const { heading, description, video } = Astro.props;
+import { tinaField } from '@tinacms/astro';
+import LinkArrow from './LinkArrow.astro';
+import ScrollFade from './ScrollFade.astro';
+const { data } = Astro.props;
+const { heading, description, image } = data;
 ---
 <section class="hero">
-  <video autoplay muted loop playsinline preload="metadata" aria-hidden="true"><source src={video} type="video/mp4" /></video>
-  <div class="hero-shade"></div>
+  <img class="hero-image" data-tina-field={tinaField(data, 'image')} src={image} alt="" width="1800" height="796" fetchpriority="high" />
+  <ScrollFade />
   <div class="container hero-copy">
-    <h1 data-editable="text" data-prop="heading">{heading}</h1>
-    <p data-editable="text" data-prop="description">{description}</p>
+    <p class="hero-kicker"><span aria-hidden="true"></span> Rooted in Kaua‘i. Created for you. <span aria-hidden="true"></span></p>
+    <h1 data-tina-field={tinaField(data, 'heading')}>{heading}</h1>
+    <p class="hero-description" data-tina-field={tinaField(data, 'description')}>{description}</p>
+    <a class="hero-link" href="/treatments">Find your ritual <LinkArrow /></a>
+    <img class="hero-rule" src="/assets/spiral-rule.png" alt="" width="739" height="118" />
   </div>
 </section>

@@ -1,0 +1,40 @@
+{
+  "_template": "locations",
+  "title": "Locations | Saltay Hanalei Bay",
+  "description": "Find Saltay Hanalei Bay in Ching Young Village and Saltay II at Anahola Marketplace. Plan your visit to our two Kauai wellness spaces.",
+  "eyebrow": "Plan your visit",
+  "heading": "Our locations",
+  "introduction": "We have two locations, nestled in the heart of Hanalei and also under the Kalalea mountains",
+  "locations": [
+    {
+      "id": "hanalei-bay",
+      "name": "SALTAY HANALEI BAY",
+      "address": "5-5190 Kuhio Hwy, Suite B7 | Ching Young Village",
+      "paragraphs": [
+        {
+          "text": "Saltay Hanalei Bay is located in the heart of Hanalei at the Ching Young Village, on the second floor, in the back of the courtyard.  Please call or text to schedule an Appointment with us.  Whether you are coming in for a signature spa experience, wanting to check out our boutique apothecary, sit in our foot soak grotto, enjoy our infra-red sauna; scheduling time with us is the first step in becoming our guest."
+        },
+        {
+          "text": "Our Saltay Hanalei Bay space was created with the vision of providing a wellness sanctuary for the senses to offer unique, full-body spa experiences including acupuncture, body scrubs, therapeutic body work, massage, botanical facials and Chinese Sports Medicine therapies that rejuvenate the soul, touch the heart, enliven the spirit and empower those on their life journey."
+        }
+      ]
+    },
+    {
+      "id": "saltay-ii",
+      "name": "SALTAY II",
+      "address": "4523 Ioane Rd, Anahola, HI 96703 | Anahola Marketplace",
+      "paragraphs": [
+        {
+          "text": "Saltay II is located on Hawaiian Homelands in Anahola, at the foot of the Kalalea Mountain, known as the birthplace to all souls."
+        },
+        {
+          "text": "Located in a stand-alone red “hale” (house structure), Saltay II offers a down-to-earth, rootsy space and provides a casual atmosphere for botanical spa experiences that can be accessed more easily for those staying on the west and south sides of Kauai."
+        }
+      ]
+    }
+  ],
+  "booking_heading": "Schedule your visit",
+  "booking_text": "Please call or text to schedule an appointment with us.",
+  "booking_label": "Book with us",
+  "booking_url": "/book-with-us/"
+}

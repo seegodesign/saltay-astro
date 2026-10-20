@@ -1,0 +1,56 @@
+---
+import { tinaField } from '@tinacms/astro';
+import LinkArrow from './LinkArrow.astro';
+import ScrollFade from './ScrollFade.astro';
+import type { PageQuery } from '../../tina/__generated__/types';
+interface Props { page: Extract<PageQuery['page'], { __typename: 'PageAbout' }>; }
+const { page } = Astro.props;
+---
+<main id="about-content">
+  <section class="about-intro" aria-labelledby="about-heading">
+    <img class="about-hero-image" data-tina-field={tinaField(page, 'hero_image')} src={page.hero_image ?? ''} alt={page.hero_image_alt ?? ''} width="1800" height="781" fetchpriority="high" />
+    <ScrollFade layer={0} />
+    <div class="container about-intro-inner">
+    <div class="about-intro-copy">
+      <p class="about-eyebrow" data-tina-field={tinaField(page, 'eyebrow')}>{page.eyebrow}</p>
+      <h1 id="about-heading" data-tina-field={tinaField(page, 'heading')}>{page.heading}</h1>
+      <p class="about-lead" data-tina-field={tinaField(page, 'introduction')}>{page.introduction}</p>
+      <a class="about-text-link" href="#our-philosophy">Get to know us <span aria-hidden="true">↓</span></a>
+    </div>
+    </div>
+  </section>
+  <section class="about-story" id="our-philosophy">
+    <div class="container about-story-inner">
+      <article class="about-story-col" aria-labelledby="mission-heading">
+        <p class="about-eyebrow">OUR PHILOSOPHY</p>
+        <h2 id="mission-heading" data-tina-field={tinaField(page, 'mission_heading')}>{page.mission_heading}</h2>
+        <div class="about-prose">
+          <p data-tina-field={tinaField(page, 'mission_text')}>{page.mission_text}</p>
+          <p data-tina-field={tinaField(page, 'philosophy_text')}>{page.philosophy_text}</p>
+        </div>
+      </article>
+      <article class="about-story-col" aria-labelledby="founder-heading">
+        <p class="about-eyebrow" data-tina-field={tinaField(page, 'founder_eyebrow')}>{page.founder_eyebrow}</p>
+        <h2 id="founder-heading" data-tina-field={tinaField(page, 'founder_heading')}>{page.founder_heading}</h2>
+        <div class="about-signature">
+          <img class="about-founder-photo" src={page.founder_image ?? ''} alt={page.founder_image_alt ?? ''} width="96" height="96" loading="lazy" data-tina-field={tinaField(page, 'founder_image')} />
+          <div>
+            <p data-tina-field={tinaField(page, 'founder_name')}>{page.founder_name}</p>
+            <span data-tina-field={tinaField(page, 'founder_role')}>{page.founder_role}</span>
+          </div>
+        </div>
+        <div class="about-prose">
+          <p data-tina-field={tinaField(page, 'founder_text')}>{page.founder_text}</p>
+          <p data-tina-field={tinaField(page, 'founder_detail')}>{page.founder_detail}</p>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="about-team" aria-labelledby="team-heading"><div class="container">
+    <div class="about-team-heading"><div><p class="about-eyebrow">THE PEOPLE BEHIND THE PRACTICE</p><h2 id="team-heading" data-tina-field={tinaField(page, 'team_heading')}>{page.team_heading}</h2></div><p data-tina-field={tinaField(page, 'team_introduction')}>{page.team_introduction}</p></div>
+    <div class="about-team-grid" data-tina-field={tinaField(page, 'practitioners')}>
+      {(page.practitioners ?? []).filter(Boolean).map((person, index) => <article class="about-person"><img class="about-person-photo" src={person.image || '/assets/placeholders/bio-portrait.svg'} alt={person.image_alt ?? ''} width="600" height="750" loading="lazy" data-tina-field={tinaField(person, 'image')} /><span class="about-person-number" aria-hidden="true">0{index + 1}</span><h3 data-tina-field={tinaField(person, 'name')}>{person.name}</h3><p class="about-person-role" data-tina-field={tinaField(person, 'role')}>{person.role}</p><p data-tina-field={tinaField(person, 'description')}>{person.description}</p></article>)}
+    </div>
+  </div></section>
+  <section class="about-invitation container" aria-labelledby="invitation-heading"><p class="about-eyebrow">YOUR TIME TO RECONNECT</p><h2 id="invitation-heading" data-tina-field={tinaField(page, 'booking_heading')}>{page.booking_heading}</h2><p data-tina-field={tinaField(page, 'booking_text')}>{page.booking_text}</p><div class="about-actions"><a class="button" href={page.booking_url ?? ''} data-tina-field={tinaField(page, 'booking_label')}>{page.booking_label} <LinkArrow /></a><a class="about-text-link" href="/pricing/">Explore our offerings <LinkArrow /></a></div></section>
+</main>

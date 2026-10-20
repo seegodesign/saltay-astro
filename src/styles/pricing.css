@@ -1,0 +1,282 @@
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 20px;
+  z-index: 20;
+  background: var(--cream);
+  padding: 12px 20px;
+}
+.skip-link:focus {
+  top: 12px;
+}
+.menu-hero {
+  padding: 190px 0 74px;
+  background:
+    linear-gradient(110deg, #fffaf2f5, #fffaf2d9),
+    url("/assets/ocean.jpg") center / cover;
+  text-align: center;
+  border-bottom: 1px solid #a47e3733;
+}
+.menu-hero h1 {
+  font-size: clamp(42px, 5vw, 68px);
+  text-wrap: balance;
+}
+.menu-hero .eyebrow {
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.menu-intro {
+  max-width: 640px;
+  margin: 22px auto 28px;
+  font-size: 23px;
+  line-height: 1.4;
+}
+.menu-hero .button,
+.menu-booking .button {
+  padding: 12px 24px;
+  font-size: 21px;
+}
+.menu-layout {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: clamp(32px, 6vw, 100px);
+  padding: 72px 0 90px;
+  scroll-margin-top: 110px;
+}
+.menu-index {
+  align-self: start;
+  position: sticky;
+  top: 118px;
+  max-height: calc(100dvh - 142px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+.menu-hero-booking {
+  margin-top: 28px;
+}
+.menu-index .eyebrow {
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+}
+.menu-index nav {
+  display: flex;
+  flex-direction: column;
+}
+.menu-index a {
+  display: flex;
+  gap: 14px;
+  padding: 13px 0;
+  border-top: 1px solid #a47e372b;
+  color: #625b48;
+  line-height: 1.25;
+}
+.menu-index a:hover {
+  color: var(--gold);
+}
+.menu-index a span {
+  font-size: 14px;
+  color: var(--gold);
+  padding-top: 3px;
+}
+.menu-section {
+  scroll-margin-top: 110px;
+  margin-bottom: 64px;
+}
+.menu-section:last-child {
+  margin-bottom: 0;
+}
+.menu-section-heading {
+  margin-bottom: 24px;
+}
+.menu-section-heading.with-image {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 180px;
+  gap: 32px;
+  align-items: center;
+}
+.menu-section-heading .eyebrow {
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+}
+.menu-section h2 {
+  font-size: clamp(30px, 3vw, 40px);
+  text-wrap: balance;
+}
+.menu-section-heading p:not(.eyebrow) {
+  line-height: 1.4;
+  margin: 16px 0 0;
+}
+.menu-section-heading img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 90px 90px 8px 8px;
+}
+.session-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid #a47e3740;
+}
+.session-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+  padding: 20px 0;
+  border-bottom: 1px solid #a47e372b;
+}
+.session-row h3 {
+  font-family: "Hubballi", Helvetica, Arial, sans-serif;
+  font-size: 23px;
+  line-height: 1.25;
+  color: #514b3c;
+}
+.session-duration {
+  margin: 5px 0 0;
+  color: #746549;
+  line-height: 1.25;
+}
+.session-note {
+  margin: 10px 0 0;
+  line-height: 1.4;
+  max-width: 600px;
+}
+.session-details {
+  margin-top: 10px;
+  line-height: 1.4;
+  max-width: 600px;
+  overflow-wrap: anywhere;
+}
+.session-details p {
+  margin: 0 0 12px;
+}
+.session-details p:last-child {
+  margin-bottom: 0;
+}
+.session-details ul,
+.session-details ol {
+  margin: 12px 0;
+  padding-left: 22px;
+}
+.session-details li {
+  padding-bottom: 6px;
+}
+.session-details li::marker {
+  color: var(--gold);
+}
+.session-price {
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 28px;
+  line-height: 1.2;
+  color: #806125;
+  white-space: nowrap;
+}
+.menu-book-link {
+  display: inline-flex;
+  gap: 16px;
+  margin-top: 18px;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.menu-booking {
+  padding: 76px 0;
+  text-align: center;
+  background:
+    linear-gradient(#fffaf2df, #fffaf2df),
+    url("/assets/ocean.jpg") center / cover;
+  border-top: 1px solid #a47e3733;
+}
+.menu-booking .eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+}
+.menu-booking h2 {
+  font-size: clamp(34px, 4vw, 48px);
+}
+.menu-booking p:not(.eyebrow) {
+  margin: 22px auto 28px;
+  max-width: 540px;
+}
+.menu-phone {
+  display: block;
+  margin: 18px auto 0;
+  color: #625b48;
+  font-size: 23px;
+}
+@media (max-width: 1000px) {
+  .menu-layout {
+    grid-template-columns: 200px minmax(0, 1fr);
+    gap: 32px;
+  }
+  .menu-section-heading.with-image {
+    grid-template-columns: minmax(0, 1fr) 125px;
+    gap: 20px;
+  }
+  .menu-section-heading img {
+    height: 150px;
+  }
+}
+@media (max-width: 767px) {
+  .menu-hero {
+    padding: 138px 0 48px;
+  }
+  .menu-intro {
+    font-size: 21px;
+  }
+  .menu-layout {
+    grid-template-columns: 1fr;
+    gap: 42px;
+    padding: 36px 0 56px;
+  }
+  .menu-index {
+    position: static;
+    max-height: none;
+    overflow: visible;
+  }
+  .menu-index nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .menu-index a {
+    font-size: 16px;
+    padding: 8px 12px;
+    border: 1px solid #a47e3733;
+    border-radius: 3px;
+  }
+  .menu-index a span {
+    display: none;
+  }
+  .menu-section {
+    margin-bottom: 48px;
+  }
+  .menu-section-heading.with-image {
+    grid-template-columns: minmax(0, 1fr) 90px;
+    gap: 14px;
+  }
+  .menu-section-heading img {
+    height: 130px;
+  }
+  .session-row {
+    gap: 16px;
+  }
+  .session-row h3 {
+    font-size: 22px;
+  }
+  .session-price {
+    font-size: 25px;
+  }
+  .menu-booking {
+    padding: 54px 0;
+  }
+}
+
+.pricing-page-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px 28px; margin-top: 28px; font-size: 18px; }
+.pricing-page-links a { color: #735e3f; padding: 5px 0; border-bottom: 1px solid #a47e3755; }
+.pricing-page-links a[aria-current] { border-bottom-color: #735e3f; }

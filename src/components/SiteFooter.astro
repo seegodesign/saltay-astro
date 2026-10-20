@@ -1,0 +1,51 @@
+---
+import { tinaField } from '@tinacms/astro';
+import defaultHome from '../data/home.json';
+
+interface Props {
+  home?: { logo?: string | null; footer_links?: (string | null)[] | null };
+}
+const { home = defaultHome } = Astro.props;
+const destinations: Record<string, string> = {
+  Locations: '/locations/',
+  Home: '/',
+  Treatments: '/treatments/',
+  'Wellness Treatments': '/treatments/',
+  'Signature Experiences': '/signature-experiences/',
+  'Spa Add-ons': '/spa-add-ons/',
+  Pricing: '/pricing/',
+  'Saltay II Specials': '/discounted-pricing/',
+  About: '/about/',
+  Musings: '/musings/',
+  Community: '/community/',
+  'Book With Us': '/book-with-us/',
+};
+const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
+const groups = [
+  { title: 'Explore Saltay', labels: ['Home', 'About', 'Community', 'Musings', 'Swimwear'] },
+  { title: 'Treatments', labels: ['Treatments', 'Wellness Treatments', 'Signature Experiences', 'Spa Add-ons'] },
+  { title: 'Plan your visit', labels: ['Pricing', 'Saltay II Specials', 'Book With Us', 'Locations'] },
+];
+const links = (home.footer_links ?? []).filter((label): label is string => Boolean(label));
+const columns = groups.map((group, index) => ({
+  ...group,
+  links: links.filter(label => group.labels.includes(label) || (index === 0 && !groups.some(item => item.labels.includes(label)))),
+})).filter(group => group.links.length);
+---
+<footer>
+  <div class="container footer-inner">
+    <a class="footer-brand" href="/" aria-label="Saltay Hanalei Bay home">
+      <img data-tina-field={tinaField(home, 'logo')} src={home.logo || defaultHome.logo} alt="Saltay Hanalei Bay Spa" width="300" height="154" loading="lazy" />
+    </a>
+    <nav data-tina-field={tinaField(home, 'footer_links')} aria-label="Footer navigation">
+      {columns.map(group => <div class="footer-column">
+        <h2>{group.title}</h2>
+        <ul>{group.links.map(label => {
+          const href = destinations[label] ?? '#';
+          return <li><a href={href} aria-current={href !== '#' && (href.replace(/\/$/, '') || '/') === pathname ? 'page' : undefined}>{label}</a></li>;
+        })}</ul>
+      </div>)}
+    </nav>
+  </div>
+  <div class="container footer-bottom">© Copyright - Saltay Hanalei Bay</div>
+</footer>

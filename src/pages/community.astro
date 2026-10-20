@@ -1,0 +1,34 @@
+---
+import SiteFooter from '../components/SiteFooter.astro';
+import TinaIsland from '@tinacms/astro/TinaIsland.astro';
+import Community from '../components/Community.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import home from '../data/home.json';
+import { getCommunity } from '../lib/tina/data';
+import { islands } from '../lib/tina/islands';
+import '../styles/global.css';
+import '../styles/pricing.css';
+import '../styles/community.css';
+const { data: { page } } = await getCommunity();
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{page.title}</title>
+    <meta name="description" content={page.description ?? ''} />
+    <meta name="robots" content="noindex,nofollow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Hubballi&display=swap" rel="stylesheet" />
+  </head>
+  <body class="pricing-page">
+    <a class="skip-link" href="#community-content">Skip to content</a>
+    <SiteHeader home={home} active="Community" />
+    <TinaIsland name="community" wrapper={islands.community.wrapper} primary>
+      <Community page={page} />
+    </TinaIsland>
+    <SiteFooter home={home} />
+  </body>
+</html>

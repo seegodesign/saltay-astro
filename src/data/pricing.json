@@ -1,0 +1,205 @@
+{
+  "_template": "pricing",
+  "title": "Pricing | Saltay Hanalei Bay",
+  "heading": "A ritual for every rhythm",
+  "eyebrow": "Saltay treatments & pricing",
+  "description": "Explore bodywork, botanical rituals, holistic facials, and immersive retreats. Find your experience and make time for yourself on Kaua‘i.",
+  "booking_url": "/book-with-us/",
+  "booking_message": "Try our online booking system and receive 10 to 25% off",
+  "sections": [
+    {
+      "id": "bodywork",
+      "title": "MASSAGE / BODYWORK",
+      "options": [
+        {
+          "name": "60 minutes",
+          "price": "$235",
+          "details_html": "Just enough to get started"
+        },
+        {
+          "name": "90 minutes",
+          "price": "$345",
+          "details_html": "Drop in deeper"
+        },
+        {
+          "name": "120 minutes",
+          "price": "$465",
+          "details_html": "The ultimate reset"
+        }
+      ]
+    },
+    {
+      "id": "holistic-facials",
+      "title": "HOLISTIC FACIALS",
+      "options": [
+        {
+          "name": "60 minutes",
+          "price": "$235",
+          "details_html": "Elemental custom healing that may include: <ul><li>Acupuncture/Acupressure</li> <li>Contrast therapy</li> <li>Cranial sacral</li> <li>Tui Na</li> <li>Herbal consultation &amp; Rx</li> <li>Qi Gong Meditation</li> <li>Diet &amp; Exercise</li></ul>"
+        },
+        {
+          "name": "90 minutes",
+          "price": "$345",
+          "details_html": "Extended Elemental custom healing"
+        }
+      ]
+    },
+    {
+      "id": "botanical-rituals",
+      "title": "BOTANICAL FOOT SOAK, INFRA-RED SAUNA & STEAM",
+      "options": [
+        {
+          "name": "60 minutes",
+          "price": "$150",
+          "details_html": "Botanical Respiratory Steam and Infra-red Sauna"
+        },
+        {
+          "name": "60 minutes",
+          "price": "$120",
+          "details_html": "Botanical Foot Soak, Infra-red Sauna and Formulated Tea."
+        },
+        {
+          "name": "60 minutes",
+          "price": "$100",
+          "details_html": "Botanical Foot Soak and Infra-red Sauna"
+        },
+        {
+          "name": "30 minutes",
+          "price": "$100",
+          "details_html": "Botanical Respiratory Steam"
+        },
+        {
+          "name": "30 minutes",
+          "price": "$100",
+          "details_html": "Botanical Pelvic Floor Steam"
+        },
+        {
+          "name": "30 minutes",
+          "price": "$60",
+          "details_html": "Botanical Foot Soak"
+        },
+        {
+          "name": "30 minutes",
+          "price": "$60",
+          "details_html": "Infra-red Sauna with Botanical Mist"
+        }
+      ]
+    },
+    {
+      "id": "facials",
+      "title": "COSMETIC ACUPUNCTURE/ACUPRESSURE FACIAL",
+      "options": [
+        {
+          "name": "45 minutes (must be added to a signature experience)",
+          "price": "$195",
+          "details_html": "Jewel of the Siren"
+        },
+        {
+          "name": "60 minutes",
+          "price": "$245",
+          "details_html": "Jewel of the Siren"
+        },
+        {
+          "name": "75 minutes",
+          "price": "$305",
+          "details_html": "Extended Jewel of the Siren"
+        },
+        {
+          "name": "105 minutes",
+          "price": "$450",
+          "details_html": "Extended Jewel of the Siren +"
+        }
+      ]
+    },
+    {
+      "id": "acupuncture",
+      "title": "ACUPUNCTURE/ACUPRESSURE, FIRE CUPPING & MORE",
+      "options": [
+        {
+          "name": "60 minutes",
+          "price": "$180"
+        },
+        {
+          "name": "90 minutes",
+          "price": "$270"
+        }
+      ],
+      "link_label": "View acupuncture/acupressure & fire cupping experiences",
+      "link_url": "/acupuncture/"
+    },
+    {
+      "id": "signature-experiences",
+      "title": "SALTAY SIGNATURE EXPERIENCE + BOTANICAL FOOT SOAK & INFRA-RED SAUNA",
+      "options": [
+        {
+          "name": "90 minutes",
+          "price": "$455",
+          "details_html": "Signature Experience, Foot Soak &amp; Infra-red Sauna"
+        },
+        {
+          "name": "120 minutes",
+          "price": "$575",
+          "details_html": "Extended Signature Experience, Foot Soak &amp; Infra-red Sauna"
+        }
+      ],
+      "link_label": "View signature experiences",
+      "link_url": "/signature-experiences/"
+    },
+    {
+      "id": "tui-na",
+      "title": "TUI NA CHINESE MEDICINE BODYWORK",
+      "options": [
+        {
+          "name": "90 minutes",
+          "price": "$455",
+          "details_html": "Visual structural analysis, Tui Na, Fire cupping, Acupressure trigger point, Gua Sha scraping, Mobility Stretching &amp; botanical Magnesium body misting."
+        },
+        {
+          "name": "120 minutes",
+          "price": "$575",
+          "details_html": "Extended Visual structural analysis, Tui Na, Fire cupping, Acupressure trigger point, Gua Sha scraping, Mobility Stretching &amp; botanical Magnesium body misting +"
+        }
+      ],
+      "link_label": "View signature experiences",
+      "link_url": "/signature-experiences/"
+    },
+    {
+      "id": "spa-packages",
+      "title": "SIGNATURE SPA PACKAGES",
+      "options": [
+        {
+          "name": "Pampered Indulgence",
+          "price": "$595",
+          "details_html": "Total time: 3hrs 15 min <ul><li>90 mins Pampered in Paradise Signature experience</li> <li>45 mins Jewel of the Siren Signature experience</li> <li>Up to 30 minutes Botanical Foot Soak</li> <li>Up to 30 minutes Infra-red sauna</li></ul>"
+        },
+        {
+          "name": "Nourished Restoration",
+          "price": "$995",
+          "details_html": "Total time: 4hrs 44 min <ul><li>90 minutes Tui Na Chinese Medicine Bodywork</li> <li>74 minutes Jewel of the Siren Signature Experience + Jade comb meridian scalp channel stimulation</li> <li>60 minutes Parasympathetic System reset w/ Acupuncture or Acupressure</li> <li>30 minutes botanical respiratory steam</li> <li>30 minutes botanical foot soak</li></ul>"
+        },
+        {
+          "name": "Saltay Reset",
+          "price": "$1,111",
+          "details_html": "Total time: 5 hours <ul><li>120 minutes The Mermaid’s Way Signature experience <ul><li>Water blessing</li> <li>Acupunture/Acupressure</li> <li>Tui Na Chinese Medicine bodywork</li> <li>Yin Yang contrast therapy</li> <li>Chromo light scape vibrational frequency</li> <li>Silky seaweed mineral-infused botanical foot soak</li></ul></li> <li>60 minutes cacao ceremony <ul><li>Guided meditation journey</li> <li>Alchemy crystal sound healing therapy</li></ul></li> <li>60 minutes body healing reset <ul><li>Cranial sacral therapy</li> <li>Jade comb meridian scalp channel stimulation</li> <li>Deep abdominal release</li> <li>Energetic Balancing</li> <li>Sacral pounding</li></ul></li> <li>60 minutes Spirit vision reading</li></ul>"
+        },
+        {
+          "name": "Sanctuary for Two",
+          "price": "$1,395",
+          "details_html": "Total time: 3hrs 33 min <ul><li>90 minutes Signature Pampered in Paradise</li> <li>45 minutes Cacao ceremony + sound healing journey</li> <li>30 minutes Botanical foot soak</li> <li>30 minutes Infra-Red Sauna</li> <li>18 minutes Heart connection bonding + Energy reset</li></ul>"
+        },
+        {
+          "name": "Saltay Escape",
+          "price": "$995",
+          "details_html": "<p>4Hrs, 45 mins</p> <p>60 min Botanical Body Wrap &amp; Compress Detox</p> <p>90 min Full Body Cacao Butter &amp; Coconut Oil Therapeutic Bodywork</p> <p>30 min Yoni / Sitz Steam or 30 min Respiratory SteamUp to 30 min foot soak with some fresh nourishment</p> <p>40 min Contrast Therapy including Heated Stones &amp; Body Scraping</p> <p>35 min Jade Comb Scalp Channel Stimulation and Facial Crystal Mask</p>"
+        },
+        {
+          "name": "Saltay Luxe Immersion",
+          "price": "$2,222",
+          "details_html": "<p><b>3 Days | 3 Hours Daily</b></p> <p><i>The Way of the Water Being.</i></p> <p>Dedicate three consecutive days to a <strong>transformative, 9-hour cellular healing odyssey</strong> designed to return you to your truest, fluid baseline. The Saltay Luxe Immersion is our most prestigious holistic spa package offering, intuitively tailored to dismantle chronic stress, burnout, and environmental exhaustion. Surrender to the peaceful energy of Hanalei Bay as we guide you into a curated flow of clinical acupuncture, thermal contrast, sculpting touch, and deep restorative medicine. This consecutive master-level sanctuary experience invites your mind, body, and spirit to completely soften, reset, and claim your deepest state of nourishment.</p>"
+        }
+      ],
+      "link_label": "View signature retreats",
+      "link_url": "/signature-spa-packages/"
+    }
+  ]
+}

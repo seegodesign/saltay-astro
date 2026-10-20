@@ -1,3 +1,11 @@
 import { defineConfig } from 'astro/config';
-import editableRegions from '@cloudcannon/editable-regions/astro-integration';
-export default defineConfig({ output: 'static', integrations: [editableRegions()] });
+import node from '@astrojs/node';
+import tina from '@tinacms/astro/integration';
+import { tinaAdminDevRedirect } from '@tinacms/astro/vite';
+
+export default defineConfig({
+  output: 'static',
+  adapter: node({ mode: 'standalone' }),
+  integrations: [tina()],
+  vite: { plugins: [tinaAdminDevRedirect()] },
+});

@@ -1,0 +1,49 @@
+{
+  "_template": "wellnessDetail",
+  "booking_heading": "Make time for yourself",
+  "booking_text": "Choose your experience, explore session pricing, or get in touch to plan your visit.",
+  "booking_label": "Book your experience",
+  "booking_url": "/book-with-us/",
+  "title": "Signature Spa Packages | Saltay Hanalei Bay",
+  "description": "Explore six immersive spa packages at Saltay, with botanical bodywork, facial rituals, and time to unwind.",
+  "eyebrow": "Time to immerse · Kaua‘i",
+  "heading": "A little longer in paradise",
+  "introduction": "Let several experiences become one unhurried journey. Discover botanical rituals, restorative bodywork, and shared moments, with each package bringing its own rhythm to your visit.",
+  "hero_image": "/assets/facial.jpeg",
+  "hero_image_alt": "Botanical facial care at Saltay",
+  "menu_heading": "Find your spa journey",
+  "note": "For current package rates, visit our treatment pricing menu.",
+  "pricing_url": "/pricing/#spa-packages",
+  "items": [
+    {
+      "id": "pampered-indulgence",
+      "title": "Pampered Indulgence",
+      "details_html": "Total time: 3hrs 15 min <ul><li>90 mins Pampered in Paradise Signature experience</li> <li>45 mins Jewel of the Siren Signature experience</li> <li>Up to 30 minutes Botanical Foot Soak</li> <li>Up to 30 minutes Infra-red sauna</li></ul>"
+    },
+    {
+      "id": "nourished-restoration",
+      "title": "Nourished Restoration",
+      "details_html": "Total time: 4hrs 44 min <ul><li>90 minutes Tui Na Chinese Medicine Bodywork</li> <li>74 minutes Jewel of the Siren Signature Experience + Jade comb meridian scalp channel stimulation</li> <li>60 minutes Parasympathetic System reset w/ Acupuncture or Acupressure</li> <li>30 minutes botanical respiratory steam</li> <li>30 minutes botanical foot soak</li></ul>"
+    },
+    {
+      "id": "saltay-reset",
+      "title": "Saltay Reset",
+      "details_html": "Total time: 5 hours <ul><li>120 minutes The Mermaid’s Way Signature experience <ul><li>Water blessing</li> <li>Acupunture/Acupressure</li> <li>Tui Na Chinese Medicine bodywork</li> <li>Yin Yang contrast therapy</li> <li>Chromo light scape vibrational frequency</li> <li>Silky seaweed mineral-infused botanical foot soak</li></ul></li> <li>60 minutes cacao ceremony <ul><li>Guided meditation journey</li> <li>Alchemy crystal sound healing therapy</li></ul></li> <li>60 minutes body healing reset <ul><li>Cranial sacral therapy</li> <li>Jade comb meridian scalp channel stimulation</li> <li>Deep abdominal release</li> <li>Energetic Balancing</li> <li>Sacral pounding</li></ul></li> <li>60 minutes Spirit vision reading</li></ul>"
+    },
+    {
+      "id": "sanctuary-for-two",
+      "title": "Sanctuary for Two",
+      "details_html": "Total time: 3hrs 33 min <ul><li>90 minutes Signature Pampered in Paradise</li> <li>45 minutes Cacao ceremony + sound healing journey</li> <li>30 minutes Botanical foot soak</li> <li>30 minutes Infra-Red Sauna</li> <li>18 minutes Heart connection bonding + Energy reset</li></ul>"
+    },
+    {
+      "id": "saltay-escape",
+      "title": "Saltay Escape",
+      "details_html": "<p>4Hrs, 45 mins</p> <p>60 min Botanical Body Wrap &amp; Compress Detox</p> <p>90 min Full Body Cacao Butter &amp; Coconut Oil Therapeutic Bodywork</p> <p>30 min Yoni / Sitz Steam or 30 min Respiratory SteamUp to 30 min foot soak with some fresh nourishment</p> <p>40 min Contrast Therapy including Heated Stones &amp; Body Scraping</p> <p>35 min Jade Comb Scalp Channel Stimulation and Facial Crystal Mask</p>"
+    },
+    {
+      "id": "saltay-luxe-immersion",
+      "title": "Saltay Luxe Immersion",
+      "details_html": "<p><b>3 Days | 3 Hours Daily</b></p> <p><i>The Way of the Water Being.</i></p> <p>Dedicate three consecutive days to a <strong>transformative, 9-hour cellular healing odyssey</strong> designed to return you to your truest, fluid baseline. The Saltay Luxe Immersion is our most prestigious holistic spa package offering, intuitively tailored to dismantle chronic stress, burnout, and environmental exhaustion. Surrender to the peaceful energy of Hanalei Bay as we guide you into a curated flow of clinical acupuncture, thermal contrast, sculpting touch, and deep restorative medicine. This consecutive master-level sanctuary experience invites your mind, body, and spirit to completely soften, reset, and claim your deepest state of nourishment.</p>"
+    }
+  ]
+}

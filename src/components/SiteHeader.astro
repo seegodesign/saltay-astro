@@ -1,0 +1,46 @@
+---
+import { tinaField } from '@tinacms/astro';
+const { home, active = 'Home' } = Astro.props;
+const links: Record<string, string> = { Home: '/', Treatments: '/treatments/', Pricing: '/pricing/', About: '/about/', Musings: '/musings/', Community: '/community/', Locations: '/locations/' };
+---
+<header><div class="container header-inner">
+  <a href="/" aria-label="Saltay Hanalei Bay home"><img data-tina-field={tinaField(home, 'logo')} class="logo" src={home.logo} alt="Saltay Hanalei Bay Spa" /></a>
+  <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+  <nav data-tina-field={tinaField(home, 'navigation')} id="main-nav" aria-label="Main navigation">
+    {(home.navigation ?? []).filter(Boolean).map(text => text === 'Pricing' ? <details class="pricing-navigation">
+      <summary class:list={{ 'pricing-navigation-current': active === 'Pricing' || active === 'Discounted Pricing' }}>Pricing</summary>
+      <div class="pricing-dropdown"><a href="/pricing/" aria-current={active === 'Pricing' ? 'page' : undefined}>Treatment pricing</a><a href="/discounted-pricing/" aria-current={active === 'Discounted Pricing' ? 'page' : undefined}>Discounted Pricing at Saltay II</a></div>
+    </details> : text === 'Treatments' ? <details class="pricing-navigation">
+      <summary class:list={{ 'pricing-navigation-current': active === 'Treatments' || active === 'Spa Add-ons' || active === 'Signature Experiences' || active === 'Spa Packages' || active === 'Acupuncture' || active === 'Keiki' }}>Treatments</summary>
+      <div class="pricing-dropdown"><a href="/treatments/" aria-current={active === 'Treatments' ? 'page' : undefined}>Explore treatments</a><a href="/signature-experiences/" aria-current={active === 'Signature Experiences' ? 'page' : undefined}>Signature Experiences</a><a href="/signature-spa-packages/" aria-current={active === 'Spa Packages' ? 'page' : undefined}>Signature Spa Packages</a><a href="/acupuncture/" aria-current={active === 'Acupuncture' ? 'page' : undefined}>Acupuncture &amp; More</a><a href="/keiki-children/" aria-current={active === 'Keiki' ? 'page' : undefined}>Keiki (Children)</a><a href="/spa-add-ons/" aria-current={active === 'Spa Add-ons' ? 'page' : undefined}>Wellness Enhancements &amp; Spa Add-ons</a></div>
+    </details> : <a href={links[text] ?? '#'} aria-current={text === active ? 'page' : undefined}>{text}</a>)}
+    <a href="/book-with-us/" class="button" aria-current={active === 'Book With Us' ? 'page' : undefined} data-tina-field={tinaField(home, 'booking_label')}>{home.booking_label}</a>
+  </nav>
+</div></header>
+<script src="../scripts/navigation.ts"></script>
+
+<style>
+  .pricing-navigation { position: relative; color: #735e3f; font-size: 18px; }
+  .pricing-navigation summary { cursor: pointer; list-style: none; display: flex; align-items: center; gap: 8px; }
+  .pricing-navigation summary::-webkit-details-marker { display: none; }
+  .pricing-navigation summary::after { content: ''; width: 6px; height: 6px; border-right: 1px solid currentColor; border-bottom: 1px solid currentColor; transform: rotate(45deg) translateY(-2px); }
+  .pricing-navigation[open] summary::after { transform: rotate(225deg); }
+  .pricing-navigation summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 5px; }
+  #main-nav a[aria-current="page"], .pricing-navigation-current { font-weight: 700; }
+  .pricing-navigation-current { text-decoration: underline; text-underline-offset: 6px; }
+  .pricing-dropdown { position: absolute; top: calc(100% + 12px); left: -18px; width: 270px; max-height: calc(100dvh - 120px); overflow-y: auto; padding: 10px 18px; background: var(--cream); border: 1px solid #a47e3740; box-shadow: 0 8px 24px #514b3c12; }
+  /* Keep the hover bridge outside the dropdown's scrolling/clipping area. */
+  .pricing-navigation[open]::after { content: ''; position: absolute; top: 100%; left: -18px; width: 270px; height: 13px; }
+  .pricing-dropdown a { display: block; color: #735e3f; padding: 10px 0; line-height: 1.35; }
+  .pricing-dropdown a + a { border-top: 1px solid #a47e372b; }
+  .pricing-dropdown a:hover { color: var(--gold); }
+  @media (min-width: 768px) and (max-width: 1100px) {
+    .logo { width: 140px; }
+    #main-nav { gap: 12px; }
+    #main-nav > a, .pricing-navigation { font-size: 16px; }
+  }
+  @media (max-width: 767px) {
+    .pricing-navigation[open]::after { display: none; }
+    .pricing-dropdown { position: static; width: 100%; max-height: none; overflow: visible; margin-top: 12px; box-shadow: none; }
+  }
+</style>

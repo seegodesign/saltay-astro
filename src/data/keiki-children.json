@@ -1,0 +1,34 @@
+{
+  "_template": "wellnessDetail",
+  "booking_heading": "Make time for yourself",
+  "booking_text": "Choose your experience, explore session pricing, or get in touch to plan your visit.",
+  "booking_label": "Book your experience",
+  "booking_url": "/book-with-us/",
+  "title": "Keiki (Children) | Saltay Hanalei Bay",
+  "description": "Explore Saltay’s offerings for younger guests, with parent accompaniment and botanical facials from age nine.",
+  "eyebrow": "Care for younger guests",
+  "heading": "A gentle introduction to Saltay",
+  "introduction": "Explore bodywork and botanical experiences for children. A parent must accompany their child throughout the chosen session.",
+  "hero_image": "/assets/ocean.jpg",
+  "hero_image_alt": "Ocean waters along the coast of Kaua‘i",
+  "menu_heading": "Plan a Keiki visit",
+  "note": "Contact us to discuss the right session, duration, and pricing for your child before booking.",
+  "pricing_url": "/pricing/",
+  "items": [
+    {
+      "id": "bodywork",
+      "title": "Bodywork & botanical care",
+      "text": "Published Keiki options include acupuncture, cranial sacral therapy, push/pull massage, ear candling, respiratory steam, fire cupping, sound frequency, and botanical foot soaks. Speak with the team about your child’s age and an appropriate choice."
+    },
+    {
+      "id": "facials",
+      "title": "Jewel of the Siren",
+      "text": "The Jewel of the Siren botanical facial is available for children aged nine and older. Explore the Signature Experiences page to learn about this facial ritual."
+    },
+    {
+      "id": "planning",
+      "title": "A parent by their side",
+      "text": "Share your child’s age, preferred experience, and scheduling needs when you contact us. A parent accompanies the session; the team can help you plan the details."
+    }
+  ]
+}

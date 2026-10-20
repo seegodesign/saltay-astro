@@ -1,0 +1,30 @@
+.wellness-hero { padding: 155px 0 65px; background: var(--cream); border-bottom: 1px solid #a47e3733; }
+.wellness-hero-grid { display: grid; grid-template-columns: 1.1fr 1fr; align-items: center; gap: clamp(32px, 6vw, 90px); }
+.wellness-hero-copy .eyebrow { text-align: left; text-transform: uppercase; letter-spacing: .12em; margin-bottom: 22px; }
+.wellness-hero h1 { font-size: clamp(42px, 5vw, 68px); line-height: 1.08; text-wrap: balance; }
+.wellness-intro { margin: 26px 0 32px; font-size: 23px; line-height: 1.45; max-width: 560px; }
+.wellness-hero-image { width: 100%; height: 470px; object-fit: cover; border-radius: 220px 220px 5px 5px; }
+.wellness-offering { border-top: 1px solid #a47e3740; padding-top: 26px; }
+.wellness-offering > p { margin-top: 20px; line-height: 1.5; }
+.wellness-offering .session-details { margin-top: 20px; max-width: none; }
+.wellness-planning { padding: 28px; background: #a47e370c; border: 1px solid #a47e3733; line-height: 1.4; }
+.booking-availability { max-width: 600px; margin: 26px auto 0; line-height: 1.5; color: #735e3f; }
+.booking-contact { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; padding-block: 80px; }
+.booking-contact .eyebrow { text-align: left; text-transform: uppercase; letter-spacing: .12em; margin-bottom: 20px; }
+.booking-contact h2 { font-size: clamp(34px, 4vw, 46px); }
+.booking-contact p:not(.eyebrow) { margin-top: 24px; line-height: 1.5; }
+.booking-contact-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px; margin-top: 28px; }
+.booking-contact-actions .menu-book-link { margin-top: 0; }
+.booking-request { padding: 32px; background: #a47e370c; border: 1px solid #a47e3733; }
+.booking-request h3 { font-size: 30px; }
+.booking-request ul { padding-left: 22px; margin: 20px 0 0; }
+.booking-request li { padding: 8px 0; line-height: 1.4; }
+.booking-request li::marker { color: var(--gold); }
+@media (max-width: 767px) {
+  .wellness-hero { padding: 125px 0 40px; }
+  .wellness-hero-grid, .booking-contact { grid-template-columns: 1fr; gap: 36px; }
+  .wellness-hero-image { height: 310px; border-radius: 160px 160px 5px 5px; }
+  .wellness-intro { font-size: 21px; }
+  .booking-contact { padding-block: 48px; }
+  .booking-request, .wellness-planning { padding: 24px; }
+}

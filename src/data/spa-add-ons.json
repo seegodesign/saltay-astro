@@ -1,0 +1,160 @@
+{
+  "_template": "spaAddOns",
+  "title": "Wellness Enhancements & Spa Add-ons | Saltay Hanalei Bay",
+  "description": "Explore wellness enhancements for your Saltay Signature Experience or Wellness Retreat, with spa add-ons from $10 to $55.",
+  "eyebrow": "SPA ADD-ONS · SALTAY HANALEI BAY",
+  "heading": "Wellness Enhancements",
+  "introduction": "Wellness Enhancements may be added to a Signature Experience or Wellness Retreat.",
+  "session_note": "Enhancements enrich your experience without increasing the duration of your session.",
+  "menu_heading": "Enhance your experience",
+  "enhancements": [
+    {
+      "name": "Abdominal Organ Balancing",
+      "price": "$25"
+    },
+    {
+      "name": "Acupressure Facial Rejuvenation",
+      "price": "$25"
+    },
+    {
+      "name": "Acupressure Facial Stimulation",
+      "price": "$25"
+    },
+    {
+      "name": "Aromatherapy Acupressure",
+      "price": "$25"
+    },
+    {
+      "name": "Auricular Acupressure Stimulation",
+      "price": "$25"
+    },
+    {
+      "name": "Cellulite Gua Sha Scraping Therapy",
+      "price": "$25"
+    },
+    {
+      "name": "Chakra Root & Sacral Steam",
+      "price": "$55"
+    },
+    {
+      "name": "Contrast Therapy",
+      "price": "$25"
+    },
+    {
+      "name": "Cranial Sacral Therapy",
+      "price": "$50"
+    },
+    {
+      "name": "Crystal Masque Compress",
+      "price": "$10"
+    },
+    {
+      "name": "Gua Sha Facial Stimulation",
+      "price": "$25"
+    },
+    {
+      "name": "Gua Sha Therapy",
+      "price": "$25"
+    },
+    {
+      "name": "Guava Stick Acupressure Therapy",
+      "price": "$25"
+    },
+    {
+      "name": "Guava Stick Tui Na Therapy",
+      "price": "$25"
+    },
+    {
+      "name": "Herbal Bundle Awakening",
+      "price": "$25"
+    },
+    {
+      "name": "Herbal Compress",
+      "price": "$25"
+    },
+    {
+      "name": "Head & Scalp Acupressure Channel Stimulation w Jade Comb",
+      "price": "$25"
+    },
+    {
+      "name": "Heated-Stone Acu-Therapy",
+      "price": "$25"
+    },
+    {
+      "name": "Herbal Acupressure Point Compress",
+      "price": "$25"
+    },
+    {
+      "name": "Herbal Detoxification Steam",
+      "price": "$50"
+    },
+    {
+      "name": "Inner Child Connection Meditation",
+      "price": "$45"
+    },
+    {
+      "name": "Kane / Male Steam",
+      "price": "$55"
+    },
+    {
+      "name": "Magnesium Mineral Mist",
+      "price": "$10"
+    },
+    {
+      "name": "Moxa Box Smoke Therapy",
+      "price": "$25"
+    },
+    {
+      "name": "Moxa Cone Treatment",
+      "price": "$25"
+    },
+    {
+      "name": "One-ness Meditation & Exercises",
+      "price": "$10"
+    },
+    {
+      "name": "Palm Frond Channel Stimulation",
+      "price": "$25"
+    },
+    {
+      "name": "Qi Gong Breathing Exercises",
+      "price": "$55"
+    },
+    {
+      "name": "Respiratory Steam",
+      "price": "$55"
+    },
+    {
+      "name": "Sandalwood Meridian Balancing",
+      "price": "$25"
+    },
+    {
+      "name": "Sliding Fire Cups",
+      "price": "$50"
+    },
+    {
+      "name": "Sound Frequency Crystal Pyramid",
+      "price": "$45"
+    },
+    {
+      "name": "Sound Frequency Crystal Singing Bowls",
+      "price": "$45"
+    },
+    {
+      "name": "Steam Therapy",
+      "price": "$55"
+    },
+    {
+      "name": "Tuning Fork “Sesna” Frequency",
+      "price": "$10"
+    },
+    {
+      "name": "Wahine / Female Steam",
+      "price": "$55"
+    }
+  ],
+  "booking_heading": "Make the experience your own.",
+  "booking_text": "Choose your Signature Experience or Wellness Retreat, then add a little extra care with a wellness enhancement.",
+  "booking_label": "Book your experience",
+  "booking_url": "/book-with-us/"
+}

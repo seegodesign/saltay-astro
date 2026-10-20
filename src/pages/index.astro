@@ -1,23 +1,15 @@
 ---
-import home from '../data/home.json';
-import Hero from '../components/Hero.astro';
-import Treatments from '../components/Treatments.astro';
-import Care from '../components/Care.astro';
-import Booking from '../components/Booking.astro';
+import TinaIsland from '@tinacms/astro/TinaIsland.astro';
+import Home from '../components/Home.astro';
+import { getHome } from '../lib/tina/data';
+import { islands } from '../lib/tina/islands';
 import '../styles/global.css';
-const components = { Hero, Treatments, Care, Booking };
+const { data: { page: home } } = await getHome();
+const hero = home.blocks?.find(block => block?.__typename === 'PageHomeBlocksHero');
 ---
-<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>{home.title}</title><meta name="description" content={home.blocks[0].description}/><meta name="robots" content="noindex,nofollow"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Hubballi&display=swap" rel="stylesheet"/></head>
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>{home.title}</title><meta name="description" content={hero?.description ?? ''}/><meta name="robots" content="noindex,nofollow"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Hubballi&display=swap" rel="stylesheet"/></head>
 <body>
-<header><div class="container header-inner"><a href="#" aria-label="Saltay Hanalei Bay"><img class="logo" src={home.logo} alt="Saltay Hanalei Bay Spa" data-editable="image" data-prop-src="@file[src/data/home.json].logo" /></a><button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button><nav id="main-nav" aria-label="Main navigation">{home.navigation.map(text=><a href="#">{text}</a>)}<a href="#" class="button">{home.booking_label}</a></nav></div></header>
-<main data-editable="array" data-prop="@file[src/data/home.json].blocks" data-id-key="_name" data-component-key="_name">
-{home.blocks.map(block=>{const Component=components[block._name];return <div data-editable="array-item" data-id={block._name} data-component={block._name}><Component {...block}/></div>;})}
-</main>
-<footer><div class="container footer-inner"><span>© Copyright - Saltay Hanalei Bay</span><nav aria-label="Footer navigation">{home.footer_links.map(text=><a href="#">{text}</a>)}<a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="X">𝕏</a></nav></div></footer>
-<script>
-if (window.inEditorMode) import('../scripts/register-components.js').catch(console.warn);
-const toggle=document.querySelector('.menu-toggle');
-toggle?.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')!=='true';toggle.setAttribute('aria-expanded',String(open));document.querySelector('#main-nav')?.classList.toggle('open',open);});
-window.addEventListener('scroll',()=>document.querySelector('header')?.classList.toggle('scrolled',window.scrollY>50),{passive:true});
-</script>
+<TinaIsland name="home" wrapper={islands.home.wrapper} primary>
+  <Home home={home} />
+</TinaIsland>
 </body></html>

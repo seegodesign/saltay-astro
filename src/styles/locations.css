@@ -1,0 +1,15 @@
+.locations-list { padding: 72px 0 90px; }
+.location-section { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: clamp(32px, 6vw, 100px); padding: 42px 0; border-top: 1px solid #a47e3740; scroll-margin-top: 118px; }
+.location-section:last-child { padding-bottom: 0; }
+.location-number { display: block; font-size: 17px; color: var(--gold); margin-bottom: 18px; }
+.location-heading h2 { font-size: clamp(30px, 3vw, 40px); text-wrap: balance; }
+.location-heading address { margin-top: 20px; font-style: normal; color: #735e3f; line-height: 1.4; }
+.location-map-link { display: inline-block; margin-top: 12px; color: #735e3f; text-decoration: underline; text-underline-offset: 4px; }
+.location-map-link:hover { color: var(--gold); }
+.location-description { line-height: 1.5; }
+.location-description p { margin: 0 0 22px; }
+.location-description p:last-child { margin-bottom: 0; }
+@media (max-width: 767px) {
+  .locations-list { padding: 36px 0 56px; }
+  .location-section { grid-template-columns: 1fr; gap: 24px; padding: 32px 0; scroll-margin-top: 100px; }
+}

@@ -1,0 +1,19 @@
+---
+import { tinaField } from '@tinacms/astro';
+import type { MusingsQuery } from '../../tina/__generated__/types';
+interface Props { post: MusingsQuery['musings']; }
+const { post } = Astro.props;
+const dateLabel = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeZone: 'Pacific/Honolulu' }).format(new Date(post.date));
+---
+<main id="musings-content" class="musings-main container">
+  <article class="musing-article">
+    <a class="musing-back" href="/musings/">← All musings</a>
+    <p class="eyebrow">SALTAY LIFE MUSINGS</p>
+    <h1 data-tina-field={tinaField(post, 'title')}>{post.title}</h1>
+    <p class="musing-meta"><time datetime={post.date} data-tina-field={tinaField(post, 'date')}>{dateLabel}</time> · By <span data-tina-field={tinaField(post, 'author')}>{post.author}</span></p>
+    {post.image && <img class="musing-featured" data-tina-field={tinaField(post, 'image')} src={post.image} alt={post.image_alt ?? ''} />}
+    <div class="musing-body" data-tina-field={tinaField(post, 'body_html')} set:html={post.body_html} />
+    {(post.tags ?? []).length > 0 && <p class="musing-tags" data-tina-field={tinaField(post, 'tags')}>{post.tags?.join(' ')}</p>}
+    <a class="musing-read" href="/musings/">← Back to musings</a>
+  </article>
+</main>

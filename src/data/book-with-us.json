@@ -1,0 +1,30 @@
+{
+  "_template": "bookWithUs",
+  "title": "Book With Us | Saltay Hanalei Bay",
+  "description": "Reserve your Saltay experience through Square or contact us for help planning your appointment.",
+  "eyebrow": "Your time at Saltay",
+  "heading": "Book your experience",
+  "introduction": "Saltay Botanical Spa welcomes guests by appointment. Explore available sessions online, or contact us for help choosing your experience.",
+  "booking_label": "Check availability on Square",
+  "booking_url": "https://book.squareup.com/appointments/vl1njil0c37z16/location/BDHCVABZZ9TJ1",
+  "availability_note": "Online appointments depend on therapist availability. For a specific therapist or a request outside the online schedule, please call or text.",
+  "contact_heading": "Let us help plan your visit",
+  "contact_text": "Call or text (808) 855-8718. Please allow 24–48 hours for a response.",
+  "phone": "(808) 855-8718",
+  "phone_url": "tel:+18088558718",
+  "sms_url": "sms:+18088558718",
+  "requests": [
+    {
+      "text": "Preferred day, time, and session duration"
+    },
+    {
+      "text": "An individual or couples appointment"
+    },
+    {
+      "text": "Your chosen experience and any therapist request"
+    },
+    {
+      "text": "Your name and email address for invoicing"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "_template": "community",
+  "title": "Community | Saltay Hanalei Bay",
+  "description": "Community offerings at Saltay Botanical Spa: Kama’aina rates, Kupuna healing days, workshops, community spa days, and group experiences.",
+  "eyebrow": "ROOTED IN COMMUNITY",
+  "heading": "Community",
+  "introduction": "Care, connection, and shared experiences for those who live and work in our community.",
+  "menu_heading": "Explore community offerings",
+  "sections": [
+    {
+      "id": "visiting-practitioners",
+      "heading": "Visiting Cultural Practitioners",
+      "body_html": "<p>Follow our <a href=\"https://www.instagram.com/saltay.hanaleibay/\">Instagram</a> for upcoming practitioner visits.</p>"
+    },
+    {
+      "id": "kamaaina-rates",
+      "heading": "Kama’aina Rates",
+      "body_html": "<p>Special Kama’aina Rates are offered to full time residents who live and work in the community. Please <a href=\"/book-with-us/\">inquire</a>.</p>"
+    },
+    {
+      "id": "community-healing-days",
+      "heading": "Kupuna / Community Healing Days",
+      "body_html": "<p>Offered 1st Saturday of every month (coincides with Surf Swap) · 10AM to 2PM</p><p><strong>1 healing modality for $50 | 2 healing modalities for $85</strong></p><p>Modality Options:</p><ul><li>Acupuncture / Acupressure</li><li>Fire Cupping</li><li>Tui Na Massage</li><li>Cranial Sacral Therapy / Reiki</li><li>Gua Sha – Psoas Release</li><li>Botanical Compress / Hot Stones</li><li>Steam Therapy</li></ul>"
+    },
+    {
+      "id": "special-events",
+      "heading": "Special Events",
+      "body_html": "<p>SALTAY BOTANICAL SPA offers community events for those who live and work in our community.</p>"
+    },
+    {
+      "id": "community-experiences",
+      "heading": "Community Experiences",
+      "body_html": "<p>Please <a href=\"/book-with-us/\">schedule an appointment</a>.</p><p>Infra-red Sauna $25 | Botanical Foot Soak $40</p>"
+    },
+    {
+      "id": "workshops-classes",
+      "heading": "Workshops / Classes",
+      "body_html": "<p>Sign up for our mailing list or check out our <a href=\"https://www.instagram.com/saltay.hanaleibay/\">Instagram page</a> for upcoming training.</p>"
+    },
+    {
+      "id": "community-spa-days",
+      "heading": "Community Spa Days",
+      "body_html": "<p>Offered to the community on specifically chosen dates – see calendar for upcoming CSD, Community Spa Days.</p><ul><li>60 min: $111 (The Saltay Experience with Signature Spa Body Treatment)</li><li>30 min: $75 (The Saltay Experience Herbal Botanical Foot Soak with Far Infra-red Sauna)</li><li>90 min: $150 (Saltay Experience with Botanical Spa Body Treatment)</li></ul><p>(Spa Experiences are offered in a community setting and treatments may be done in a shared room if the person receiving the session comes in alone. Private rooms granted to those who come with a friend or family member.)</p>"
+    },
+    {
+      "id": "group-spa-experiences",
+      "heading": "Group Spa Experiences",
+      "body_html": "<p>Are you planning a ceremony, retreat, wedding, or other group event?</p><p><a href=\"/book-with-us/\">Contact us</a> to plan a customized group spa experience.</p>"
+    }
+  ],
+  "booking_heading": "Connect with Saltay",
+  "booking_text": "Inquire about community offerings or plan a customized group spa experience.",
+  "booking_label": "Get in touch",
+  "booking_url": "/book-with-us/",
+  "hero_image": "/assets/community-header.jpg",
+  "hero_image_alt": "Ceramic bowls, a sage bundle, red hibiscus on green leaves, and a feather beside printed Hawaiian chants"
+}

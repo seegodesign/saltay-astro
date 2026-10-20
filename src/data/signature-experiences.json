@@ -1,0 +1,88 @@
+{
+  "_template": "signatureExperiences",
+  "title": "Signature Experiences | Saltay Hanalei Bay",
+  "description": "Explore nine signature experiences at Saltay Hanalei Bay, from botanical bodywork and restorative rituals to holistic facial care.",
+  "eyebrow": "Botanical rituals · Saltay Hanalei Bay",
+  "heading": "Signature Experiences",
+  "introduction": "Therapeutic botanical bodywork, restorative rituals, and holistic facial care. Find a little time to reconnect, and an experience that speaks to you.",
+  "menu_heading": "Find your signature ritual",
+  "menu_introduction": "Choose an image to explore the experience.",
+  "experiences": [
+    {
+      "id": "pampered-in-paradise",
+      "name": "Pampered in Paradise",
+      "title": "Pampered in Paradise ~ Therapeutic Botanical Bodywork & Pampering",
+      "image": "/assets/signature/pampered-in-paradise.jpg",
+      "image_alt": "Pampered in Paradise at Saltay Botanical Spa",
+      "details_html": "<p>Ultimate full-body pampering with therapeutic botanical bodywork from head to toe.</p>\n<p>Spa Time Options:  60 ~ 90 ~ 120 mins</p>\n<p>Step out of the world and transport yourself into your very own sanctuary where fragrant scents and rhythmic frequencies create a space for you to relax, and let go.</p>\n<p>Session begins with heated stones, freshly harvested foliage and botanical infused oils lathered atop body.</p>\n<p>Botanical bundles are therapeutically applied to the surface of your body to lightly exfoliate your skin, lengthen and stretch your muscles and assist with releasing tension. </p>\n<p>The nourishing properties of the herbs encourages body systems to come into balance calling forth deep relaxation.</p>\n<p>Application of warm compresses are applied to specially selected energy centers while jade combs are brushed atop your head to stimulate channels, welcoming further bliss. </p>\n<p>Scented botanical oils are applied to rejuvenating points on upper body with the utmost precision and care. </p>\n<p>Additional pressure point therapy applied in rhythmic fashion as time and space seem to drift away bringing the utmost pampered feeling.  </p>\n<p>Session concludes with fragrant cool mists and gentle topical touch of whispering foliage.   </p>\n<p>Pampered in Paradise Experience is perfect for the solo traveler, honeymooners, couples, celebratory times, friends, family, and more.</p>\n<p>Wanting more?</p>\n<p>Try our “Pampered” Signature Spa Package (3hrs.15mins)</p>"
+    },
+    {
+      "id": "botanical-bliss",
+      "name": "Botanical Bliss",
+      "title": "Botanical Bliss Restoration",
+      "image": "/assets/signature/botanical-bliss.jpg",
+      "image_alt": "Botanical Bliss at Saltay Botanical Spa",
+      "details_html": "<p>A symphony of herbs are custom blended to restore, rejuvenate and harmonize the body. Indulge and let go in a chorus of customized herbal blends applied through three to five of the following botanical applications:</p>\n<p>Acupunture/Acupressure</p>\n<p>Botanical foot soaking</p>\n<p>Botanical steam</p>\n<p>Custom herbal teas</p>\n<p>Heated Compresses</p>\n<p>Herbal salve wrapping</p>\n<p>Infra-red sauna herbal bath</p>\n<p>Pelvic floor steaming</p>\n<p>Respiratory misting</p>\n<p>Tui Na Chinese medicine bodywork</p>\n<p>This signature experience may be shared with another and custom blended to each individual’s needs.</p>"
+    },
+    {
+      "id": "elemental-escape",
+      "name": "Elemental Escape",
+      "title": "Elemental Escape",
+      "image": "/assets/signature/elemental-escape.jpeg",
+      "image_alt": "Elemental Escape at Saltay Botanical Spa",
+      "details_html": "<p>This custom experience cycles through the 5 elements.</p>\n<p>Surrender to the flow and natural rhythms of life.</p>\n<p>A deeply nourishing experience designed to return your body to a state of inner balance & harmony.</p>\n<p>This session can be experienced alone or with a friend or loved one.</p>\n<blockquote>\n<p><strong>Fire</strong>: Ear Candling, Fire Cupping, Hot Stones, Moxabustion Smoke Therapy<br>\n<strong>Water</strong>: Botanical Soaks, Herbal Teas, Heated Compresses<br>\n<strong>Earth</strong>: Cranial Sacral Therapy, Chi Nei Tsang (Chinese Abdominal Organ Massage), Gua Sha, Guava Stick Trigger Point, Heated Stones, Herbal Compresses, Tui Na Bodywork, Psoas Release<br>\n<strong>Wood</strong>: Bamboo Channel Stimulation, Hawaiian Sandalwood Smudging, Palm Frond Channel Stimulation, Yoni Steam<br>\n<strong>Metal</strong>/<strong>Air</strong> : Acupuncture, Auricular Vaccaria Seeds, Botanical Mist, Clearing Feathers, Jade Stone Channel Stimulation, Steaming (Face, Body, Respiratory), Tibetan Singing Bowls, Tuning Fork(s)</p>\n</blockquote>"
+    },
+    {
+      "id": "immortal-dragon",
+      "name": "Immortal Dragon",
+      "title": "The Immortal Dragon ~ Sports Medicine and Athletic Support Experience",
+      "image": "/assets/signature/immortal-dragon.jpg",
+      "image_alt": "Immortal Dragon at Saltay Botanical Spa",
+      "details_html": "<p>In this signature experience, techniques are used to address pain, stress and body misalignment utilizing an ancient form of Battlefield Botanical Medicine.</p>\n<p>Initially, a therapeutic technique is used to reduce pain and inflammation and increase range of motion within the neck. After which, firm pressure points are applied to the lower abdomen to induce relaxation of deep muscles and release lower back or hip tension.</p>\n<p>Acupuncture or acupressure is applied to reset the central nervous system while botanical herbal applications are used with therapeutic bodywork to encourage full body athletic support.</p>\n<p>Session concludes with advanced fire cupping, heated compresses and energy balancing.</p>\n<p>This experience is encouraged to be shared with a friend or loved-one and is highly recommended for the athlete, active person, or those who have physical discomfort or imbalances.</p>"
+    },
+    {
+      "id": "saltay-seahorse",
+      "name": "Saltay Seahorse",
+      "title": "Saltay Seahorse Detox",
+      "image": "/assets/signature/saltay-seahorse-underwater.jpg",
+      "image_alt": "Golden seahorse holding seagrass in sunlit turquoise water",
+      "details_html": "<p>Enjoy full body relaxation from warm botanical compresses, contrasted with cool mineralized exfoliation while your spirit tunes into a luscious sound bath.</p>\n<p>Drop in as warm herbal infused compresses are applied to your skin to open your pores. Heated stones seal in the warmth while a mineralized <strong><em>Saltay</em></strong> scrub awakens your senses.</p>\n<p>Allow tension to melt as a warm, green-tea compress is placed upon your face followed with a cooling, weighted crystal masque.</p>\n<p>Custom blended warm botanical oils are slowly drizzled from a seashell atop your abdomen and upper chest.  Contrast therapy is applied to your extremities preparing your spirit for a relaxing soundscape finale.</p>\n<p>This shared nourishing experience assists with detoxifying, stimulating and releasing that which no longer serves, allowing one to drop into a deeper, <strong><em>Saltay</em></strong> state-of-being.</p>\n<p>A perfect experience for friends and conscious souls to share.</p>\n<p>Suggested Add-ons:</p>\n<p>Jade Stone Scalp Channel Stimulation</p>\n<p>Acupressure Trigger Point for the Feet</p>"
+    },
+    {
+      "id": "octopus-embrace",
+      "name": "Octopus Embrace",
+      "title": "The Octopus Embrace",
+      "image": "/assets/signature/octopus-embrace.jpeg",
+      "image_alt": "Octopus Embrace at Saltay Botanical Spa",
+      "details_html": "<p>The Octopus Embrace is a two-hour journey designed to support the functions of the human body. This experience focuses on regulating lymphatics, clearing toxicity and calming the mind through a rainbow of botanical remedies.</p>\n<p>This unique journey begins with a botanical foot soak to encourage an initial release of toxins.  After which, vaccaria acupressure seeds or tiny acupuncture needles are applied to specific points of the ear to encourage peace and stimulate the body’s innate ability to heal.</p>\n<p>Botanical tea compresses are placed upon the digestive and reproductive areas while dry brushing and, or, jade comb channel stimulation nourish lymphatics.</p>\n<p>Cups are slid over the back to create smooth circulation and guava stick rolling and trigger point therapy is worked through the extremities. Multiple glass cups are then applied in a rhythmic method to further move deeper lymphatics.  Seasonal herbal compresses are placed onto the back to expel toxins and reduce inflammation.</p>\n<p>Session concludes with contrast therapy as entire body is spritzed with a specially formulated mist applied prior to a seating in the FAR infrared sauna.  Cool, damp botanical cloths are provided to renew and invigorate.</p>\n<p>(NOTE: <em>After your session, you may look as though you’ve been embraced by an octopus as round circle marks may appear on your skin from the fire cupping. Colored circle marks from cupping may remain on the back for approximately 1-3 days, depending on the person’s overall constitution. This session brings instantaneous, deep relief to back pain, reduces internal inflammation and encourages overall circulation. </em><em>This session is NOT intended for anyone who is pregnant, diabetic or has a pacemaker, or, very thin skin.)</em></p>"
+    },
+    {
+      "id": "divine-unwind",
+      "name": "Divine Unwind",
+      "title": "Divine Unwind Therapeutic Bodywork & Stretch",
+      "image": "/assets/signature/divine-unwind.jpeg",
+      "image_alt": "Divine Unwind at Saltay Botanical Spa",
+      "details_html": "<p>Therapeutic bodywork with zero gravity stretch and botanical oils offering comprehensive support and deep relaxation.</p>\n<p>Divine Unwind is derived from a combination of battlefield botanical medicine revival techniques, push-pull massage and correct bone push-pull massage.*</p>\n<p>Herbal magnesium body replenishing mists, tea compresses, or botanical infused oils are applied to provide relief to muscle aches and tension.</p>\n<p>Targeted touch and passive stretch and traction enhances mobility.</p>\n<p>Zero gravity movement method gently unwinds the spine and hips to open the diaphragm and shoulder joints, effectively releasing tension and improving range of motion.</p>\n<p>Custom blended botanicals applied to support the respiratory system to induce a state of calm in the parasympathetic nervous system.</p>\n<p>Experience increased relaxation and enjoy comprehensive athletic support with Saltay’s Divine Unwind Experience.</p>\n<p>Suggested Ad-ons:</p>\n<p>Freshly harvested Aloe gel body application</p>\n<p>*Battlefield Botanical Revival Medicine body-work uses effective techniques to bring the body back into proper aligned structure.  Chinese Tui Na, push-pull massage, is a form of therapeutic bodywork offered at Saltay Botanical Spa.  Chinese Zheng Gu Tui Na, correct bone push pull therapeutic bodywork is considered an advanced form of sports medicine massage for those trained in this modality.</p>"
+    },
+    {
+      "id": "the-mermaids-journey",
+      "name": "The Mermaid’s Journey",
+      "title": "The Mermaid’s Journey",
+      "image": "/assets/signature/the-mermaids-journey.jpg",
+      "image_alt": "The Mermaid’s Journey at Saltay Botanical Spa",
+      "details_html": "<p>Allow tranquility to settle in as you immerse your feet into a silky seaweed mineral-infused foot soak.  Set your intentions through an “Ode to the Ocean”, in the form of a water blessing and choose a specific portal for your unique journey. </p>\n<p>This mystical healing ritual blends lathered botanical oils with gentle touch, loving pampered bodywork, scintillating scalp treatment, chromo light scape and vibrational frequency.  Ritual finale concludes with a chosen water blessing that may be carried back home.</p>\n<p>Suggested ADD-On:  30 min guided meditation journey</p>"
+    },
+    {
+      "id": "jewel-of-the-siren",
+      "name": "Jewel of the Siren",
+      "title": "Jewel of the Siren Botanical Facial",
+      "image": "/assets/signature/jewel-of-the-siren.jpg",
+      "image_alt": "Jewel of the Siren at Saltay Botanical Spa",
+      "details_html": "<p><strong>Unlock your skin’s most radiant, lifted potential with Jewel of the Siren | Cosmetic Acupuncture or Acupressure Facial.</strong></p>\n<p>Inspired by the healing alchemy of the ocean and earth, this signature treatment begins with a purifying herbal steam and an aromatic botanical mist. We paint your skin with botanical herbal masques targeted to hydrate, soothe, or rejuvenate.</p>\n<p>Rhythmic warmth from heated stones and compresses pairs with gentle pressure point therapy to melt away tension. Next, the skin is treated to an exquisite contrast experience—alternating warm towelettes with cool botanicals, cooling crystal masques, and the sculpting touch of jade and rose quartz Gua Sha.</p>\n<p>Finely tuned cosmetic acupuncture or facial acupressure completes the ritual, stimulating collagen and delivering an instant, enlivened lift that glows from within</p>"
+    }
+  ],
+  "booking_heading": "Your time to unwind.",
+  "booking_text": "Reserve your signature experience, explore treatment pricing, or personalize your visit with a wellness enhancement.",
+  "booking_label": "Book your experience",
+  "booking_url": "/book-with-us/"
+}

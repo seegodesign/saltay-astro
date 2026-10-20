@@ -1,0 +1,27 @@
+---
+import { tinaField } from '@tinacms/astro';
+import type { MusingsConnectionQuery } from '../../tina/__generated__/types';
+interface Props { connection: MusingsConnectionQuery['musingsConnection']; }
+const { connection } = Astro.props;
+const posts = (connection.edges ?? []).flatMap(edge => edge?.node ? [edge.node] : [])
+  .sort((a, b) => b.date.localeCompare(a.date));
+const dateLabel = (date: string) => new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeZone: 'Pacific/Honolulu' }).format(new Date(date));
+---
+<main id="musings-content" class="musings-main container">
+  <div class="musings-intro">
+    <p class="eyebrow">FROM SALTAY HANALEI BAY</p>
+    <h1>Saltay Life Musings</h1>
+    <p>Stories and reflections on botanicals, healing, and the Saltay way of life.</p>
+    <img class="musings-rule" src="/assets/spiral-rule.png" alt="" width="370" />
+  </div>
+  <div class="musings-grid">
+    {posts.map(post => <article class="musing-card">
+      {post.image && <a href={`/musings/${post._sys.filename}/`} tabindex="-1" aria-hidden="true"><img class="musing-card-image" data-tina-field={tinaField(post, 'image')} src={post.image} alt={post.image_alt ?? ''} loading="lazy" /></a>}
+      <p class="musing-meta"><time datetime={post.date} data-tina-field={tinaField(post, 'date')}>{dateLabel(post.date)}</time> · By <span data-tina-field={tinaField(post, 'author')}>{post.author}</span></p>
+      <h2 data-tina-field={tinaField(post, 'title')}><a href={`/musings/${post._sys.filename}/`}>{post.title}</a></h2>
+      <p data-tina-field={tinaField(post, 'excerpt')}>{post.excerpt}</p>
+      <a class="musing-read" href={`/musings/${post._sys.filename}/`}>Read more<span class="sr-only">: {post.title}</span> <span aria-hidden="true">→</span></a>
+    </article>)}
+    {posts.length === 0 && <p>More musings are on their way.</p>}
+  </div>
+</main>

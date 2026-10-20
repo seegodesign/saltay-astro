@@ -1,0 +1,13 @@
+---
+import TinaIsland from '@tinacms/astro/TinaIsland.astro';
+import Musings from '../../components/Musings.astro';
+import MusingsLayout from '../../layouts/MusingsLayout.astro';
+import { getMusings } from '../../lib/tina/data';
+import { islands } from '../../lib/tina/islands';
+const { data: { musingsConnection } } = await getMusings();
+---
+<MusingsLayout title="Saltay Life Musings" description="Stories and reflections on botanicals, healing, and the Saltay way of life.">
+  <TinaIsland name="musings" wrapper={islands.musings.wrapper} primary>
+    <Musings connection={musingsConnection} />
+  </TinaIsland>
+</MusingsLayout>

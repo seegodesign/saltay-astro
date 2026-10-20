@@ -1,0 +1,35 @@
+.discount-hero h1 { white-space: pre-line; }
+.discount-location { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; padding-block: 64px; border-bottom: 1px solid #a47e3740; }
+.discount-location .eyebrow { text-align: left; letter-spacing: .1em; padding-top: 9px; }
+.discount-location p:not(.eyebrow) { max-width: 700px; font-size: 22px; line-height: 1.5; margin-bottom: 0; }
+.discount-rates { padding-block: 64px 80px; }
+.discount-section-heading { text-align: center; margin-bottom: 36px; }
+.discount-section-heading h2 { font-size: clamp(34px, 3.3vw, 46px); }
+.discount-section-heading > p:not(.eyebrow) { max-width: 620px; margin: 18px auto 0; font-size: 21px; line-height: 1.45; }
+.discount-rate-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; max-width: 960px; margin: auto; }
+.discount-rate-card { padding: 32px; border: 1px solid #a47e3740; background: #f7f0e4; }
+.discount-rate-card h3 { font-size: 32px; margin-bottom: 24px; }
+.discount-rate-card ul { list-style: none; padding: 0; margin: 0; }
+.discount-rate-card li { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 24px 0; border-top: 1px solid #a47e3733; font-size: 23px; }
+.discount-rate-card li:last-child { padding-bottom: 0; }
+.discount-rate-card li > div { text-align: right; }
+.discount-price { display: block; font-family: 'EB Garamond', Georgia, serif; font-size: 42px; line-height: 1.1; color: #806125; }
+.discount-price-unit { display: block; font-size: 15px; color: #625b48; }
+.discount-experiences { background: #f0eadf; padding-block: 68px; }
+.discount-experiences .eyebrow { letter-spacing: .12em; margin-bottom: 16px; }
+.discount-experiences ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 36px; list-style: none; padding: 0; margin: 40px 0 0; }
+.discount-experiences li { border-top: 1px solid #a47e3755; padding-top: 22px; }
+.discount-experiences li > span { color: #806125; font-size: 14px; letter-spacing: .1em; }
+.discount-experiences h3 { font-size: 30px; line-height: 1.2; margin-top: 16px; }
+.discount-full-menu { display: block; width: fit-content; margin: 24px auto 0; text-decoration: underline; text-underline-offset: 5px; }
+@media (max-width: 767px) {
+  .discount-location { grid-template-columns: 1fr; gap: 16px; padding-block: 40px; }
+  .discount-location .eyebrow { padding: 0; margin: 0; }
+  .discount-location p:not(.eyebrow) { font-size: 20px; }
+  .discount-rates { padding-block: 44px 52px; }
+  .discount-rate-grid { grid-template-columns: 1fr; gap: 20px; }
+  .discount-rate-card { padding: 26px; }
+  .discount-experiences { padding-block: 48px; }
+  .discount-experiences ul { grid-template-columns: 1fr; gap: 28px; }
+  .discount-experiences h3 { margin-top: 10px; }
+}

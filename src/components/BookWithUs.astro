@@ -1,0 +1,23 @@
+---
+import { tinaField } from '@tinacms/astro';
+import DiagonalArrow from './DiagonalArrow.astro';
+import type { PageQuery } from '../../tina/__generated__/types';
+interface Props { page: Extract<PageQuery['page'], { __typename: 'PageBookWithUs' }>; }
+const { page } = Astro.props;
+---
+<main id="wellness-content">
+  <section class="menu-hero" aria-labelledby="booking-title"><div class="container">
+    <p class="eyebrow" data-tina-field={tinaField(page, 'eyebrow')}>{page.eyebrow}</p>
+    <h1 id="booking-title" data-tina-field={tinaField(page, 'heading')}>{page.heading}</h1>
+    <p class="menu-intro" data-tina-field={tinaField(page, 'introduction')}>{page.introduction}</p>
+    <a class="button" href={page.booking_url ?? ''} data-tina-field={tinaField(page, 'booking_label')}>{page.booking_label} <span aria-hidden="true"><DiagonalArrow /></span></a>
+    <p class="booking-availability" data-tina-field={tinaField(page, 'availability_note')}>{page.availability_note}</p>
+  </div></section>
+  <section class="container booking-contact" aria-labelledby="contact-title">
+    <div><p class="eyebrow">A personal conversation</p><h2 id="contact-title" data-tina-field={tinaField(page, 'contact_heading')}>{page.contact_heading}</h2><p data-tina-field={tinaField(page, 'contact_text')}>{page.contact_text}</p>
+      <div class="booking-contact-actions"><a class="button" href={page.phone_url ?? ''}>Call <span data-tina-field={tinaField(page, 'phone')}>{page.phone}</span></a><a class="menu-book-link" href={page.sms_url ?? ''}>Send a text</a></div>
+    </div>
+    <div class="booking-request"><h3>When you get in touch</h3><ul data-tina-field={tinaField(page, 'requests')}>{(page.requests ?? []).filter(Boolean).map(request => <li data-tina-field={tinaField(request, 'text')}>{request.text}</li>)}</ul></div>
+  </section>
+  <section class="menu-booking" aria-labelledby="browse-title"><div class="container"><p class="eyebrow">Find your ritual</p><h2 id="browse-title">A little inspiration before you book</h2><nav class="pricing-page-links" aria-label="Plan your experience"><a href="/pricing/">Treatment pricing</a><a href="/signature-spa-packages/">Spa packages</a><a href="/signature-experiences/">Signature Experiences</a><a href="/discounted-pricing/">Saltay II specials</a></nav></div></section>
+</main>

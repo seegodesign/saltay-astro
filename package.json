@@ -1,15 +1,25 @@
 {
-  "name": "saltay-astro-cloudcannon",
+  "name": "saltay-astro",
   "version": "1.0.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "astro dev --host 0.0.0.0 --port 4173",
-    "build": "astro build",
-    "preview": "astro preview --host 0.0.0.0 --port 4173"
+    "dev": "node --dns-result-order=ipv4first ./node_modules/@tinacms/cli/bin/tinacms dev -c \"astro dev --host 0.0.0.0 --port 4173\"",
+    "build": "node --dns-result-order=ipv4first ./node_modules/@tinacms/cli/bin/tinacms build && astro build",
+    "preview": "astro preview --host 0.0.0.0 --port 4173",
+    "build:local": "node --dns-result-order=ipv4first ./node_modules/@tinacms/cli/bin/tinacms build --local --skip-cloud-checks -c \"astro build\""
   },
   "dependencies": {
+    "@astrojs/node": "^10.1.4",
+    "@tinacms/astro": "^0.7.1",
     "astro": "^6.0.0",
-    "@cloudcannon/editable-regions": "0.0.21"
+    "tinacms": "^3.14.4"
+  },
+  "devDependencies": {
+    "@tinacms/cli": "^4.0.2",
+    "@types/node": "^22.20.5"
+  },
+  "engines": {
+    "node": "^22.19.0 || ^24.0.0"
   }
 }

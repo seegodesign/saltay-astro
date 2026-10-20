@@ -1,0 +1,51 @@
+{
+  "_template": "about",
+  "title": "About | Saltay Hanalei Bay",
+  "description": "Meet the people and philosophy behind Saltay Botanical Spa: botanical wisdom, personalized care, and a deeper connection to yourself and Kaua‘i.",
+  "eyebrow": "THE SPIRIT OF SALTAY",
+  "heading": "Rooted in nature.\nInspired by you.",
+  "introduction": "A connection to plants, to place, and to yourself. Discover a different kind of spa experience on Kaua‘i.",
+  "hero_image": "/assets/about-page-hero-1.jpg",
+  "hero_image_alt": "Wanda standing by the ocean with a turquoise scarf outstretched in the breeze",
+  "mission_heading": "More than a treatment.\nA way of being.",
+  "mission_text": "Saltay brings herbal arts and therapeutic bodywork together in full-body experiences inspired by Battlefield Botanical Medicine. Our purpose is to share both care and knowledge, encouraging you to take an active part in your wellbeing.",
+  "philosophy_text": "We see wellbeing as a relationship: with yourself, your community, and the land and sea around you. Custom botanical formulations and thoughtful touch invite you to slow down, reconnect, and find your own sense of balance.",
+  "mantra": "A slower rhythm.\nA deeper connection.",
+  "founder_eyebrow": "OUR FOUNDER",
+  "founder_heading": "A practice with heart.\nA purpose beyond the spa.",
+  "founder_name": "Wanda Sakari",
+  "founder_role": "Founder · Master Herbalist · Licensed Acupuncturist",
+  "founder_text": "Wanda founded Saltay to help people feel more connected to their health and wellbeing. Her training with martial artist and Chinese medical practitioner Tom Bisio informs a practice that brings botanical traditions into a deeply personal spa experience.",
+  "founder_detail": "That spirit extends beyond Kaua‘i. Wanda has shared botanical medicine practices with underserved communities around the world, teaching skills that encourage confidence, connection, and self-care.",
+  "team_heading": "Thoughtful care.\nPracticed hands.",
+  "team_introduction": "Get to know a few of the people who bring Saltay’s philosophy to life.",
+  "practitioners": [
+    {
+      "name": "Wanda Sakari",
+      "role": "Botanical medicine & acupuncture",
+      "description": "Master Herbalist, Licensed Acupuncturist, and owner. Wanda brings botanical medicine to spa rituals, remote sessions, apprenticeships, and personal retreats.",
+      "image": "/assets/bio-wanda-1.jpg",
+      "image_alt": ""
+    },
+    {
+      "name": "Angela Walker",
+      "role": "Holistic esthetics",
+      "description": "A Kaua‘i-based licensed esthetician with 25 years in health, beauty, and wellness. Angela’s approach cares for the skin from the inside out.",
+      "image": "/assets/placeholders/bio-portrait.svg",
+      "image_alt": ""
+    },
+    {
+      "name": "Opinder",
+      "role": "Somatic & energy healing",
+      "description": "With decades of personal practice, Opinder brings an intuitive presence to meditation, somatic healing, and energy work, creating space for reflection and reconnection.",
+      "image": "/assets/placeholders/bio-portrait.svg",
+      "image_alt": ""
+    }
+  ],
+  "booking_heading": "Make a little space for yourself.",
+  "booking_text": "Explore the rituals, find what speaks to you, and let your Saltay experience begin.",
+  "booking_label": "Book your experience",
+  "booking_url": "/book-with-us/",
+  "founder_image": "/assets/bio-wanda-1.jpg",
+  "founder_image_alt": "Wanda Sakari"
+}

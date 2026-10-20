@@ -1,0 +1,41 @@
+---
+import { tinaField } from '@tinacms/astro';
+import LinkArrow from './LinkArrow.astro';
+import type { PageQuery } from '../../tina/__generated__/types';
+interface Props { page: Extract<PageQuery['page'], { __typename: 'PagePricing' }>; }
+const { page } = Astro.props;
+const sections = (page.sections ?? []).filter(Boolean);
+const bookingUrl = page.booking_url || '/book-with-us/';
+const categoryLabel = (title: string) => title.toLowerCase().replace(/\b[a-z]/g, letter => letter.toUpperCase());
+---
+<main>
+  <section class="menu-hero" aria-labelledby="menu-title">
+    <div class="container menu-hero-inner">
+      <p class="eyebrow" data-tina-field={tinaField(page, 'eyebrow')}>{page.eyebrow}</p>
+      <h1 id="menu-title" data-tina-field={tinaField(page, 'heading')}>{page.heading}</h1>
+      <p class="menu-intro" data-tina-field={tinaField(page, 'description')}>{page.description}</p>
+      <a href={bookingUrl} class="button">Book your experience</a>
+      <nav class="pricing-page-links" aria-label="Pricing menus"><a href="/pricing/" aria-current="page">Full treatment menu</a><a href="/discounted-pricing/">Saltay II specials in Anahola <LinkArrow /></a></nav>
+    </div>
+  </section>
+  <div class="container menu-layout" id="treatment-menu">
+    <aside class="menu-index"><p class="eyebrow">Explore the menu</p><nav aria-label="Treatment categories">{sections.map((section, index) => <a href={`#${section.id}`}><span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>{categoryLabel(section.title ?? '')}</a>)}</nav></aside>
+    <div class="menu-sections" data-tina-field={tinaField(page, 'sections')}>
+      {sections.map(section => <section class="menu-section" id={section.id} aria-labelledby={`${section.id}-title`}>
+        <div class="menu-section-heading">
+          <h2 id={`${section.id}-title`} data-tina-field={tinaField(section, 'title')}>{section.title}</h2>
+        </div>
+        <ul class="session-list" data-tina-field={tinaField(section, 'options')}>
+          {(section.options ?? []).filter(Boolean).map(option => <li class="session-row">
+            <div><h3 data-tina-field={tinaField(option, 'name')}>{option.name}</h3>{option.details_html && <div class="session-details" data-tina-field={tinaField(option, 'details_html')} set:html={option.details_html} />}</div>
+            <span class="session-price" data-tina-field={tinaField(option, 'price')}>{option.price}</span>
+          </li>)}
+        </ul>
+        {section.link_url && <a class="menu-book-link" href={section.link_url} data-tina-field={tinaField(section, 'link_label')}>{section.link_label} <LinkArrow /></a>}
+      </section>)}
+    </div>
+  </div>
+  <section class="menu-booking" aria-label="Online booking"><div class="container">
+    <p data-tina-field={tinaField(page, 'booking_message')}>{page.booking_message}</p><a class="button" href={bookingUrl}>Book Now</a>
+  </div></section>
+</main>

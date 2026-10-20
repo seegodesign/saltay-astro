@@ -1,0 +1,47 @@
+---
+import { tinaField } from '@tinacms/astro';
+import LinkArrow from './LinkArrow.astro';
+import type { PageTreatments } from '../../tina/__generated__/types';
+interface Props { page: PageTreatments; }
+const { page } = Astro.props;
+---
+<main id="treatments-content">
+  <section class="overview-hero" aria-labelledby="overview-title">
+    <img class="overview-hero-image" src={page.hero_image} alt={page.hero_image_alt ?? ''} width="1800" height="1200" fetchpriority="high" data-tina-field={tinaField(page, 'hero_image')} />
+    <div class="container overview-hero-inner">
+      <div class="overview-hero-copy">
+        <p class="eyebrow" data-tina-field={tinaField(page, 'eyebrow')}>{page.eyebrow}</p>
+        <h1 id="overview-title" data-tina-field={tinaField(page, 'heading')}>{page.heading}</h1>
+        <p class="overview-introduction" data-tina-field={tinaField(page, 'introduction')}>{page.introduction}</p>
+        <div class="overview-actions"><a class="button" href="#choose-your-experience">Explore treatments</a><a class="overview-text-link" href="/pricing/">View pricing <LinkArrow /></a></div>
+      </div>
+    </div>
+  </section>
+  <section class="container overview-choices" id="choose-your-experience" aria-labelledby="choices-title">
+    <div class="overview-section-intro"><h2 id="choices-title" data-tina-field={tinaField(page, 'choices_heading')}>{page.choices_heading}</h2><p data-tina-field={tinaField(page, 'choices_introduction')}>{page.choices_introduction}</p></div>
+    <div class="overview-category-grid" data-tina-field={tinaField(page, 'categories')}>
+      {(page.categories ?? []).filter(Boolean).map(category => <a class="overview-category" href={category.url} aria-label={category.title}>
+        <div class="overview-category-visual">
+          <img src={category.image} alt={category.image_alt ?? ''} width="495" height="400" loading="lazy" data-tina-field={tinaField(category, 'image')} />
+          <div class="overview-category-heading"><p class="eyebrow" data-tina-field={tinaField(category, 'eyebrow')}>{category.eyebrow}</p><h3 data-tina-field={tinaField(category, 'title')}>{category.title}</h3></div>
+        </div>
+        <div class="overview-category-copy"><p data-tina-field={tinaField(category, 'description')}>{category.description}</p><span class="overview-text-link" data-tina-field={tinaField(category, 'link_label')}>{category.link_label} <LinkArrow /></span></div>
+      </a>)}
+    </div>
+  </section>
+  <section class="container overview-extras" aria-labelledby="extras-title">
+    <h2 id="extras-title" data-tina-field={tinaField(page, 'extras_heading')}>{page.extras_heading}</h2>
+    <div class="overview-extras-grid" data-tina-field={tinaField(page, 'extras')}>
+      {(page.extras ?? []).filter(Boolean).map((extra, index) => <article class="overview-extra"><span class="overview-extra-number" aria-hidden="true">0{index + 1}</span><div><p class="eyebrow" data-tina-field={tinaField(extra, 'eyebrow')}>{extra.eyebrow}</p><h3 data-tina-field={tinaField(extra, 'title')}>{extra.title}</h3><p data-tina-field={tinaField(extra, 'description')}>{extra.description}</p><a class="overview-text-link" href={extra.url} data-tina-field={tinaField(extra, 'link_label')}>{extra.link_label} <LinkArrow /></a></div></article>)}
+    </div>
+  </section>
+  <section class="overview-expect" aria-labelledby="expect-title"><div class="container">
+    <div class="overview-section-intro"><p class="eyebrow" data-tina-field={tinaField(page, 'expect_eyebrow')}>{page.expect_eyebrow}</p><h2 id="expect-title" data-tina-field={tinaField(page, 'expect_heading')}>{page.expect_heading}</h2><p data-tina-field={tinaField(page, 'expect_introduction')}>{page.expect_introduction}</p></div>
+    <ol class="overview-steps" data-tina-field={tinaField(page, 'steps')}>{(page.steps ?? []).filter(Boolean).map(step => <li><h3 data-tina-field={tinaField(step, 'title')}>{step.title}</h3><p data-tina-field={tinaField(step, 'description')}>{step.description}</p></li>)}</ol>
+  </div></section>
+  <section class="overview-booking" aria-labelledby="overview-booking-title"><div class="container">
+    <h2 id="overview-booking-title" data-tina-field={tinaField(page, 'booking_heading')}>{page.booking_heading}</h2><p data-tina-field={tinaField(page, 'booking_text')}>{page.booking_text}</p>
+    <div class="overview-actions"><a class="button" href={page.booking_url} data-tina-field={tinaField(page, 'booking_label')}>{page.booking_label}</a><a class="overview-text-link" href="/pricing/">View treatment pricing <LinkArrow /></a></div>
+    <a class="overview-phone" href={page.phone_url} data-tina-field={tinaField(page, 'phone')}>{page.phone}</a>
+  </div></section>
+</main>

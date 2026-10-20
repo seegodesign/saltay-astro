@@ -1,0 +1,34 @@
+---
+import { tinaField } from '@tinacms/astro';
+import type { PageQuery } from '../../tina/__generated__/types';
+interface Props { page: Extract<PageQuery['page'], { __typename: 'PageLocations' }>; }
+const { page } = Astro.props;
+const locations = (page.locations ?? []).filter(Boolean);
+---
+<main id="locations-content">
+  <section class="menu-hero" aria-labelledby="locations-title">
+    <div class="container">
+      <p class="eyebrow" data-tina-field={tinaField(page, 'eyebrow')}>{page.eyebrow}</p>
+      <h1 id="locations-title" data-tina-field={tinaField(page, 'heading')}>{page.heading}</h1>
+      <p class="menu-intro" data-tina-field={tinaField(page, 'introduction')}>{page.introduction}</p>
+    </div>
+  </section>
+  <div class="container locations-list" data-tina-field={tinaField(page, 'locations')}>
+    {locations.map((location, index) => <section class="location-section" id={location.id} aria-labelledby={`${location.id}-title`}>
+      <div class="location-heading">
+        <span class="location-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+        <h2 id={`${location.id}-title`} data-tina-field={tinaField(location, 'name')}>{location.name}</h2>
+        <address data-tina-field={tinaField(location, 'address')}>{location.address}</address>
+        <a class="location-map-link" href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${location.name}, ${location.address}, Kauai, Hawaii`)}`} aria-label={`View ${location.name} on Google Maps`}>View on Google Maps</a>
+      </div>
+      <div class="location-description" data-tina-field={tinaField(location, 'paragraphs')}>
+        {(location.paragraphs ?? []).filter(Boolean).map(paragraph => <p data-tina-field={tinaField(paragraph, 'text')}>{paragraph.text}</p>)}
+      </div>
+    </section>)}
+  </div>
+  <section class="menu-booking" aria-labelledby="locations-booking-title"><div class="container">
+    <h2 id="locations-booking-title" data-tina-field={tinaField(page, 'booking_heading')}>{page.booking_heading}</h2>
+    <p data-tina-field={tinaField(page, 'booking_text')}>{page.booking_text}</p>
+    <a class="button" href={page.booking_url ?? '/book-with-us/'} data-tina-field={tinaField(page, 'booking_label')}>{page.booking_label}</a>
+  </div></section>
+</main>

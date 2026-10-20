@@ -1,31 +1,39 @@
 {
+  "_template": "home",
   "title": "Saltay Hanalei Bay",
   "url": "/",
   "logo": "/assets/logo.png",
   "navigation": [
     "Home",
     "Treatments",
-    "Pricing"
+    "Pricing",
+    "About",
+    "Community",
+    "Musings"
   ],
   "booking_label": "Book Now and Save",
   "footer_links": [
+    "Home",
     "Wellness Treatments",
+    "Signature Experiences",
+    "Spa Add-ons",
+    "Pricing",
     "Swimwear",
     "Community",
     "About",
+    "Saltay II Specials",
     "Musings",
     "Book With Us",
     "Locations"
   ],
   "blocks": [
     {
-      "_name": "Hero",
       "heading": "A luxury sanctuary on Kaua‘i, now available anywhere",
       "description": "Discover signature treatments, holistic therapies, and personalized care designed to restore balance and elevate your well-being. Visit us on Kaua‘i or experience Saltay from wherever you are.",
-      "video": "/assets/floating-woman.mp4"
+      "_template": "Hero",
+      "image": "/assets/floating-woman-light-top-gradient.jpg"
     },
     {
-      "_name": "Treatments",
       "services": [
         {
           "eyebrow": "HEALING TOUCH",
@@ -34,10 +42,7 @@
           "image_alt": "Massage Therapy & Bodywork",
           "paragraphs": [
             {
-              "text": "Our signature massage experiences are personalized therapeutic rituals designed to release deep-seated tension, restore healthy circulation, and bring your nervous system into a profound state of rest."
-            },
-            {
-              "text": "Each session is customized to your specific needs — whether you seek relief from chronic pain, recovery support, or a deeply restorative escape."
+              "text": "Personalized massage and therapeutic bodywork, with botanical touches and time to settle into deep rest."
             }
           ],
           "items": [
@@ -53,7 +58,9 @@
             {
               "text": "Tui Na Therapeutic Massage"
             }
-          ]
+          ],
+          "link_label": "Explore bodywork",
+          "link_url": "/signature-experiences/"
         },
         {
           "eyebrow": "ANCIENT HEALING",
@@ -62,7 +69,7 @@
           "image_alt": "Acupuncture & Energy Medicine",
           "paragraphs": [
             {
-              "text": "Drawing on thousands of years of Traditional Chinese Medicine, our acupuncture and energy medicine sessions restore the free flow of vital energy throughout your body — encouraging balance, vitality, and emotional wellbeing."
+              "text": "Explore acupuncture, cupping, and energy work, with care shaped around your needs and preferences."
             }
           ],
           "items": [
@@ -78,7 +85,9 @@
             {
               "text": "Elemental Restorative Healing"
             }
-          ]
+          ],
+          "link_label": "Explore acupuncture",
+          "link_url": "/acupuncture/"
         },
         {
           "eyebrow": "HOLISTIC FACIALS",
@@ -87,7 +96,7 @@
           "image_alt": "Botanical Rituals & Holistic Skincare",
           "paragraphs": [
             {
-              "text": "Our botanical rituals are immersive, plant-based experiences that honor the healing intelligence of nature. Each ritual is custom blended with locally sourced botanicals, minerals, and ocean-inspired elements."
+              "text": "Plant-based facial and body rituals, blending botanicals, minerals, and thoughtful touch into a moment of care."
             }
           ],
           "items": [
@@ -103,33 +112,63 @@
             {
               "text": "Botanical Facial Rituals"
             }
-          ]
+          ],
+          "link_label": "Explore botanical rituals",
+          "link_url": "/signature-experiences/#jewel-of-the-siren"
+        }
+      ],
+      "_template": "Treatments"
+    },
+    {
+      "columns": [
+        {
+          "title": "Immersive & In-Person Care",
+          "body_html": "<ul>\n<li><strong><a href=\"/signature-spa-packages/\">Spa Packages &amp; Day Rituals</a>:</strong> Curated combinations (like the <em>Saltay Sanctuary Reset</em> or <em>Nourished Restoration</em>) for guests seeking a half-day escape.</li>\n<li><strong><a href=\"#\">Personal Retreats &amp; Apprenticeships</a>:</strong> Multi-day journeys for self-discovery, mastery, and master practitioner training modules.</li>\n<li><strong><a href=\"#\">Workshops</a>:</strong> Local educational events rooted in foundational botanical medicine.</li>\n</ul>\n"
+        },
+        {
+          "title": "Care from anywhere",
+          "body_html": "<p>Explore remote healing and energy work with Saltay, wherever you are.</p>\n<ul>\n<li>Remote Acupuncture</li>\n<li>Spirit Vision Readings</li>\n<li>Multi-dimensional Root Chakra Healing</li>\n</ul>\n<p><a class=\"care-remote-link\" href=\"/book-with-us/\">Ask about remote care <span aria-hidden=\"true\">→</span></a></p>\n"
+        }
+      ],
+      "background_image": "/assets/ocean.jpg",
+      "_template": "Care"
+    },
+    {
+      "_template": "Reviews",
+      "eyebrow": "WORDS FROM OUR GUESTS",
+      "heading": "A little aloha, in their own words",
+      "link_label": "Read more reviews on Google",
+      "link_url": "https://www.google.com/maps?cid=8062033889982457878",
+      "reviews": [
+        {
+          "quote": "Blissful, relaxing atmosphere. Pure Aloha!",
+          "author": "Dawn S",
+          "rating": 5,
+          "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChZDSUhNMG9nS0VJQ0FnSUNfOGVEY1dBEAE!2m1!1s0x7c06fbff5f3790c9:0x6fe2191bc390a816!3m1!1s2"
+        },
+        {
+          "quote": "Best Massage We've Ever Had!",
+          "author": "Lorena B",
+          "rating": 5,
+          "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChdDSUhNMG9nS0VLMno2ZC1lX2J1emhnRRAB!2m1!1s0x7c06fbff5f3790c9:0x6fe2191bc390a816!3m1!1s2"
+        },
+        {
+          "quote": "My mother and I will never forget this experience!",
+          "author": "Megan J",
+          "rating": 5,
+          "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChdDSUhNMG9nS0VJQ0FnTURReDh6TDV3RRAB!2m1!1s0x7c06fbff5f3790c9:0x6fe2191bc390a816!3m1!1s2"
         }
       ]
     },
     {
-      "_name": "Care",
-      "columns": [
-        {
-          "title": "Immersive & In-Person Care",
-          "body_html": "<ul>\n<li><strong><a href=\"#\">Spa Packages &amp; Day Rituals</a>:</strong> Curated combinations (like the <em>Saltay Sanctuary Reset</em> or <em>Nourished Restoration</em>) for guests seeking a half-day escape.</li>\n<li><strong><a href=\"#\">Personal Retreats &amp; Apprenticeships</a>:</strong> Multi-day journeys for self-discovery, mastery, and master practitioner training modules.</li>\n<li><strong><a href=\"#\">Workshops</a>:</strong> Local educational events rooted in foundational botanical medicine.</li>\n</ul>\n"
-        },
-        {
-          "title": "Metaphysical & Remote Support",
-          "body_html": "<p><strong><a href=\"#\">Remote Healing &amp; Energy Work</a>:</strong> Tapping into subtle fields via Remote Acupuncture, Spirit Vision Readings, and Multi-dimensional Root Chakra Healing.</p>\n"
-        }
-      ],
-      "background_image": "/assets/ocean.jpg"
-    },
-    {
-      "_name": "Booking",
       "eyebrow": "READY TO BEGIN?",
       "heading": "Book Your Experience",
       "description": "By appointment only — Hanalei & Anahola, Kaua‘i",
       "button": "Book Now and Save",
       "phone": "(808) 855-8718",
       "statement": "Every offering at Saltay is a deeply personalized ritual that blends ancient healing wisdom with luxurious, plant-based care.",
-      "background_image": "/assets/ocean.jpg"
+      "background_image": "/assets/ocean.jpg",
+      "_template": "Booking"
     }
   ]
 }
