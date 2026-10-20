@@ -1,15 +1,25 @@
-.locations-list { padding: 72px 0 90px; }
-.location-section { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: clamp(32px, 6vw, 100px); padding: 42px 0; border-top: 1px solid #a47e3740; scroll-margin-top: 118px; }
-.location-section:last-child { padding-bottom: 0; }
+.locations-map-section { padding-bottom: 72px; }
+saltay-locations-map { display: block; }
+.locations-map { height: clamp(340px, 40vw, 500px); width: 100%; z-index: 0; background: var(--cream); border: 1px solid #a47e3740; }
+.locations-map-caption { margin: 14px 0 0; color: #735e3f; font-size: 18px; }
+.locations-map .location-pin { background: transparent; border: 0; }
+.location-pin span { display: grid; place-items: center; width: 36px; height: 36px; background: #7d7152; color: white; border: 2px solid white; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); box-shadow: 0 2px 8px #0004; }
+.location-pin b { font: bold 15px/1 sans-serif; transform: rotate(45deg); }
+.locations-map .leaflet-popup-content { line-height: 1.5; }
+.locations-map .leaflet-popup-content a { color: #735e3f; text-decoration: underline; }
+.locations-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(32px, 6vw, 100px); padding: 48px 0 90px; }
+.location-section { padding: 42px 0 0; border-top: 1px solid #a47e3740; scroll-margin-top: 118px; }
 .location-number { display: block; font-size: 17px; color: var(--gold); margin-bottom: 18px; }
 .location-heading h2 { font-size: clamp(30px, 3vw, 40px); text-wrap: balance; }
 .location-heading address { margin-top: 20px; font-style: normal; color: #735e3f; line-height: 1.4; }
 .location-map-link { display: inline-block; margin-top: 12px; color: #735e3f; text-decoration: underline; text-underline-offset: 4px; }
 .location-map-link:hover { color: var(--gold); }
-.location-description { line-height: 1.5; }
+.location-description { margin-top: 28px; line-height: 1.5; }
 .location-description p { margin: 0 0 22px; }
 .location-description p:last-child { margin-bottom: 0; }
 @media (max-width: 767px) {
-  .locations-list { padding: 36px 0 56px; }
-  .location-section { grid-template-columns: 1fr; gap: 24px; padding: 32px 0; scroll-margin-top: 100px; }
+  .locations-map-section { padding-bottom: 48px; }
+  .locations-list { grid-template-columns: 1fr; gap: 32px; padding: 36px 0 56px; }
+  .location-section { padding: 32px 0 0; scroll-margin-top: 100px; }
+  .location-description { margin-top: 24px; }
 }

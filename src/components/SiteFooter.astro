@@ -11,7 +11,9 @@ const destinations: Record<string, string> = {
   Home: '/',
   Treatments: '/treatments/',
   'Wellness Treatments': '/treatments/',
+  Acupuncture: '/acupuncture/',
   'Signature Experiences': '/signature-experiences/',
+  'Spa Packages': '/signature-spa-packages/',
   'Spa Add-ons': '/spa-add-ons/',
   Pricing: '/pricing/',
   'Saltay II Specials': '/discounted-pricing/',
@@ -22,8 +24,8 @@ const destinations: Record<string, string> = {
 };
 const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
 const groups = [
-  { title: 'Explore Saltay', labels: ['Home', 'About', 'Community', 'Musings', 'Swimwear'] },
-  { title: 'Treatments', labels: ['Treatments', 'Wellness Treatments', 'Signature Experiences', 'Spa Add-ons'] },
+  { title: 'Explore Saltay', labels: ['Home', 'About', 'Community', 'Musings'] },
+  { title: 'Treatments', labels: ['Treatments', 'Wellness Treatments', 'Acupuncture', 'Signature Experiences', 'Spa Packages', 'Spa Add-ons'] },
   { title: 'Plan your visit', labels: ['Pricing', 'Saltay II Specials', 'Book With Us', 'Locations'] },
 ];
 const links = (home.footer_links ?? []).filter((label): label is string => Boolean(label));
@@ -34,9 +36,6 @@ const columns = groups.map((group, index) => ({
 ---
 <footer>
   <div class="container footer-inner">
-    <a class="footer-brand" href="/" aria-label="Saltay Hanalei Bay home">
-      <img data-tina-field={tinaField(home, 'logo')} src={home.logo || defaultHome.logo} alt="Saltay Hanalei Bay Spa" width="300" height="154" loading="lazy" />
-    </a>
     <nav data-tina-field={tinaField(home, 'footer_links')} aria-label="Footer navigation">
       {columns.map(group => <div class="footer-column">
         <h2>{group.title}</h2>
@@ -46,6 +45,9 @@ const columns = groups.map((group, index) => ({
         })}</ul>
       </div>)}
     </nav>
+    <a class="footer-brand" href="/" aria-label="Saltay Hanalei Bay home">
+      <img src="/assets/logomark.png" alt="Saltay seahorse logomark" width="353" height="512" loading="lazy" />
+    </a>
   </div>
   <div class="container footer-bottom">© Copyright - Saltay Hanalei Bay</div>
 </footer>

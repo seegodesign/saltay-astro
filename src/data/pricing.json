@@ -1,8 +1,7 @@
 {
-  "_template": "pricing",
   "title": "Pricing | Saltay Hanalei Bay",
-  "heading": "A ritual for every rhythm",
   "eyebrow": "Saltay treatments & pricing",
+  "heading": "A ritual for every rhythm",
   "description": "Explore bodywork, botanical rituals, holistic facials, and immersive retreats. Find your experience and make time for yourself on Kaua‘i.",
   "booking_url": "/book-with-us/",
   "booking_message": "Try our online booking system and receive 10 to 25% off",
@@ -114,6 +113,9 @@
     {
       "id": "acupuncture",
       "title": "ACUPUNCTURE/ACUPRESSURE, FIRE CUPPING & MORE",
+      "image": "",
+      "link_label": "View acupuncture/acupressure & fire cupping experiences",
+      "link_url": "/acupuncture/",
       "options": [
         {
           "name": "60 minutes",
@@ -123,13 +125,13 @@
           "name": "90 minutes",
           "price": "$270"
         }
-      ],
-      "link_label": "View acupuncture/acupressure & fire cupping experiences",
-      "link_url": "/acupuncture/"
+      ]
     },
     {
       "id": "signature-experiences",
       "title": "SALTAY SIGNATURE EXPERIENCE + BOTANICAL FOOT SOAK & INFRA-RED SAUNA",
+      "link_label": "View signature experiences",
+      "link_url": "/signature-experiences/",
       "options": [
         {
           "name": "90 minutes",
@@ -141,13 +143,13 @@
           "price": "$575",
           "details_html": "Extended Signature Experience, Foot Soak &amp; Infra-red Sauna"
         }
-      ],
-      "link_label": "View signature experiences",
-      "link_url": "/signature-experiences/"
+      ]
     },
     {
       "id": "tui-na",
       "title": "TUI NA CHINESE MEDICINE BODYWORK",
+      "link_label": "View signature experiences",
+      "link_url": "/signature-experiences/",
       "options": [
         {
           "name": "90 minutes",
@@ -159,13 +161,13 @@
           "price": "$575",
           "details_html": "Extended Visual structural analysis, Tui Na, Fire cupping, Acupressure trigger point, Gua Sha scraping, Mobility Stretching &amp; botanical Magnesium body misting +"
         }
-      ],
-      "link_label": "View signature experiences",
-      "link_url": "/signature-experiences/"
+      ]
     },
     {
       "id": "spa-packages",
       "title": "SIGNATURE SPA PACKAGES",
+      "link_label": "View signature retreats",
+      "link_url": "/signature-spa-packages/",
       "options": [
         {
           "name": "Pampered Indulgence",
@@ -197,9 +199,8 @@
           "price": "$2,222",
           "details_html": "<p><b>3 Days | 3 Hours Daily</b></p> <p><i>The Way of the Water Being.</i></p> <p>Dedicate three consecutive days to a <strong>transformative, 9-hour cellular healing odyssey</strong> designed to return you to your truest, fluid baseline. The Saltay Luxe Immersion is our most prestigious holistic spa package offering, intuitively tailored to dismantle chronic stress, burnout, and environmental exhaustion. Surrender to the peaceful energy of Hanalei Bay as we guide you into a curated flow of clinical acupuncture, thermal contrast, sculpting touch, and deep restorative medicine. This consecutive master-level sanctuary experience invites your mind, body, and spirit to completely soften, reset, and claim your deepest state of nourishment.</p>"
         }
-      ],
-      "link_label": "View signature retreats",
-      "link_url": "/signature-spa-packages/"
+      ]
     }
-  ]
+  ],
+  "_template": "pricing"
 }

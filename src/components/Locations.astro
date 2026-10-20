@@ -1,5 +1,6 @@
 ---
 import { tinaField } from '@tinacms/astro';
+import LocationsMap from './LocationsMap.astro';
 import type { PageQuery } from '../../tina/__generated__/types';
 interface Props { page: Extract<PageQuery['page'], { __typename: 'PageLocations' }>; }
 const { page } = Astro.props;
@@ -26,6 +27,7 @@ const locations = (page.locations ?? []).filter(Boolean);
       </div>
     </section>)}
   </div>
+  <LocationsMap locations={locations} />
   <section class="menu-booking" aria-labelledby="locations-booking-title"><div class="container">
     <h2 id="locations-booking-title" data-tina-field={tinaField(page, 'booking_heading')}>{page.booking_heading}</h2>
     <p data-tina-field={tinaField(page, 'booking_text')}>{page.booking_text}</p>
