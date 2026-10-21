@@ -11,35 +11,56 @@
       "title": "MASSAGE / BODYWORK",
       "options": [
         {
-          "name": "60 minutes",
-          "price": "$235",
-          "details_html": "Just enough to get started"
+          "name": "Restorative Massage With Stretching & Traction",
+          "details_html": "<p>Bodywork that emphasizes therapeutic benefits and a restorative experience, incorporating stretching and traction.</p>",
+          "price": "$235 / $345 / $465"
         },
         {
-          "name": "90 minutes",
-          "price": "$345",
-          "details_html": "Drop in deeper"
+          "name": "Pregnancy Massage",
+          "details_html": "<p>Side-lying massage with a hapai cushion.</p>",
+          "price": "$235 / $345 / $465"
         },
         {
-          "name": "120 minutes",
-          "price": "$465",
-          "details_html": "The ultimate reset"
+          "name": "Sports Recovery & Myofascial Release",
+          "details_html": "<p>Ideal for active individuals and anyone experiencing persistent muscular tension. Combines focused massage, scraping, cupping, and trigger point techniques with targeted back or abdominal release to support recovery and movement.</p>",
+          "price": "$235 / $345 / $465"
+        },
+        {
+          "name": "Pampered Massage",
+          "details_html": "<p>A deeply indulgent massage experience featuring warm oils, heated stones, herbal botanical bundles, soothing thermal compresses, and gentle jade comb stimulation. A nurturing ritual designed to melt tension, calm the senses, and leave you feeling beautifully restored.</p>",
+          "price": "$235 / $345 / $465"
         }
-      ]
+      ],
+      "description": "60/90/120 minutes. The same pricing applies to every massage."
     },
     {
       "id": "holistic-facials",
       "title": "HOLISTIC FACIALS",
       "options": [
         {
-          "name": "60 minutes",
-          "price": "$235",
-          "details_html": "Elemental custom healing that may include: <ul><li>Acupuncture/Acupressure</li> <li>Contrast therapy</li> <li>Cranial sacral</li> <li>Tui Na</li> <li>Herbal consultation &amp; Rx</li> <li>Qi Gong Meditation</li> <li>Diet &amp; Exercise</li></ul>"
+          "name": "The Afterglow Dual-Exfoliation Ritual",
+          "price": "$360",
+          "details_html": "<p>90 minutes</p><p>Begins with a thorough cleanse and dermaplaning, followed by a gentle chemical exfoliation to refine texture and lift away dull surface cells. A customized mask, concentrated serums, facial sculpting, and soothing massage complete this glow-enhancing ritual.</p>"
         },
         {
-          "name": "90 minutes",
-          "price": "$345",
-          "details_html": "Extended Elemental custom healing"
+          "name": "Botanical Beauty Way Ritual",
+          "price": "$245",
+          "details_html": "<p>60 minutes</p><p>Our signature holistic facial, customized to you. Botanical skin therapy, sculpting touch, warm contrast, cooling jade, and restorative massage come together for a beautiful reset.</p>"
+        },
+        {
+          "name": "Jewel of the Siren",
+          "price": "$245",
+          "details_html": "<p>60 minutes</p><p>Reveal radiant, lifted skin with this luxurious facial ritual inspired by the ocean and earth. Purifying herbal steam, botanical masques, heated stones, and soothing compresses nourish the skin and release tension. Cooling crystals, jade and rose quartz Gua Sha sculpt and rejuvenate, while cosmetic acupuncture or acupressure promotes a naturally radiant, youthful glow.</p>"
+        },
+        {
+          "name": "The Luxe Refresh",
+          "price": "$195",
+          "details_html": "<p>45 minutes</p><p>A seriously refreshing, results-driven mini facial to cleanse, smooth, and deeply hydrate while awakening your natural glow. Perfect for jet lag, travel recovery, or a radiant refresh before dinner.</p>"
+        },
+        {
+          "name": "The Gentleman",
+          "price": "$245",
+          "details_html": "<p>60 minutes</p><p>A tailored facial for men’s skin with deep cleansing, exfoliation, hydration, and therapeutic massage. Clean, refreshed, balanced, and ready to go.</p>"
         }
       ]
     },

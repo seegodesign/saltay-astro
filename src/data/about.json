@@ -35,16 +35,21 @@
     {
       "name": "Angela Walker",
       "role": "Holistic esthetics",
-      "image": "/assets/placeholders/bio-portrait.svg",
+      "image": "/assets/angela.webp",
       "image_alt": "",
       "description": "A Kaua‘i-based licensed esthetician with 25 years in health, beauty, and wellness. Angela’s approach cares for the skin from the inside out."
     },
     {
       "name": "Opinder",
       "role": "Somatic & energy healing",
-      "image": "/assets/placeholders/bio-portrait.svg",
+      "image": "/assets/opinder.webp",
       "image_alt": "",
       "description": "With decades of personal practice, Opinder brings an intuitive presence to meditation, somatic healing, and energy work, creating space for reflection and reconnection."
+    },
+    {
+      "name": "Krish",
+      "image": "/assets/krish.webp",
+      "description": "Krish has a deep sense of connection to the elements and enjoys delivering Biodynamic lymphfascial unwinding with energy balancing for a profound deep level of healing - a master in many disciplines, Krish’s style of bodywork often encourages Saltay Guests to book multiple sessions before it’s time for their departure back home. "
     }
   ],
   "_template": "about"

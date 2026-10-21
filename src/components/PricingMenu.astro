@@ -21,18 +21,24 @@ const categoryLabel = (title: string) => title.toLowerCase().replace(/\b[a-z]/g,
   <div class="container menu-layout" id="treatment-menu">
     <aside class="menu-index"><p class="eyebrow">Explore the menu</p><nav aria-label="Treatment categories">{sections.map((section, index) => <a href={`#${section.id}`}><span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>{categoryLabel(section.title ?? '')}</a>)}</nav></aside>
     <div class="menu-sections" data-tina-field={tinaField(page, 'sections')}>
-      {sections.map(section => <section class="menu-section" id={section.id} aria-labelledby={`${section.id}-title`}>
+      {sections.map(section => {
+        const sharedPrice = section.id === 'bodywork' ? section.options?.find(option => option?.price)?.price : null;
+        return <section class="menu-section" id={section.id} aria-labelledby={`${section.id}-title`}>
         <div class="menu-section-heading">
-          <h2 id={`${section.id}-title`} data-tina-field={tinaField(section, 'title')}>{section.title}</h2>
+          <div class="menu-section-title-row">
+            <h2 id={`${section.id}-title`} data-tina-field={tinaField(section, 'title')}>{section.title}</h2>
+            {sharedPrice && <span class="session-price">{sharedPrice}</span>}
+          </div>
+          {section.description && <p data-tina-field={tinaField(section, 'description')}>{section.description}</p>}
         </div>
         <ul class="session-list" data-tina-field={tinaField(section, 'options')}>
-          {(section.options ?? []).filter(Boolean).map(option => <li class="session-row">
+          {(section.options ?? []).filter(Boolean).map(option => <li class:list={['session-row', { 'without-price': sharedPrice || !option.price }]}>
             <div><h3 data-tina-field={tinaField(option, 'name')}>{option.name}</h3>{option.details_html && <div class="session-details" data-tina-field={tinaField(option, 'details_html')} set:html={option.details_html} />}</div>
-            <span class="session-price" data-tina-field={tinaField(option, 'price')}>{option.price}</span>
+            {!sharedPrice && option.price && <span class="session-price" data-tina-field={tinaField(option, 'price')}>{option.price}</span>}
           </li>)}
         </ul>
         {section.link_url && <a class="menu-book-link" href={section.link_url} data-tina-field={tinaField(section, 'link_label')}>{section.link_label} <LinkArrow /></a>}
-      </section>)}
+      </section>})}
     </div>
   </div>
   <section class="menu-booking" aria-label="Online booking"><div class="container">

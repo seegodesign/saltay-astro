@@ -91,6 +91,13 @@
 .menu-section-heading {
   margin-bottom: 24px;
 }
+.menu-section-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
 .menu-section-heading.with-image {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 180px;
@@ -135,6 +142,9 @@
   font-size: 23px;
   line-height: 1.25;
   color: #514b3c;
+}
+.session-row.without-price {
+  grid-template-columns: minmax(0, 1fr);
 }
 .session-duration {
   margin: 5px 0 0;
@@ -271,6 +281,10 @@
   }
   .session-price {
     font-size: 25px;
+  }
+  #bodywork .session-price {
+    font-size: 18px;
+    text-align: right;
   }
   .menu-booking {
     padding: 54px 0;

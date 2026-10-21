@@ -26,7 +26,7 @@
 .about-team { padding: 84px 0 94px; background: #f4eee2; }
 .about-team-heading { display: flex; align-items: end; justify-content: space-between; gap: 40px; margin-bottom: 52px; }
 .about-team-heading > p { max-width: 320px; font-size: 21px; margin: 0; }
-.about-team-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 5%; }
+.about-team-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 5%; }
 .about-person { border-top: 1px solid #a47e3766; padding-top: 22px; }
 .about-person-photo { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center; border-radius: 10px; }
 .about-person-photo { margin-bottom: 24px; }
